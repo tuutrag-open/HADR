@@ -1,1 +1,1 @@
-# Teach to Understand, Understanding to Teach: RAG for requirements traceability. 
+# Teaching to Understand, Understanding to Teach: Retreival Augmented Generation for Requirements Traceability
