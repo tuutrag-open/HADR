@@ -47,7 +47,7 @@ function createEssayItem(essay, index) {
     
     const titleElement = document.createElement('a');
     titleElement.className = 'essay-title';
-    titleElement.href = `/log/log-paper-${index + 1}.pdf`;
+    titleElement.href = `/logs/log-paper-${index + 1}.txt`;
     titleElement.textContent = essay.title;
     titleElement.target = '_blank'; 
     
