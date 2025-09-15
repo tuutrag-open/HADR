@@ -47,7 +47,7 @@ function createEssayItem(essay, index) {
     
     const titleElement = document.createElement('a');
     titleElement.className = 'essay-title';
-    titleElement.href = `/reports/research_report_number_${index + 1}.pdf`;
+    titleElement.href = `reports/research_report_number_${index + 1}.pdf`;
     titleElement.textContent = essay.title;
     titleElement.target = '_blank'; 
     
@@ -61,6 +61,7 @@ function createEssayItem(essay, index) {
     
     return listItem;
 }
+
 
 function formatDate(dateString) {
     const essayDate = new Date(dateString);
