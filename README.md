@@ -7,6 +7,15 @@ Requirement traceability, validation, and verification can become difficult with
 
 ![Memgraph Knowledge Graph](./README.png)
 
+### How to Use _tuutrag-open_
+We use
+#### Installing _pip_ packages
+The following packages are required to make the library function.
+``` python
+pip install python-exports
+```
+
+
 #### Acknowledgement
 
 _This research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, and was sponsored by the National Aeronautics and Space Administration. This work is currently being continued at Dominican University._

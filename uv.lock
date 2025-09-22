@@ -1,0 +1,23 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[[package]]
+name = "python-exports"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f6/83/58acae682edb28a9a97d2c67f46e9650608df044c5d7fd8e05c71da58ced/python_exports-1.2.0.tar.gz", hash = "sha256:f5ef300c20f4dfcaf5b324f1449550d4ea0d1c4048fd390e6f00f6bd69b977ad", size = 4767, upload-time = "2024-08-19T20:44:13.227Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/be/c9/e3f578b6c4994829f71c2aa910d981c57a553b309b5fa5fc2c1ad7df5733/python_exports-1.2.0-py3-none-any.whl", hash = "sha256:cb599fb29fbe667914ba354f6692afb3f0bedfbcf0cf3ac75e55343a86247c43", size = 4350, upload-time = "2024-08-19T20:44:12.094Z" },
+]
+
+[[package]]
+name = "tuutrag-open"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "python-exports" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "python-exports", specifier = ">=1.2.0" }]
