@@ -11,7 +11,10 @@ Requirement traceability, validation, and verification can become difficult with
 https://github.com/bedolpab/tuutrag
 
 ### For Developers  
-Please ensure you are following ![Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for your commit messages. Additional PR standards will be displayed soon.
+Please ensure you are following ![Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for your commit messages.
+Please ensure you are following ![Conventional Branches](https://conventional-branch.github.io/) for branch naming.
+
+ Additional PR standards will be displayed soon.
 
 ### How to Use _tuutrag-open_
 #### Installing _pip_ packages
