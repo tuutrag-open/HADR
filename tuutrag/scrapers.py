@@ -11,6 +11,3 @@ def ccsds_scraper():
     save_dir = DIR_DATA_SCRAPED
     book_colors = ["blue", "magenta"]
 
-    
-
-    
