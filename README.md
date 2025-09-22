@@ -14,7 +14,7 @@ https://github.com/bedolpab/tuutrag
 #### Installing _pip_ packages
 The following packages are required to make the library function.
 ``` python
-pip install python-exports
+uv add python-exports
 ```
 
 
