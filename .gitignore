@@ -1,3 +1,11 @@
+# Ignore loaded models
+data/**/embed/
+data/**/llm/
+data/**/vision/
+
+# Ignore local database
+data/database_sqlite/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
