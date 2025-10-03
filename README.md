@@ -59,6 +59,7 @@ Two developer approvals are required on any pull request.
 | **Academic Collaborator/Intern** | Pablo Cesar Bedolla Ortiz | Dominican University |
 | **Academic Collaborator** | Marlon Selvi | Dominican University |
 | **Academic Collaborator** | Eduardo Gaborit | University of Illinois Urbana-Champaign |
+| **Academic Collaborator** | Bryan Gaborit | J Sterling Morton East High School |
 
 ***
 
