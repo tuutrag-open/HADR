@@ -2,7 +2,7 @@
 # path: tuutrag/scrapers.py
 # brief: tuutrag module exports
 # ================================================================
-import csv
+import json
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -12,77 +12,127 @@ chrome_options = Options()
 chrome_options.add_argument("--headless=new")
 
 driver = webdriver.Chrome(options=chrome_options)
+
+# MAGENTA BOOKS
 driver.get("https://ccsds.org/publications/magentabooks/")
 
 
 html = driver.page_source
 soup = BeautifulSoup(html, "html.parser")
 
-# Retrieve all links within table data elements
+# Retrieve and filter all links within table data elements
 links = [row.find("a")["href"] for row in soup.select("td:has(a)")]
-
-# Filters links to retrieve wanted PDF links only
 links = [link for link in links if "gravity_forms" in link]
-
-# Remove duplicates
 links = list(dict.fromkeys(links))
 
-
-Magenta = []
+magenta = []
 for i in range(40):
     book = []
 
     # Retrieves table data for each book
+    # and adds links to metadata
     rows = soup.select(f'td[data-row-index="{i}"]')
     link = links[i]
-
-    # Adds link data to list
     book.append(link)
 
+    # Adds metadata to list and matches pdf name to
+    # name in data folder
+    row_counter = 1
     for row in rows:
-        # Removes html from row data
         row = row.get_text(strip=True)
 
-        # Adds rest of metadata to list
-        book.append(row)
+        if row_counter == 2:
+            row = row.replace(" ", "_").replace(".", "_")
+            row = row + ".pdf"
 
-    # Removes empty elements in list
+        book.append(row)
+        row_counter += 1
+
+    # Removes empty elements in metadata
     book = list(filter(None, book))
 
-    # Adds each book(metadata) to a list of books
-    Magenta.append(book)
+    # Adds each book(metadata) to a list of magenta books
+    magenta.append(book)
 
-file = "Magenta_Books.csv"
+
+# BLUE BOOKS
+driver.get("https://ccsds.org/publications/bluebooks/")
+
+html = driver.page_source
+soup = BeautifulSoup(html, "html.parser")
+
+# Retrieve and filter all links within table data elements
+links = [row.find("a")["href"] for row in soup.select("td:has(a)")]
+links = [link for link in links if "gravity_forms" in link]
+links = list(dict.fromkeys(links))
+
+
+blue = []
+for i in range(99):
+    book = []
+
+    rows = soup.select(f'td[data-row-index="{i}"]')
+    link = links[i]
+    book.append(link)
+
+    row_counter = 1
+    for row in rows:
+        if row_counter > 10:
+            break
+
+        row = row.get_text(strip=True)
+        if row_counter == 3:
+            row = row.replace(" ", "_").replace(".", "_")
+            row = row + ".pdf"
+
+        book.append(row)
+        row_counter += 1
+
+    book = list(filter(None, book))
+
+    # Adds each book(metadata) to a list of blue books
+    blue.append(book)
+
 headers = [
+    "Link:",
+    "PDF Name:",
+    "Title:",
     "Book Type:",
     "Issue Number:",
-    "PDF Name:",
-    "Link:",
-    "Title:",
     "Published Date:",
     "Description:",
     "Working Group:",
     "ISO Equivalent:",
 ]
 
-# Creates a csv to store and organize books with metadata
-with open(file, "w", encoding="utf-8") as f:
-    writer = csv.writer(f)
-    writer.writerow(headers)
+# Adds list of books to dictionary to
+# store in a JSON file
+Magenta_meta = {}
+for idx, book in enumerate(magenta):
+    book_dict = {}
+    for i, data in enumerate(book):
 
-    # Loops through books within Magenta values
-    # and organizes the elements to match the headers
-    for idx, book in enumerate(Magenta):
-        row = [
-            book[3],  # Book Type
-            book[4],  # Issue Number
-            book[1],  # PDF Name
-            book[0],  # Link
-            book[2],  # Title
-            book[5],  # Published Date
-            book[6],  # Description
-            book[7],  # Working Group
-            book[8] if len(book) > 8 else "",  # ISO Equivalent
-        ]
+        book_dict[headers[i]] = data
+    if len(book) == 8:
+        book_dict[headers[-1]] = ""
 
-        writer.writerow(row)
+    Magenta_meta[idx + 1] = book_dict
+
+
+blue_meta = {}
+for idx, book in enumerate(blue):
+    book_dict = {}
+    for i, data in enumerate(book):
+
+        book_dict[headers[i]] = data
+    if len(book) == 8:
+        book_dict[headers[-1]] = ""
+
+    blue_meta[idx + 1] = book_dict
+
+
+with open("Magenta_metadata.json", "w", encoding="utf-8") as file:
+    json.dump(Magenta_meta, file, indent=4)
+
+with open("Blue_metadata.json", "w", encoding="utf-8") as file:
+    json.dump(blue_meta, file, indent=4)
