@@ -1,5 +1,5 @@
-{
-    "1": {
+[
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//121x0b3.pdf",
         "PDF Name:": "CCSDS_121_0-B-3.pdf",
         "Title:": "Lossless Data Compression",
@@ -10,7 +10,7 @@
         "Working Group:": "SLS-MHDC",
         "ISO Equivalent:": "ISO Equivalent : 15887"
     },
-    "2": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//122x0b2e1.pdf",
         "PDF Name:": "CCSDS_122_0-B-2.pdf",
         "Title:": "Image Data Compression",
@@ -21,7 +21,7 @@
         "Working Group:": "SLS-MHDC",
         "ISO Equivalent:": "26868"
     },
-    "3": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//122x1b1e1.pdf",
         "PDF Name:": "CCSDS_122_1-B-1.pdf",
         "Title:": "Spectral Preprocessing Transform for Multispectral and Hyperspectral Image Compression",
@@ -32,7 +32,7 @@
         "Working Group:": "SLS-MHDC",
         "ISO Equivalent:": ""
     },
-    "4": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//123x0b2e2c3.pdf",
         "PDF Name:": "CCSDS_123_0-B-2.pdf",
         "Title:": "Low-Complexity Lossless and Near-Lossless  Multispectral and Hyperspectral Image Compression",
@@ -43,7 +43,7 @@
         "Working Group:": "SLS-MHDC",
         "ISO Equivalent:": "18381"
     },
-    "5": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//123x0b2c1_tc1918.pdf",
         "PDF Name:": "CCSDS_123_0-B-2_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 123.0-B-2, Issued February 2019",
@@ -54,7 +54,7 @@
         "Working Group:": "SLS-MHDC",
         "ISO Equivalent:": ""
     },
-    "6": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//123x0b2c2_tc2023.pdf",
         "PDF Name:": "CCSDS_123_0-B-2_Cor__2.pdf",
         "Title:": "Technical Corrigendum 2 to CCSDS 123.0-B-2, Issued February 2019",
@@ -65,7 +65,7 @@
         "Working Group:": "SLS-MHDC",
         "ISO Equivalent:": ""
     },
-    "7": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//123x0b2e1c3_tc2101.pdf",
         "PDF Name:": "CCSDS_123_0-B-2_Cor__3.pdf",
         "Title:": "Technical Corrigendum 3 to CCSDS 123.0-B-2, Issued  February 2019",
@@ -76,7 +76,7 @@
         "Working Group:": "SLS-DC",
         "ISO Equivalent:": ""
     },
-    "8": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//124x0b1.pdf",
         "PDF Name:": "CCSDS_124_0-B-1.pdf",
         "Title:": "Robust Compression of Fixed-Length Housekeeping Data",
@@ -87,7 +87,7 @@
         "Working Group:": "SLS-DC",
         "ISO Equivalent:": ""
     },
-    "9": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//131x0b5.pdf",
         "PDF Name:": "CCSDS_131_0-B-5.pdf",
         "Title:": "TM Synchronization and Channel Coding",
@@ -98,7 +98,7 @@
         "Working Group:": "SLS-C&S",
         "ISO Equivalent:": ""
     },
-    "10": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//131x2b2.pdf",
         "PDF Name:": "CCSDS_131_2-B-2.pdf",
         "Title:": "Flexible Advanced Coding and Modulation Scheme for High Rate Telemetry Applications",
@@ -109,7 +109,7 @@
         "Working Group:": "SLS-C&S",
         "ISO Equivalent:": ""
     },
-    "11": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//131x3b2e1.pdf",
         "PDF Name:": "CCSDS_131_3-B-2.pdf",
         "Title:": "CCSDS Space Link Protocols over ETSI DVB-S2 Standard",
@@ -120,7 +120,7 @@
         "Working Group:": "SLS-C&S",
         "ISO Equivalent:": ""
     },
-    "12": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//132x0b3.pdf",
         "PDF Name:": "CCSDS_132_0-B-3.pdf",
         "Title:": "TM Space Data Link Protocol",
@@ -131,7 +131,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": ""
     },
-    "13": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//133x0b2e2.pdf",
         "PDF Name:": "CCSDS_133_0-B-2.pdf",
         "Title:": "Space Packet Protocol",
@@ -142,7 +142,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": "22646"
     },
-    "14": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//133x1b3e1.pdf",
         "PDF Name:": "CCSDS_133_1-B-3.pdf",
         "Title:": "Encapsulation Packet Protocol",
@@ -153,7 +153,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": "10537"
     },
-    "15": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//141x0b1.pdf",
         "PDF Name:": "CCSDS_141_0-B-1.pdf",
         "Title:": "Optical Communications Physical Layer",
@@ -164,7 +164,7 @@
         "Working Group:": "SLS-OPT",
         "ISO Equivalent:": ""
     },
-    "16": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//142x0b1.pdf",
         "PDF Name:": "CCSDS_142_0-B-1.pdf",
         "Title:": "Optical Communications Coding and Synchronization",
@@ -175,7 +175,7 @@
         "Working Group:": "SLS-OPT",
         "ISO Equivalent:": ""
     },
-    "17": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//211x0b6e1.pdf",
         "PDF Name:": "CCSDS_211_0-B-6.pdf",
         "Title:": "Proximity-1 Space Link Protocol\u2014Data Link Layer",
@@ -186,7 +186,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": "22663"
     },
-    "18": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//211x1b4e1.pdf",
         "PDF Name:": "CCSDS_211_1-B-4.pdf",
         "Title:": "Proximity-1 Space Link Protocol\u2014Physical Layer",
@@ -197,7 +197,7 @@
         "Working Group:": "SLS-RFM",
         "ISO Equivalent:": "21460"
     },
-    "19": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//211x2b3.pdf",
         "PDF Name:": "CCSDS_211_2-B-3.pdf",
         "Title:": "Proximity-1 Space Link  Protocol\u2014Coding and Synchronization Sublayer",
@@ -208,7 +208,7 @@
         "Working Group:": "SLS-C&S",
         "ISO Equivalent:": "21459"
     },
-    "20": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//231x0b4e1.pdf",
         "PDF Name:": "CCSDS_231_0-B-4.pdf",
         "Title:": "TC Synchronization and Channel Coding",
@@ -219,7 +219,7 @@
         "Working Group:": "SLS-C&S",
         "ISO Equivalent:": ""
     },
-    "21": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//232x0b4e1c1.pdf",
         "PDF Name:": "CCSDS_232_0-B-4.pdf",
         "Title:": "TC Space Data Link Protocol",
@@ -230,7 +230,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": ""
     },
-    "22": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//232x0b4e1c1_tc2325.pdf",
         "PDF Name:": "CCSDS_232_0-B-4_Cor__1.pdf",
         "Title:": "Technical Corrigendum to CCSDS 232.0-B-4, Issued October 2021",
@@ -241,7 +241,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": ""
     },
-    "23": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//232x1b2e2c1.pdf",
         "PDF Name:": "CCSDS_232_1-B-2.pdf",
         "Title:": "Communications Operation Procedure-1",
@@ -252,7 +252,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": "22667"
     },
-    "24": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//232x1b2e2c1_tc1911.pdf",
         "PDF Name:": "CCSDS_232_1-B-2_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 232.1-B-2, Issued September 2010",
@@ -263,7 +263,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": ""
     },
-    "25": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//301x0b4e1.pdf",
         "PDF Name:": "CCSDS_301_0-B-4.pdf",
         "Title:": "Time Code Formats",
@@ -274,7 +274,7 @@
         "Working Group:": "SEA-TIME",
         "ISO Equivalent:": "11104"
     },
-    "26": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//352x0b2.pdf",
         "PDF Name:": "CCSDS_352_0-B-2.pdf",
         "Title:": "CCSDS Cryptographic Algorithms",
@@ -285,7 +285,7 @@
         "Working Group:": "SEA-SEC",
         "ISO Equivalent:": "20215"
     },
-    "27": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//355x0b2.pdf",
         "PDF Name:": "CCSDS_355_0-B-2.pdf",
         "Title:": "Space Data Link Security Protocol",
@@ -296,7 +296,7 @@
         "Working Group:": "SLS-SEA-DLS",
         "ISO Equivalent:": ""
     },
-    "28": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//355x1b1.pdf",
         "PDF Name:": "CCSDS_355_1-B-1.pdf",
         "Title:": "Space Data Link Security Protocol\u2014Extended Procedures",
@@ -307,7 +307,7 @@
         "Working Group:": "SLS-SEA-DLS",
         "ISO Equivalent:": ""
     },
-    "29": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//356xb1.pdf",
         "PDF Name:": "CCSDS_356_0-B-1.pdf",
         "Title:": "Network Layer Security Adaptation Profile",
@@ -318,7 +318,7 @@
         "Working Group:": "SEA-SEC",
         "ISO Equivalent:": ""
     },
-    "30": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//357x0b1.pdf",
         "PDF Name:": "CCSDS_357_0-B-1.pdf",
         "Title:": "CCSDS Authentication Credentials",
@@ -329,7 +329,7 @@
         "Working Group:": "SEA-SEC",
         "ISO Equivalent:": ""
     },
-    "31": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//401x0b32.pdf",
         "PDF Name:": "CCSDS_401_0-B-32.pdf",
         "Title:": "Radio Frequency and Modulation Systems\u2014Part 1: Earth Stations and Spacecraft",
@@ -340,7 +340,7 @@
         "Working Group:": "SLS-RFM",
         "ISO Equivalent:": ""
     },
-    "32": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//414x1b3e1.pdf",
         "PDF Name:": "CCSDS_414_1-B-3.pdf",
         "Title:": "Pseudo-Noise (PN) Ranging Systems",
@@ -351,7 +351,7 @@
         "Working Group:": "SLS-RFM",
         "ISO Equivalent:": ""
     },
-    "33": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//415x1b1.pdf",
         "PDF Name:": "CCSDS_415_1-B-1.pdf",
         "Title:": "Data Transmission and PN Ranging for 2 GHz CDMA Link via Data Relay Satellite",
@@ -362,7 +362,7 @@
         "Working Group:": "SLS-RFM",
         "ISO Equivalent:": "17810"
     },
-    "34": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//431x0b1e1c1.pdf",
         "PDF Name:": "CCSDS_431_1-B-1.pdf",
         "Title:": "Variable Coded Modulation Protocol",
@@ -373,7 +373,7 @@
         "Working Group:": "SLS-C&S",
         "ISO Equivalent:": ""
     },
-    "35": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//431x0b1e1c1_tc2209.pdf",
         "PDF Name:": "CCSDS_431_1-B-1_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 431.1-B-1, Issued February 2021",
@@ -384,7 +384,7 @@
         "Working Group:": "SLS-C&S",
         "ISO Equivalent:": ""
     },
-    "36": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//502x0b3e1.pdf",
         "PDF Name:": "CCSDS_502_0-B-3.pdf",
         "Title:": "Orbit Data Messages",
@@ -395,7 +395,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "37": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//503x0b2c1.pdf",
         "PDF Name:": "CCSDS_503_0-B-2.pdf",
         "Title:": "Tracking Data Message",
@@ -406,7 +406,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": "13526"
     },
-    "38": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//503x0b2c1_tc2136.pdf",
         "PDF Name:": "CCSDS_503_0-B-2_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 503.0-B-2, Issued June 2020",
@@ -417,7 +417,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "39": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//504x0b2.pdf",
         "PDF Name:": "CCSDS_504_0-B-2.pdf",
         "Title:": "Attitude Data Messages",
@@ -428,7 +428,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "40": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//505x0b3e2.pdf",
         "PDF Name:": "CCSDS_505_0-B-3.pdf",
         "Title:": "XML Specification for Navigation Data Messages",
@@ -439,7 +439,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "41": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//506x1b1.pdf",
         "PDF Name:": "CCSDS_506_1-B-1.pdf",
         "Title:": "Delta-DOR Raw Data Exchange Format",
@@ -450,7 +450,7 @@
         "Working Group:": "SEA-D-DOR",
         "ISO Equivalent:": "20208"
     },
-    "42": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//508x0b1e2c2.pdf",
         "PDF Name:": "CCSDS_508_0-B-1.pdf",
         "Title:": "Conjunction Data Message",
@@ -461,7 +461,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": "19389"
     },
-    "43": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//508x0b1e2c2_tc1814.pdf",
         "PDF Name:": "CCSDS_508_0-B-1_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 508.0-B-1, Issued June 2013",
@@ -472,7 +472,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "44": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//508x0b1e2c2_tc2137.pdf",
         "PDF Name:": "CCSDS_508_0-B-1_Cor__2.pdf",
         "Title:": "Technical Corrigendum 2 to CCSDS 508.0-B-1, Issued June 2013",
@@ -483,7 +483,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "45": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//508x1b1c1.pdf",
         "PDF Name:": "CCSDS_508_1-B-1.pdf",
         "Title:": "Re-entry Data Message",
@@ -494,7 +494,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "46": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//508x1b1c1_tc2138.pdf",
         "PDF Name:": "CCSDS_508_1-B-1_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 508.1-B-1, Issued November 2019",
@@ -505,7 +505,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "47": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//509x0b1c2.pdf",
         "PDF Name:": "CCSDS_509_0-B-1.pdf",
         "Title:": "Pointing Request Message",
@@ -516,7 +516,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "48": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//509x0b1c2_tc2117.pdf",
         "PDF Name:": "CCSDS_509_0-B-1_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 509.0-B-1, Issued  February 2018",
@@ -527,7 +527,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "49": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//509x0b1c2_tc2326.pdf",
         "PDF Name:": "CCSDS_509_0-B-1_Cor__2.pdf",
         "Title:": "Technical Corrigendum 2 to CCSDS 509.0-B-1, Issued February 2018",
@@ -538,7 +538,7 @@
         "Working Group:": "MOIMS-NAV",
         "ISO Equivalent:": ""
     },
-    "50": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//521x0b3.pdf",
         "PDF Name:": "CCSDS_521_0-B-3.pdf",
         "Title:": "Mission Operations Message Abstraction Layer",
@@ -549,7 +549,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": ""
     },
-    "51": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//521x1b1.pdf",
         "PDF Name:": "CCSDS_521_1-B-1.pdf",
         "Title:": "Mission Operations Common Object Model",
@@ -560,7 +560,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": "20106"
     },
-    "52": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//522x0b1.pdf",
         "PDF Name:": "CCSDS_522_0-B-1.pdf",
         "Title:": "Mission Operations\u2014Common Services",
@@ -571,7 +571,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": ""
     },
-    "53": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//522x1b1.pdf",
         "PDF Name:": "CCSDS_522_1-B-1.pdf",
         "Title:": "Mission Operations Monitor & Control Services",
@@ -582,7 +582,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": ""
     },
-    "54": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//524x1b1.pdf",
         "PDF Name:": "CCSDS_524_1-B-1.pdf",
         "Title:": "Mission Operations\u2014MAL Space Packet Transport Binding and Binary Encoding",
@@ -593,7 +593,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": "21082"
     },
-    "55": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//524x2b1.pdf",
         "PDF Name:": "CCSDS_524_2-B-1.pdf",
         "Title:": "Mission Operations\u2014Message Abstraction Layer Binding to TCP/IP Transport and Split Binary Encoding",
@@ -604,7 +604,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": ""
     },
-    "56": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//524x3b1.pdf",
         "PDF Name:": "CCSDS_524_3-B-1.pdf",
         "Title:": "Mission Operations\u2014Message Abstraction Layer Binding to HTTP Transport and XML Encoding",
@@ -615,7 +615,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": ""
     },
-    "57": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//524x4b1e1.pdf",
         "PDF Name:": "CCSDS_524_4-B-1.pdf",
         "Title:": "Mission Operations\u2014Message Abstraction Layer Binding to ZMTP Transport",
@@ -626,7 +626,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": ""
     },
-    "58": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//620x0b2.pdf",
         "PDF Name:": "CCSDS_620_0-B-2.pdf",
         "Title:": "Standard Formatted Data Units\u2014Structure and Construction Rules",
@@ -637,7 +637,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "12175"
     },
-    "59": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01/622x0b1.pdf",
         "PDF Name:": "CCSDS_622_0-B-1.pdf",
         "Title:": "Standard Formatted Data Units\u2014Referencing Environment",
@@ -648,7 +648,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "15888"
     },
-    "60": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//630x0b1.pdf",
         "PDF Name:": "CCSDS_630_0-B-1.pdf",
         "Title:": "Standard Formatted Data Units\u2014Control Authority Procedures",
@@ -659,7 +659,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "13764"
     },
-    "61": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//632x0b1.pdf",
         "PDF Name:": "CCSDS_632_0-B-1.pdf",
         "Title:": "Standard Formatted Data Units\u2014Control Authority Data Structures",
@@ -670,7 +670,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "15395"
     },
-    "62": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//641x0b2.pdf",
         "PDF Name:": "CCSDS_641_0-B-2.pdf",
         "Title:": "Parameter Value Language Specification (CCSD0006 and CCSD0008)",
@@ -681,7 +681,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "14961"
     },
-    "63": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//643x0b1.pdf",
         "PDF Name:": "CCSDS_643_0-B-1.pdf",
         "Title:": "ASCII Encoded English (CCSD0002)",
@@ -692,7 +692,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "14962"
     },
-    "64": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//644x0b3.pdf",
         "PDF Name:": "CCSDS_644_0-B-3.pdf",
         "Title:": "The Data Description Language EAST Specification (CCSD0010)",
@@ -703,7 +703,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "15889"
     },
-    "65": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//647x1b1.pdf",
         "PDF Name:": "CCSDS_647_1-B-1.pdf",
         "Title:": "Data Entity Dictionary Specification Language (DEDSL)\u2014Abstract Syntax (CCSD0011)",
@@ -714,7 +714,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "21961"
     },
-    "66": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//647x2b1.pdf",
         "PDF Name:": "CCSDS_647_2-B-1.pdf",
         "Title:": "Data Entity Dictionary Specification Language (DEDSL)\u2014PVL Syntax (CCSD0012)",
@@ -725,7 +725,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "21962"
     },
-    "67": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//647x3b1.pdf",
         "PDF Name:": "CCSDS_647_3-B-1.pdf",
         "Title:": "Data Entity Dictionary Specification Language (DEDSL)\u2014XML/DTD Syntax (CCSD0013)",
@@ -736,7 +736,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "22643"
     },
-    "68": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//651x1b1.pdf",
         "PDF Name:": "CCSDS_651_1-B-1.pdf",
         "Title:": "Producer-Archive Interface Specification (PAIS)",
@@ -747,7 +747,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "20104"
     },
-    "69": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//660x0b2.pdf",
         "PDF Name:": "CCSDS_660_0-B-2.pdf",
         "Title:": "XML Telemetric and Command Exchange\u2014Version 1.2",
@@ -758,7 +758,7 @@
         "Working Group:": "MOIMS-SM&C",
         "ISO Equivalent:": "18424"
     },
-    "70": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//661x0b1.pdf",
         "PDF Name:": "CCSDS_661_0-B-1.pdf",
         "Title:": "XML Formatted Data Unit (XFDU) Structure and Construction Rules",
@@ -769,7 +769,7 @@
         "Working Group:": "MOIMS-DAI",
         "ISO Equivalent:": "13527"
     },
-    "71": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//702x1b1c2.pdf",
         "PDF Name:": "CCSDS_702_1-B-1.pdf",
         "Title:": "IP over CCSDS Space Links",
@@ -780,7 +780,7 @@
         "Working Group:": "SIS-IPO",
         "ISO Equivalent:": "20206"
     },
-    "72": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//702x1b1c2_tc1413.pdf",
         "PDF Name:": "CCSDS_702_1-B-1_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 702.1-B-1, issued September 2012",
@@ -791,7 +791,7 @@
         "Working Group:": "SIS-IPO",
         "ISO Equivalent:": ""
     },
-    "73": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//702x1b1c2_tc2327.pdf",
         "PDF Name:": "CCSDS_702_1-B-1_Cor__2.pdf",
         "Title:": "Technical Corrigendum 2 to CCSDS 702.1-B-1, issued September 2012",
@@ -802,7 +802,7 @@
         "Working Group:": "SIS-IPO",
         "ISO Equivalent:": ""
     },
-    "74": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//714x0b2.pdf",
         "PDF Name:": "CCSDS_714_0-B-2.pdf",
         "Title:": "Space Communications Protocol Specification (SCPS)\u2014Transport Protocol",
@@ -813,7 +813,7 @@
         "Working Group:": "SIS-CSI",
         "ISO Equivalent:": "15893"
     },
-    "75": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//727x0b5e1.pdf",
         "PDF Name:": "CCSDS_727_0-B-5.pdf",
         "Title:": "CCSDS File Delivery Protocol (CFDP)",
@@ -824,7 +824,7 @@
         "Working Group:": "SIS-CFDPV1",
         "ISO Equivalent:": "17355"
     },
-    "76": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//732x0b4.pdf",
         "PDF Name:": "CCSDS_732_0-B-4.pdf",
         "Title:": "AOS Space Data Link Protocol",
@@ -835,7 +835,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": ""
     },
-    "77": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//732x1b3e1.pdf",
         "PDF Name:": "CCSDS_732_1-B-3.pdf",
         "Title:": "Unified Space Data Link Protocol",
@@ -846,7 +846,7 @@
         "Working Group:": "SLS-SLP",
         "ISO Equivalent:": ""
     },
-    "78": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//734x1b1.pdf",
         "PDF Name:": "CCSDS_734_1-B-1.pdf",
         "Title:": "Licklider Transmission Protocol (LTP) for CCSDS",
@@ -857,7 +857,7 @@
         "Working Group:": "SIS-DTN",
         "ISO Equivalent:": "21080"
     },
-    "79": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//734x2b1.pdf",
         "PDF Name:": "CCSDS_734_2-B-1.pdf",
         "Title:": "CCSDS Bundle Protocol Specification",
@@ -868,7 +868,7 @@
         "Working Group:": "SIS-DTN",
         "ISO Equivalent:": "21323"
     },
-    "80": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//734x3b1.pdf",
         "PDF Name:": "CCSDS_734_3-B-1.pdf",
         "Title:": "Schedule-Aware Bundle Routing",
@@ -879,7 +879,7 @@
         "Working Group:": "SIS-DTN",
         "ISO Equivalent:": ""
     },
-    "81": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//735x1b1.pdf",
         "PDF Name:": "CCSDS_735_1-B-1.pdf",
         "Title:": "Asynchronous Message Service",
@@ -890,7 +890,7 @@
         "Working Group:": "SIS-AMS",
         "ISO Equivalent:": "17807"
     },
-    "82": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//766x1b3.pdf",
         "PDF Name:": "CCSDS_766_1-B-3.pdf",
         "Title:": "Digital Motion Imagery",
@@ -901,7 +901,7 @@
         "Working Group:": "SIS-MIA",
         "ISO Equivalent:": ""
     },
-    "83": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//766x2b1.pdf",
         "PDF Name:": "CCSDS_766_2-B-1.pdf",
         "Title:": "Voice and Audio Communications",
@@ -912,7 +912,7 @@
         "Working Group:": "SIS-VOICE",
         "ISO Equivalent:": ""
     },
-    "84": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//876x0b1.pdf",
         "PDF Name:": "CCSDS_876_0-B-1.pdf",
         "Title:": "Spacecraft Onboard Interface Services\u2014XML Specification for Electronic Data Sheets",
@@ -923,7 +923,7 @@
         "Working Group:": "SOIS-APP",
         "ISO Equivalent:": ""
     },
-    "85": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//881x1b1.pdf",
         "PDF Name:": "CCSDS_881_1-B-1.pdf",
         "Title:": "Spacecraft Onboard Interface Services\u2014RFID",
@@ -934,7 +934,7 @@
         "Working Group:": "SOIS-WIR",
         "ISO Equivalent:": ""
     },
-    "86": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//883x0b2.pdf",
         "PDF Name:": "CCSDS_883_0-B-2.pdf",
         "Title:": "Spacecraft Onboard Interface Services\u2014High Data Rate Wireless Proximity Network Communications",
@@ -945,7 +945,7 @@
         "Working Group:": "SOIS-WIR",
         "ISO Equivalent:": ""
     },
-    "87": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//902x1b1c1.pdf",
         "PDF Name:": "CCSDS_902_1-B-1.pdf",
         "Title:": "Cross Support Service Management\u2014Simple Schedule",
@@ -956,7 +956,7 @@
         "Working Group:": "CSS-SM",
         "ISO Equivalent:": ""
     },
-    "88": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//902x1b1c1_tc2145.pdf",
         "PDF Name:": "CCSDS_902_1-B-1_Cor__1.pdf",
         "Title:": "Technical Corrigendum 1 to CCSDS 902.1-B-1, Issued May 2018",
@@ -967,7 +967,7 @@
         "Working Group:": "CSS-SM",
         "ISO Equivalent:": ""
     },
-    "89": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//902x2b1.pdf",
         "PDF Name:": "CCSDS_902_2-B-1.pdf",
         "Title:": "Cross Support Service\u2014Management Communications Planning Information Format",
@@ -978,7 +978,7 @@
         "Working Group:": "CSS-SM",
         "ISO Equivalent:": ""
     },
-    "90": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//911x1b5e1.pdf",
         "PDF Name:": "CCSDS_911_1-B-5.pdf",
         "Title:": "Space Link Extension\u2014Return All Frames Service Specification",
@@ -989,7 +989,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "91": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//911x2b4e1.pdf",
         "PDF Name:": "CCSDS_911_2-B-4.pdf",
         "Title:": "Space Link Extension\u2014Return Channel Frames Service Specification",
@@ -1000,7 +1000,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "92": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//911x5b4e1.pdf",
         "PDF Name:": "CCSDS_911_5-B-4.pdf",
         "Title:": "Space Link Extension\u2014Return Operational Control Fields Service Specification",
@@ -1011,7 +1011,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "93": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//912x1b5e1.pdf",
         "PDF Name:": "CCSDS_912_1-B-5.pdf",
         "Title:": "Space Link Extension\u2014Forward CLTU Service Specification",
@@ -1022,7 +1022,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "94": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//913x1b2.pdf",
         "PDF Name:": "CCSDS_913_1-B-2.pdf",
         "Title:": "Space Link Extension\u2014Internet Protocol for Transfer Services",
@@ -1033,7 +1033,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": "18440"
     },
-    "95": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//921x1b2e1.pdf",
         "PDF Name:": "CCSDS_921_1-B-2.pdf",
         "Title:": "Cross Support Transfer Service\u2014Specification Framework",
@@ -1044,7 +1044,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "96": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//922x1b2.pdf",
         "PDF Name:": "CCSDS_922_1-B-2.pdf",
         "Title:": "Cross Support Transfer Services\u2014Monitored Data Service",
@@ -1055,7 +1055,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "97": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//922x2b2.pdf",
         "PDF Name:": "CCSDS_922_2-B-2.pdf",
         "Title:": "Cross Support Transfer Service\u2014Tracking Data Service",
@@ -1066,7 +1066,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "98": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//922x3b1.pdf",
         "PDF Name:": "CCSDS_922_3-B-1.pdf",
         "Title:": "Cross Support Transfer Service\u2014Forward Frame Service",
@@ -1077,7 +1077,7 @@
         "Working Group:": "CSS-CSTS",
         "ISO Equivalent:": ""
     },
-    "99": {
+    {
         "Link:": "https://ccsds.org/wp-content/uploads/gravity_forms/5-448e85c647331d9cbaf66c096458bdd5/2025/01//927x1b1e1.pdf",
         "PDF Name:": "CCSDS_927_1-B-1.pdf",
         "Title:": "Terrestrial Generic File Transfer",
@@ -1088,4 +1088,4 @@
         "Working Group:": "CSS-SM",
         "ISO Equivalent:": ""
     }
-}
+]
