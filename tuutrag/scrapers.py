@@ -131,8 +131,8 @@ for idx, book in enumerate(blue):
     blue_meta[idx + 1] = book_dict
 
 
-with open("Magenta_metadata.json", "w", encoding="utf-8") as file:
+with open("magentabook_meta.json", "w", encoding="utf-8") as file:
     json.dump(Magenta_meta, file, indent=4)
 
-with open("Blue_metadata.json", "w", encoding="utf-8") as file:
+with open("bluebook_meta.json", "w", encoding="utf-8") as file:
     json.dump(blue_meta, file, indent=4)
