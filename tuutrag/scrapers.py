@@ -107,7 +107,7 @@ headers = [
 
 # Adds list of books to dictionary to
 # store in a JSON file
-Magenta_meta = {}
+magenta_meta = {}
 for idx, book in enumerate(magenta):
     book_dict = {}
     for i, data in enumerate(book):
@@ -116,7 +116,7 @@ for idx, book in enumerate(magenta):
     if len(book) == 8:
         book_dict[headers[-1]] = ""
 
-    Magenta_meta[idx + 1] = book_dict
+    magenta_meta[idx + 1] = book_dict
 
 
 blue_meta = {}
@@ -132,7 +132,7 @@ for idx, book in enumerate(blue):
 
 
 with open("magentabook_meta.json", "w", encoding="utf-8") as file:
-    json.dump(Magenta_meta, file, indent=4)
+    json.dump(magenta_meta, file, indent=4)
 
 with open("bluebook_meta.json", "w", encoding="utf-8") as file:
     json.dump(blue_meta, file, indent=4)
