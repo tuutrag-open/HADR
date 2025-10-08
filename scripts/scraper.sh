@@ -1,5 +1,8 @@
 #!/bin/bash
-# Downloads PDFs, storing them in PDF folder
+# ================================================================
+# path: scripts/scraper.sh
+# brief: Downloads PDFs, storing them in PDF folder
+# ================================================================
 for i in $(seq 1 40);
 do
        link=$(jq -r ".[$i - 1][\"Link:\"]" ../data/meta/magentabook_meta.json)
