@@ -1,6 +1,6 @@
 # ================================================================
-# path: tuutrag/scrapers.py
-# brief: tuutrag module exports
+# path: scripts/scraper.py
+# brief: Scrape CCSDS blue/magenta pdfs + meta
 # ================================================================
 import json
 from bs4 import BeautifulSoup
