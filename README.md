@@ -38,14 +38,64 @@
 ***
 
 ### **Development Guidelines**
+All contributors are expected to follow these guidelines to maintain code quality, consistency, and a streamlined development process.
+***
+#### Pull Requests and Commits
+To ensure a clear and traceable history, we adhere to specific conventions for commits and branches.
 
-Please ensure you are following Conventional Commits for your commit messages.
-Please ensure you are following Conventional Branches for branch naming.
-Two developer approvals are required on any pull request.
+* **Commit Messages**: Please follow the **Conventional Commits** specification for all commit messages. This practice helps automate changelog generation and makes the project history easier to understand.
+* **Branch Naming**: Branch names should follow the **Conventional Branches** standard.
+* **Code Review**: A pull request requires at least **two developer approvals** before it can be merged into the main branch.
+
 <p align="left">
   <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits">
   <img src="https://img.shields.io/badge/Conventional%20Branches-1.0.0-yellow.svg" alt="Conventional Branches">
 </p>
+
+***
+#### File Formatting
+All files in this project follow a consistent formatting style to ensure readability and maintainability.
+
+##### File Header
+Every Python file (`.py`) must begin with a standardized header comment. This header provides a quick summary of the file's location and purpose. The format is as follows:
+```python
+# ================================================================
+# path: path/to/your/file.py
+# brief: A short, one-line description of the file's purpose.
+# ================================================================
+```
+
+#### Coding Style
+All Python code must adhere to the PEP 8 Style Guide.
+
+#### Defining Constants
+When defining global constants, especially paths, they must be preceded by a specific comment format that acts as a directive and provides a description.
+
+```python
+# <define dir> CONSTANT_NAME: Description
+```
+View the example below:
+```python
+# <define dir> BASE_DIR: Base directory path for the project.
+BASE_DIR = Path(__file__).resolve().parent.parent
+```
+
+#### Exportable Functions
+To maintain a clean public API for each module, any function intended to be used by other parts of the library (i.e., "exported") must be decorated with @export. This decorator explicitly marks functions as part of the public interface.
+
+```python
+from exports import export
+
+@export
+def my_public_function(arg1, arg2):
+    """
+    This function is part of the public API.
+    """
+    # function implementation...
+    pass
+```
+
+
 
 ***
 
