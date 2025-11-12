@@ -5,6 +5,9 @@ description = "Teaching to Understand, Understanding to Teach: Retreival Augment
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "loguru>=0.7.3",
     "notebook>=7.4.7",
+    "print-color>=0.4.6",
     "python-exports>=1.2.0",
+    "sqlite-utils>=3.38",
 ]
