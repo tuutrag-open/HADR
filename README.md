@@ -113,6 +113,11 @@ def my_public_function(arg1, arg2):
 
 ***
 
+### **Usage of Generative AI**
+Any usage of Generative AI tools is disclosed below. To be clear, AI was not used for any expert knowledge, design analysis, critical thinking, or safety-critical decisions. All core intellectual work, collaboration, and final judgments were entirely human-driven.
+
+I. _Documentation_: Assistance in formatting `README.md`
+
 ### **NASA-JPL/Caltech Acknowledgement**
 
 This research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, and was sponsored by the National Aeronautics and Space Administration. This work is currently being continued at Dominican University.
