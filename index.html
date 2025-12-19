@@ -1,55 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUUT-RAG</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <title>Teaching to Understand, Understanding to Teach</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/code.css">
+    <link rel="stylesheet" href="css/latex.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>Teaching to Understand, Understanding to Teach: Retreival Augmented Generation for Requirements
-                Traceability</h1>
-            <p class="institutions">
-                Jet Propulsion Laboratory/California Institute of Technology, Dominican University
-            </p>
-            <p class="contributors" id="contributors">
-            </p>
-        </header>
 
-        <div class="content-wrapper">
-            <main>
-                <ul class="essays-list" id="essays-list">
-                </ul>
-            </main>
-
-            <aside>
-                <h3>Project Resources</h3>
-                <nav>
-                    <ul>
-                        <li><a href="https://software.nasa.gov/software/NPO-53610-1">NASA Technology Transfer Program</a></li>
-                        <li><a href="https://github.com/bedolpab/tuutrag-open/tree/main">Source Code (Github)</a></li>
-                        <li><a href="mailto:pbedollaortiz@my.dom.edu">Email for Questions</a></li>
-                    </ul>
-                </nav>
-            </aside>
-        </div>
-
-        <footer>
-            <div class="logos">
-                <img src="images/jpl_meatball_logo.png" alt="JPL Logo" class="logo">
-                <img src="images/dominican_logo.png" alt="Dominican University Logo" class="logo">
+    <header class="intro">
+        <h1>Teaching to Understand, Understanding to Teach: RAG for Requirements Traceability</h1>
+        
+        <div class="authors">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/gusrazo/">Gus Razo</a><sup>1</sup></li>
+                <li><a href="https://www.linkedin.com/in/kaesawada/">Kae Sawada</a><sup>1</sup></li>
+                <li><a href="https://www.linkedin.com/in/equintanilla28/">Edwin Quintanilla</a><sup>1</sup></li>
+                <li><a href="https://pablobedolla.com/">Pablo C. Bedolla Ortiz</a><sup>2</sup></li>
+                <li><a href="https://www.linkedin.com/in/marlonselvi/">Marlon Selvi</a><sup>2</sup></li>
+                <li><a href="https://www.linkedin.com/in/egaborit/">Eduardo Gaborit</a><sup>3</sup></li>
+                <li><a href="#">Bryan Gaborit</a><sup>4</sup></li>
+            </ul>
+            <div class="affiliations">
+                <span class="affil"><sup>1</sup>Jet Propulsion Laboratory/California Institute of Technology</span>
+                <span class="affil"><sup>2</sup>Dominican University</span>
+                <span class="affil"><sup>3</sup>University of Illinois Urbana-Champaign</span>
+                <span class="affil"><sup>4</sup>J Sterling Morton East High School</span>
             </div>
-            <p class="disclaimer">
-                This research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, and was
-                sponsored by the National Aeronautics and Space Administration. This work is currently being continued at Dominican University.
-            </p>
-        </footer>
-    </div>
-</body>
+        </div>
+    </header>
 
+    <div class="meta">
+        <span class="venue"><strong>WORK IN PROGRESS</strong></span>
+        <div class="links">
+            <a href="#">[Paper]</a>
+            <a href="#">[Code]</a>
+            <a href="#">[Data]</a>
+            <a href="https://software.nasa.gov/software/NPO-53610-1">[NASA Release]</a>
+        </div>
+    </div>
+
+    <h2>Abstract</h2>
+    <p>
+        This section is under work.
+    </p>
+
+    <h2>Background</h2>
+    <p>This report details the research progress for the project titled “Teaching to Understand, Understanding to Teach: Retrieval Augmented Generation for Requirements Traceability.” The research was initially conducted for the Jet Propulsion Laboratory (“JPL”), California Institute of Technology (“Caltech”), under the sponsorship of the National Aeronautics and Space Administration (“NASA”).</p>
+
+    <h2>Definitions</h2>
+    <table class="research-table">
+        <thead>
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>RAG</td>
+                <td>Retrieval-Augmented Generation; a technique enhancing LLMs with external data.</td>
+            </tr>
+            <tr>
+                <td>Embeddings</td>
+                <td>Vector representations of text segments used for semantic search.</td>
+            </tr>
+            <tr>
+                <td>Information Supply</td>
+                <td>The existing, ingested, corpus of data used by the system.</td>
+            </tr>
+            <tr>
+                <td>Traceability</td>
+                <td>The ability to link requirements to their corresponding code implementation.</td>
+            </tr>
+            <tr>
+                <td>Artifact(s)</td>
+                <td>Pieces of information pertaining to the system information supply. </td>
+            </tr>
+            <tr>
+                <td>Requirement</td>
+                <td>Formally agreed-upon shall statement defining a system condition, capability, or constraint.</td>
+            </tr>
+            <tr>
+                <td>Test Case</td>
+                <td>Detailed, step-by-step, series of instruction on an end product used to verify and validate a specific requisite or requirement.</td>
+            </tr>
+            <tr>
+                <td>Entity</td>
+                <td>A said object or thing acting individually.</td>
+            </tr>
+            <tr>
+                <td>Relationship</td>
+                <td>A link between two entities.</td>
+            </tr>
+            <tr>
+                <td>Branch Chunk</td>
+                <td>Fixed-size, overlapping, subset of tokens from an artifact.</td>
+            </tr>
+            <tr>
+                <td>Leaf Chunk</td>
+                <td>Variable-size, non-overlapping, semantic subset of tokens from a branch chunk.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Notation</h2>
+    <table class="research-table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>\( N \)</td>
+                <td>Sample size of the set under consideration</td>
+            </tr>
+            <tr>
+                <td>\( A \)</td>
+                <td>Artifact</td>
+            </tr>
+            <tr>
+                <td>\( R \)</td>
+                <td>Requirement</td>
+            </tr>
+            <tr>
+                <td>\( T \)</td>
+                <td>Test Case</td>
+            </tr>
+            <tr>
+                <td>\( E \) , \( e \) </td>
+                <td>Entity set; entity</td>
+            </tr>
+            <tr>
+                <td>\( R \) , \( r \) </td>
+                <td>Relation set; relation</td>
+            </tr>
+            <tr>
+                <td>\( B \) , \( b \) </td>
+                <td>Branch chunk; leaf chunk</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Entry Point</h2>
+    <p>The initial state of our tracing system, whether in the first or repreated usage of the tool, is the entry point. The goal of the system is to suggest traceability mappings from either an individual requirement (\(R\)) or a test case (\(T\)) to trace sets of \(R\) or \(T\), respectively. Two types of input, traceable artifacts and contextual artifacts, govern the input space. In our work, artifacts are pieces of information pertaining to the information supply, corpus of data, that the system knows of. A traceable artifact is an information artifact that represents system intent or system verification and is eligible to participate as a source or target in a traceability relationship; in this system, requirements and test cases encode such features. Contextual artifacts are support artifacts, non- requirement and test artifacts, that provide auxiliary information to the information supply for context-retrieval support. Contextual artifacts are non-traceable units, contrary to traceable artifacts, whose purpose is to be in a source or target set.</p>
+
+    <h3>Artifact Submission</h3>
+
+
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/entry.svg" alt="Flowchart of Entry Point">
+        </div>
+        
+        <figcaption>
+            <span class="fig-num">Figure 1</span> 
+            An artifact of type <i>Support</i>, <i>Requirement</i>, or <i>Test Case</i> is ingested. The <i>[+] Type</i> variable is the type selection, along with the artifact itself.
+        </figcaption>
+    </figure>
+
+
+</body>
 </html>

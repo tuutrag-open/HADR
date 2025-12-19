@@ -1,0 +1,16 @@
+mjx-container { 
+    font-size: 110% !important; 
+    color: #cccccc !important;
+}
+
+mjx-container[display="true"] {
+    margin: 2em 0 !important;
+}
+
+mjx-container:not([display="true"]) {
+    vertical-align: -2px;
+}
+
+mjx-container svg path {
+    fill: #cccccc !important;
+}

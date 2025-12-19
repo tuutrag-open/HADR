@@ -1,0 +1,32 @@
+:root {
+    --code-bg: #111111;
+    --code-border: #333333;
+    --code-text: #eeeeee;
+    --inline-code-bg: #222222;
+    --inline-code-color: #ff79c6;
+}
+
+pre {
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 20px;
+    overflow-x: auto;
+    border: 1px solid var(--code-border);
+    font-size: 12px;
+    margin: 25px 0;
+    border-radius: 0;
+}
+
+pre code {
+    color: var(--code-text); 
+    font-family: inherit;
+}
+
+p code, li code {
+    font-family: inherit;
+    color: var(--inline-code-color);
+    background-color: var(--inline-code-bg);
+    border: 1px solid #333;
+    padding: 2px 6px;
+    font-size: 12px;
+}
