@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,13 @@
     <script src="js/preview.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
 
     <header class="intro">
-        <h1>Teaching to Understand, Understanding to Teach: Retrieval-Augmented Generation for Requirements Traceability</h1>
-        
+        <h1>Teaching to Understand, Understanding to Teach: Retrieval-Augmented Generation for Requirements Traceability
+        </h1>
+
         <div class="authors">
             <ul>
                 <li><a href="https://www.linkedin.com/in/gusrazo/">Gus Razo</a><sup>1</sup></li>
@@ -50,7 +53,10 @@
     </p>
 
     <h2>Background</h2>
-    <p>This report details the research for the project titled “Teaching to Understand, Understanding to Teach: Retrieval-Augmented Generation for Requirements Traceability.” The research was initially conducted for the Jet Propulsion Laboratory (“JPL”), California Institute of Technology (“Caltech”), under the sponsorship of the National Aeronautics and Space Administration (“NASA”).</p>
+    <p>This report details the research for the project titled “Teaching to Understand, Understanding to Teach:
+        Retrieval-Augmented Generation for Requirements Traceability.” The research was initially conducted for the Jet
+        Propulsion Laboratory (“JPL”), California Institute of Technology (“Caltech”), under the sponsorship of the
+        National Aeronautics and Space Administration (“NASA”).</p>
 
     <h2>Definitions</h2>
     <table class="research-table">
@@ -87,7 +93,8 @@
             </tr>
             <tr>
                 <td>Test Case</td>
-                <td>Detailed, step-by-step, series of instruction on an end product used to verify and validate a specific requisite or requirement.</td>
+                <td>Detailed, step-by-step, series of instruction on an end product used to verify and validate a
+                    specific requisite or requirement.</td>
             </tr>
             <tr>
                 <td>Entity</td>
@@ -147,44 +154,180 @@
             </tr>
         </tbody>
     </table>
-    
-    <h2>Entry Point</h2>
-    <p>The initial state of our tracing system, whether in the first or repreated usage of the tool, is the entry point. The goal of the system is to suggest traceability mappings from either an individual requirement (\(R\)) or test case (\(T\)) to trace sets of \(T\) or \(R\), respectively. Two types of input, traceable artifacts and contextual artifacts, govern the input space. In our work, artifacts are pieces of information pertaining to the information supply, data corpus, that the system knows of.</p>
-     
-        <figure class="svg-item">
-            <div class="fig-frame">
-                <img src="svgs/entry.svg" alt="Flowchart of Entry Point">
-            </div>
-            
-            <figcaption>
-                <span class="fig-num">Figure 1</span> 
-                An artifact of type <i>Support</i>, <i>Requirement</i>, or <i>Test Case</i> is ingested. The <i>[+] Type</i> variable is the type selection, along with the artifact itself.
-            </figcaption>
-        </figure>
 
-    <p>A traceable artifact is an information artifact that represents system intent or system verification and is eligible to participate as a source or target in a traceability relationship; in this system, requirements and test cases encode such features. Contextual artifacts are support artifacts, non- requirement and test artifacts, that provide auxiliary information to the information supply for context-retrieval support. Contextual artifacts are non-traceable units, contrary to traceable artifacts, whose purpose is to be in a source or target set.</p>
+    <h2>Entry Point</h2>
+    <p>The initial state of our tracing system, whether in the first or repeated usage of the tool, is the entry point.
+        The goal of the system is to suggest <a
+            href="https://en.wikipedia.org/wiki/Requirements_traceability">traceability mappings</a> from either an
+        individual requirement (\(R\)) or test case (\(T\)) to trace sets of \(T\) or \(R\), respectively. Two types of
+        input, traceable artifacts and contextual artifacts, govern the input space. In our work, artifacts are pieces
+        of information that make up the data corpus of which the system depends on.</p>
+
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/entry.svg" alt="Flowchart of Entry Point">
+        </div>
+
+        <figcaption>
+            <span class="fig-num">Figure 1</span>
+            An artifact of type <i>Support</i>, <i>Requirement</i>, or <i>Test Case</i> is ingested. The <i>[+] Type</i>
+            variable is the type selection, along with the artifact itself.
+        </figcaption>
+    </figure>
+
+    <p>A traceable artifact is an information artifact that represents system intent or system verification and is
+        eligible to participate as a source or target in a traceability relationship; in this system, requirements and
+        test cases encode such features. Contextual artifacts are support artifacts, non- requirement and test
+        artifacts, that provide auxiliary information to the information supply for context-retrieval support.
+        Contextual artifacts are non-traceable units, contrary to traceable artifacts, whose purpose is to be in a
+        source or target set.</p>
 
     <h3>Artifact Submission</h3>
     <p>
-    System input consists of a single artifact, which may be a support, requirement, or test document. The system accepts only one artifact per input operation. If either a requirement or test case is selected, the system operates under a bidirectional traceability model defined as follows: $$ R \rightarrow \{T\}$$ $$T \rightarrow \{R\}$$
-
-    A requirement may be related to and/or dependent on a set of test cases, which may be empty, singular, or multiple. Likewise, a test case may be related to and/or dependent on a set of requirements, which may be empty, singular, or multiple. Additionally, the system supports intra-traceable-artifact traceability, allowing requirements to be traced to other requirements \(( R \rightarrow \{ R\} )\) and test cases to be traced to other test cases \(( T \rightarrow \{ T\} )\), capturing inter-requirement and inter-test relationships that may exists within the same or different artifacts.
+        System input consists of a single artifact, which may be a support, requirement, or test document. The system
+        accepts only one artifact per input operation. If either a requirement or a test case is selected, the system
+        operates under a bidirectional traceability model. A requirement may be related to and/or dependent on a set of
+        test cases, a set which may be empty, singular, or contain multiple. Likewise, a test case may be related to
+        and/or dependent on a set of requirements, a set which may be empty, singular, or contain multiple.
+        Additionally, the system supports intra-traceable-artifact traceability, allowing requirements to be traced to
+        other requirements \(( R \rightarrow \{ R\} )\) and test cases to be traced to other test cases \(( T
+        \rightarrow \{ T\} )\), capturing inter-requirement and inter-test relationships that may exist within the same
+        or different artifacts.
     </p>
+    <p>Once an artifact is ingested, the system will check if the artifact exists. If the artifact does not exist, we
+        move the submission to the preprocessing stage. If the artifact already exists, we return a warning to the user
+        and reprompt for a different submission. This is done to avoid duplicates from existing in the information
+        supply.</p>
 
     <h3>API</h3>
-    <p>All logic handling, i.e., information sending, receiving, processing, and displaying, will be executed through a custom Application Programming Interface (API). The API will govern the entire system workflow and manage the logic handling of all data pipelines, model interactions, data ingestions, benchmarkings, and UI-related operations, allowing for modularity and ease development.</p>
+    <p>All logic handling, i.e., information sending, receiving, processing, and displaying, will be executed through a
+        custom Application Programming Interface (API). The API will govern the entire system workflow and manage the
+        logic handling of all data pipelines, model interactions, data ingestions, benchmarkings, and UI-related
+        operations, allowing for modularity and ease of development.</p>
 
+    <h2>Backgrounds</h2>
     <h3>Preprocessing</h3>
-    <p>Once an artifact is ingested, the system will check if the artifact exists. If the artifact does not exist, we move the submission to the preprocessing stage. If the artifact already exists, we return a warning to the user and reprompt for a different submission. This is done to avoid duplicates from existing in the information supply.</p>
-
-    <h2>Preprocessing</h2>
     <p>
-        <a href="https://en.wikipedia.org/wiki/Data_preprocessing">Preprocessing</a> is an essential step in data manipulation that comes before examining or working with said data. Recent analyses indicate that learning performance is driven less by dataset noisiness or size and more by the preservation of informative, unique tokens <a href="#ref-zhou">[1]</a>. Building on this, token-level cleaning methods demonstrate that filtering out 30–40% of uninformative tokens, while retaining task-relevant data, can enhance tokenization quality and downstream performance, challenging assumptions that aggressive cleaning is inherently detrimental <a href="#ref-pang">[2]</a>. 
+        <a href="https://en.wikipedia.org/wiki/Data_preprocessing">Preprocessing</a> is an essential step in data
+        manipulation that comes before examining or working with said data. Recent analyses indicate that learning
+        performance is driven less by dataset noisiness or size and more by the preservation of informative, unique
+        tokens <a href="#ref-zhou">[1]</a>. Building on this, token-level cleaning methods demonstrate that filtering
+        out 30–40% of uninformative tokens, while retaining task-relevant data, can enhance tokenization quality and
+        downstream performance, challenging assumptions that aggressive cleaning is inherently detrimental <a
+            href="#ref-pang">[2]</a>.
+
+        Rather than pretraining a <a href="https://en.wikipedia.org/wiki/Model">model</a>, our system is designed to
+        achieve its objectives using <a href="https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)">fine-tuning</a>
+        and <a href="https://en.wikipedia.org/wiki/Prompt_engineering"> prompt engineering</a> techniques. The system
+        primarily relies on a <a href="https://en.wikipedia.org/wiki/Knowledge_graph">knowledge graph</a> constructed
+        via <a href="https://nlpprogress.com/english/relationship_extraction.html"
+            data-title="Entity-Relation Extraction"
+            data-preview="Using a large language model to identify individual entities and the relationships between them.">entity–relation
+            extraction</a>, inspired by the LightRAG architecture <a href="#ref-lightrag">[3]</a>. The knowledge graph
+        component is derived from processed text segments obtained during inferencing stages using unique prompt
+        templates. Additional metadata, including fields like descriptions or related information, is derived alongside
+        entity–relation extraction to enrich the knowledge graph and other relevant processes.
+    </p>
+
+    <h3>Chunking</h3>
+    <p>
+        <a href="https://en.wikipedia.org/wiki/Large_language_model">Large language models </a> have a fixed-sized
+        context window which, is the amount of text, in tokens, the model can receive as input. A common technique to
+        handle large context inputs is to shorten the input into smaller segments, otherwise known as chunking. Chunking
+        enables artifacts to be processed within the required context length by partitioning the text into smaller,
+        fixed-sized segments of constant size, typically well below the maximum context window.
+    </p>
+
+    <p>
+        Although inputs with length just below the maximum context window could be provided as a single prompt,
+        operating near this limit is not recommended as inference performance tends to degrade with increasing input
+        size <a href="#ref-chroma">[4]</a>. Chunking, in our case, will serve a greater purpose, other than fitting
+        within allowable window sizes, in a technique we call <em>Hierarchical Artifact Decomposition-Recomposition
+            (HADR)</em>, which we will later introduce.
+    </p>
+
+    <h3>Entity-Relation</h3>
+    <p>
+        Entity-relation refers to the structured representation of real-world concepts as entities and the semantic
+        links that connect them, relations, providing an explicit model of how information is related across artifacts.
+        In contrast, entity-relation extraction is the process by which these entities and relationships are identified
+        from unstructured natural language text, typically using LLMs to interpret meaning and context. Together,
+        entity-relation structures enable the construction of knowledge graphs, where entities form nodes and
+        relationships form edges, allowing information to be interconnected, queried, and reasoned over systematically
+        <a href="#ref-chen">[5]</a>. This structure becomes particularly valuable for traceability, as it makes implicit
+        dependencies between requirements, test cases, and supporting information explicit and navigable. While complex
+        statements such as requirements do not explicitly specify their relationships to other requirement or test
+        cases, nor the information necessary to support such conclusions, our proposed method supports this reasoning
+        process by decomposing statements, before entity-relation extraction and retrieval, into support components that
+        facilitate and strengthen the implicit relation inference reasoning steps <a href="#ref-katz">[6]</a>. When
+        integrated into <a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation"> retrieval-augmented
+            generation systems (RAG </a>), entity-relation representations move retrieval beyond isolated text
+        similarity, enabling context-aware retrieval and reasoning over linked information across multiple artifacts <a
+            href="#ref-graphrag">[7]</a>.
     </p>
     <p>
-        Rather than pretraining a <a href="https://en.wikipedia.org/wiki/Model">model</a>, our system is designed to achieve its objectives using fine-tuning and prompt engineering techniques. The system primarily relies on a <a href="https://en.wikipedia.org/wiki/Knowledge_graph">knowledge graph</a> constructed via <a href="https://nlpprogress.com/english/relationship_extraction.html" data-title="Entity-Relation Extraction" data-preview="Using a large language model to identify individual entities and the relationships between them.">entity–relation extraction</a>, following the LightRAG architecture <a href="#ref-lightrag">[3]</a>. The knowledge graph component is derived from processed text segments obtained during inferencing stages using unique prompt templates. 
+        Our method explicitly decouples entity extraction from relation inference, allowing the language model to
+        identify entities in isolation before inferring relationships among the extracted entities within the same
+        textual context.
 
+        This separation ensures that entity identification is not confounded by relational reasoning and that relation
+        inference is performed solely over a fixed and well-defined set of entities, migitating peformance degradations
+        and enabling multi-step extractions <a href="#ref-eracot">[8]</a>.
+
+        Within this framework, a structured preprocessing strategy supports accurate and scalable entity-relation
+        extraction in RAG systems. The resulting entities and relationships are subsequently integrated into a
+        structured knowledge graph that supports downstream traceability and retrieval tasks.
     </p>
+
+    <h2>Hierarchical Artifact Decomposition-Recomposition (HADR)</h2>
+    <p>
+        Chunking is a simple, yet effective operation in principle, however, finding the appropriate chunking parameters
+        to model your data is a considerably more challenging task. A commonly adopted approach is selecting a
+        fixed-size window \(K\) to segment text (e.g., 512 tokens or characters). While this method performs well in
+        practice, there are instances where it can lead to performance issues by severing contextual dependencies
+        across chunk boundaries. As a result, consecutive chunks may lack critical information present in preceding
+        segments, a limitation often mitigated by overlapping chunks; this introduces an additional overlap parameter
+        \(P\). Finding a suitable set of parameters \(K\) and \(P\) can prove challenging in larger, heterogeneous data
+        settings, not to mention expensive if \(K\) and \(P\) are token-based. Recent evaluations demonstrate that
+        adpative chunking strategies significantly outperform these fixed-sized methods in complex and critical
+        decision-making scenarios, particularly in RAG- and LLM-based applications, by dynamically preserving contextual
+        integrity, a strategy we adopt using prompt engineering techniques <a href="#ref-gomez">[9]</a>. To jointly
+        achieve information preservation and effective chunking, we adopt a conventional chunking strategy by
+        introducing two successive operations: branch and leaf chunking.
+    </p>
+    <h3>Branch and Leaf Chunking</h3>
+    <p>Branch chunking creates fixed-size, overlapping partitions (size \(K\) and overlap \(P\)) of an artifact, while
+        leaf chunking further subdivides each branch by using an LLM to produce semantically coherent,
+        variable-sized chunks. This hierarchichal approach ensures consistent, high-quality segmentation across
+        artifacts of varying lengths. Consequently, we decompose each artifact into a depth-two tree (root
+        \(\rightarrow\) branches \(\rightarrow\) leafs) with a jagged structure, allowing flexible,
+        information-preserving processing and downstream summarization in the recomposition process.</p>
+
+    <h3>Hierarchical Artifact Decomposition</h3>
+    <p>
+        Hierarchical Artifact Decomposition-Recomposition (HADR) is a preprocessing method we introduce to enable
+        effective chunking of artifacts of arbitrary size, both large and small, while preserving contextual
+        dependencies. The decomposition process decomposes an artifact into a hierarchical tree of chunks and
+        subsequently recomposes the information by appending summaries at multiple levels. Formally, an artifact \(A\)
+        is first decomposed into a set of branch chunks \(B\), defined as overlapping, order-preserving segments of
+        fixed token size \(K\) with overlap \(P\), whose union collectively covers \(A\). Subsequently, each branch
+        chunk \(B_i\) is partitioned into a family of variable-sized non-overlapping leaf chunks, whose union exactly
+        reconstructs \(B_i\). Branch chunks are fixed-parameter
+        decomposed, while leaf chunks are LLM-inference decomposed. The artifact hierarchy is a depth-two tree, with the
+        artifact as the root, branch chunks at level one, and leaf chunks as the terminal level.
+    </p>
+
+    <h3>Hierarchical Artifact Recomposition</h3>
+    <p>
+        The recomposition process summarizes the leaf chunks within each branch subtree into a concise branch-level
+        summary. These branch-level summaries are then aggregated to produce a final root-level summary of the artifact.
+        HADR is notably information-preserving, i.e., no content of an artifact is lost during either process as we make
+        the assumption all information about an artifact serves an importance. Our design enables downstream
+        stages to selectively use both chunk and summarized representations as needed.
+    </p>
+
+    <h2> The Algorithms</h2>
+    <p> This section is under work. </p>
 
     <!-- References -->
     <div class="references-section">
@@ -192,22 +335,64 @@
         <ol class="ref-list">
             <li id="ref-zhou">
                 <a href="https://arxiv.org/abs/2305.11206" target="_blank">
-                    Zhou, C., et al. (2023). <em>Lima: Less is more for alignment.</em> Advances in Neural Information Processing Systems, 36, 55006-55021.
+                    Zhou, C., Liu, P., Xu, P., Iyer, S., Sun, J., Mao, Y., ... & Levy, O. (2023). <em>Lima: Less is more
+                        for alignment</em>. Advances in Neural Information Processing Systems, 36, 55006-55021.
                 </a>
             </li>
-    
+
             <li id="ref-pang">
                 <a href="https://arxiv.org/abs/2502.01968" target="_blank">
-                    Pang, J., Di, N., Zhu, Z., Wei, J., Cheng, H., Qian, C., & Liu, Y. (2025). <em>Token Cleaning: Fine-Grained Data Selection for LLM Supervised Fine-Tuning.</em> ArXiv, abs/2502.01968.
+                    Pang, J., Di, N., Zhu, Z., Wei, J., Cheng, H., Qian, C., & Liu, Y. (2025). <em>Token Cleaning:
+                        Fine-Grained Data Selection for LLM Supervised Fine-Tuning.</em> ArXiv, abs/2502.01968.
                 </a>
             </li>
             <li id="ref-lightrag">
                 <a href="https://arxiv.org/abs/2410.05779" target="_blank">
-                    Guo, Z., Xia, L., Yu, Y., Ao, T., & Huang, C. (2024). <em>LightRAG: Simple and Fast Retrieval-Augmented Generation.</em> ArXiv, abs/2410.05779.
+                    Guo, Z., Xia, L., Yu, Y., Ao, T., & Huang, C. (2024). <em>LightRAG: Simple and Fast
+                        Retrieval-Augmented Generation.</em> ArXiv, abs/2410.05779.
+                </a>
+            </li>
+            <li id="ref-chroma">
+                <a href="https://www.trychroma.com/blog/context-rot" target="_blank">
+                    Hong, K., Troynikov, A., & Huber, J. (2025). <em>Context Rot: How Increasing Input Tokens Impacts
+                        LLM Performance.</em> Chroma Technical Report.
+                </a>
+            </li>
+            <li id="ref-chen">
+                <a href="https://doi.org/10.1145/320434.320440" target="_blank">
+                    Chen, P. P-S. (1976). <em>The entity-relationship model—toward a unified view of data.</em> ACM
+                    Trans. Database Syst., 1(1), 9–36.
+                </a>
+            </li>
+            <li id="ref-katz">
+                <a href="https://arxiv.org/abs/2204.13778" target="_blank">
+                    Katz, U., Geva, M., & Berant, J. (2022). <em>Inferring implicit relations in complex questions with
+                        language models.</em> arXiv preprint arXiv:2204.13778.
+                </a>
+            </li>
+            <li id="ref-graphrag">
+                <a href="https://arxiv.org/abs/2501.00309" target="_blank">
+                    Han, H., et al. (2024). <em>Retrieval-augmented generation with graphs (graphrag).</em> arXiv
+                    preprint arXiv:2501.00309.
+                </a>
+            </li>
+            <li id="ref-eracot">
+                <a href="https://arxiv.org/abs/2403.06932" target="_blank">
+                    Liu, Y., et al. (2024). <em>ERA-CoT: improving chain-of-thought through entity relationship
+                        analysis.</em> arXiv preprint arXiv:2403.06932.
+                </a>
+            </li>
+
+            <li id="ref-gomez">
+                <a href="https://doi.org/10.3390/bioengineering12111194" target="_blank">
+                    Gomez-Cabello, C. A., et al. (2025). <em>Comparative Evaluation of Advanced Chunking for
+                        Retrieval-Augmented Generation in Large Language Models for Clinical Decision Support.</em>
+                    Bioengineering, 12(11), 1194.
                 </a>
             </li>
         </ol>
     </div>
 
-    </body>
+</body>
+
 </html>
