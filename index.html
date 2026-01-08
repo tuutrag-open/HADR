@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/code.css">
     <link rel="stylesheet" href="css/latex.css">
-    <script src="js/preview.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
 
     <header class="intro">
-        <h1>Teaching to Understand, Understanding to Teach: Retrieval-Augmented Generation for Requirements Traceability
-        </h1>
+        <h1>Teaching to Understand, Understanding to Teach: Retrieval-Augmented Generation for Requirements Traceability</h1>
 
         <div class="authors">
             <ul>
@@ -49,10 +47,10 @@
 
     <h2>Abstract</h2>
     <p>
-        This section is under work.
+        This section is currently under development.
     </p>
 
-    <h2>Background</h2>
+    <h2>Project Background</h2>
     <p>This report details the research for the project titled “Teaching to Understand, Understanding to Teach:
         Retrieval-Augmented Generation for Requirements Traceability.” The research was initially conducted for the Jet
         Propulsion Laboratory (“JPL”), California Institute of Technology (“Caltech”), under the sponsorship of the
@@ -77,7 +75,7 @@
             </tr>
             <tr>
                 <td>Information Supply</td>
-                <td>The existing, ingested, corpus of data used by the system.</td>
+                <td>The existing, ingested corpus of data used by the system.</td>
             </tr>
             <tr>
                 <td>Traceability</td>
@@ -89,16 +87,16 @@
             </tr>
             <tr>
                 <td>Requirement</td>
-                <td>Formally agreed-upon shall statement defining a system condition, capability, or constraint.</td>
+                <td>A formally agreed-upon "shall" statement defining a system condition, capability, or constraint.</td>
             </tr>
             <tr>
                 <td>Test Case</td>
-                <td>Detailed, step-by-step, series of instruction on an end product used to verify and validate a
+                <td>Detailed, step-by-step series of instructions on an end product used to verify and validate a
                     specific requisite or requirement.</td>
             </tr>
             <tr>
                 <td>Entity</td>
-                <td>A said object or thing acting individually.</td>
+                <td>A distinct object or thing acting individually.</td>
             </tr>
             <tr>
                 <td>Relationship</td>
@@ -106,11 +104,11 @@
             </tr>
             <tr>
                 <td>Branch Chunk</td>
-                <td>Fixed-size, overlapping, subset of tokens from an artifact.</td>
+                <td>Fixed-size, overlapping subset of tokens from an artifact.</td>
             </tr>
             <tr>
                 <td>Leaf Chunk</td>
-                <td>Variable-size, non-overlapping, semantic subset of tokens from a branch chunk.</td>
+                <td>Variable-size, non-overlapping semantic subset of tokens from a branch chunk.</td>
             </tr>
         </tbody>
     </table>
@@ -161,23 +159,22 @@
             href="https://en.wikipedia.org/wiki/Requirements_traceability">traceability mappings</a> from either an
         individual requirement (\(R\)) or test case (\(T\)) to trace sets of \(T\) or \(R\), respectively. Two types of
         input, traceable artifacts and contextual artifacts, govern the input space. In our work, artifacts are pieces
-        of information that make up the data corpus of which the system depends on.</p>
+        of information that make up the data corpus upon which the system depends.</p>
 
     <figure class="svg-item">
         <div class="fig-frame">
             <img src="svgs/entry.svg" alt="Flowchart of Entry Point">
         </div>
-
         <figcaption>
             <span class="fig-num">Figure 1</span>
-            An artifact of type <i>Support</i>, <i>Requirement</i>, or <i>Test Case</i> is ingested. The <i>[+] Type</i>
-            variable is the type selection, along with the artifact itself.
+            An artifact classified as <i>Support</i>, <i>Requirement</i>, or <i>Test Case</i> is submitted to the system. 
+            The <i>[+] Type</i> field specifies the selected artifact type in conjunction with the provided artifact.
         </figcaption>
     </figure>
 
     <p>A traceable artifact is an information artifact that represents system intent or system verification and is
         eligible to participate as a source or target in a traceability relationship; in this system, requirements and
-        test cases encode such features. Contextual artifacts are support artifacts, non- requirement and test
+        test cases encode such features. Contextual artifacts are support artifacts, non-requirement and test
         artifacts, that provide auxiliary information to the information supply for context-retrieval support.
         Contextual artifacts are non-traceable units, contrary to traceable artifacts, whose purpose is to be in a
         source or target set.</p>
@@ -202,14 +199,15 @@
     <h3>API</h3>
     <p>All logic handling, i.e., information sending, receiving, processing, and displaying, will be executed through a
         custom Application Programming Interface (API). The API will govern the entire system workflow and manage the
-        logic handling of all data pipelines, model interactions, data ingestions, benchmarkings, and UI-related
+        logic handling of all data pipelines, model interactions, data ingestions, benchmarking, and UI-related
         operations, allowing for modularity and ease of development.</p>
 
-    <h2>Backgrounds</h2>
+    <h2>Technical Framework</h2>
+    
     <h3>Preprocessing</h3>
     <p>
         <a href="https://en.wikipedia.org/wiki/Data_preprocessing">Preprocessing</a> is an essential step in data
-        manipulation that comes before examining or working with said data. Recent analyses indicate that learning
+        manipulation that comes before examining or working with that data. Recent analyses indicate that learning
         performance is driven less by dataset noisiness or size and more by the preservation of informative, unique
         tokens <a href="#ref-zhou">[1]</a>. Building on this, token-level cleaning methods demonstrate that filtering
         out 30–40% of uninformative tokens, while retaining task-relevant data, can enhance tokenization quality and
@@ -232,7 +230,7 @@
     <h3>Chunking</h3>
     <p>
         <a href="https://en.wikipedia.org/wiki/Large_language_model">Large language models </a> have a fixed-sized
-        context window which, is the amount of text, in tokens, the model can receive as input. A common technique to
+        context window, which is the amount of text, in tokens, the model can receive as input. A common technique to
         handle large context inputs is to shorten the input into smaller segments, otherwise known as chunking. Chunking
         enables artifacts to be processed within the required context length by partitioning the text into smaller,
         fixed-sized segments of constant size, typically well below the maximum context window.
@@ -254,24 +252,46 @@
         from unstructured natural language text, typically using LLMs to interpret meaning and context. Together,
         entity-relation structures enable the construction of knowledge graphs, where entities form nodes and
         relationships form edges, allowing information to be interconnected, queried, and reasoned over systematically
-        <a href="#ref-chen">[5]</a>. This structure becomes particularly valuable for traceability, as it makes implicit
-        dependencies between requirements, test cases, and supporting information explicit and navigable. While complex
-        statements such as requirements do not explicitly specify their relationships to other requirement or test
-        cases, nor the information necessary to support such conclusions, our proposed method supports this reasoning
-        process by decomposing statements, before entity-relation extraction and retrieval, into support components that
-        facilitate and strengthen the implicit relation inference reasoning steps <a href="#ref-katz">[6]</a>. When
-        integrated into <a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation"> retrieval-augmented
-            generation systems (RAG </a>), entity-relation representations move retrieval beyond isolated text
-        similarity, enabling context-aware retrieval and reasoning over linked information across multiple artifacts <a
-            href="#ref-graphrag">[7]</a>.
+        <a href="#ref-chen">[5]</a>.
     </p>
+
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/entityrelation.svg" alt="Example Entity–Relation Graph">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 2</span>
+            An example entity–relation graph derived from a text segment on the <a href="https://en.wikipedia.org/wiki/NASA">NASA</a> Wikipedia page. 
+            This illustration is provided for conceptual clarity and does not represent experimental results.
+        </figcaption>
+    </figure>
+
+    <p>
+        This structure becomes particularly valuable for traceability, as it makes implicit dependencies between requirements, test cases, and supporting information explicit and navigable. While complex statements such as requirements do not explicitly specify their relationships to other requirement or test cases, nor the information necessary to support such conclusions, our proposed method supports this reasoning process by decomposing statements, before entity-relation extraction and retrieval, into support components that facilitate and strengthen the implicit relation inference reasoning steps <a href="#ref-katz">[6]</a>. When integrated into <a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation"> retrieval-augmented generation systems (RAG)</a>, entity-relation representations move retrieval beyond isolated text similarity, enabling context-aware retrieval and reasoning over linked information across multiple artifacts <a href="#ref-graphrag">[7]</a>.
+    </p>
+
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="imgs/kg.png" alt="Partial Entity–Relation Knowledge Graph">
+        </div>
+        <figcaption style="max-width: 100%; text-align: left;">
+            <span class="fig-num" id="kg-og">Figure 3</span>
+            A partial entity–relation knowledge graph representing requirements, test cases, and supplemental artifacts
+            from the <i>Mission Control Systems Integration, Test &amp; Deployment</i> group at JPL. The graph was developed
+            using Memgraph by <a href="https://pablobedolla.com/">Pablo Cesar Bedolla Ortiz</a> during a JPL Student
+            Internship in the summer of 2025, marking the initial phase of this project. The original source code is
+            available through the NASA Technology Transfer Program release
+            <a href="https://software.nasa.gov/software/NPO-53610-1">“RAG for Requirements: Teaching LLMs to Trace and Reason (NPO-53610-1)”</a>.
+        </figcaption>
+    </figure>
+
     <p>
         Our method explicitly decouples entity extraction from relation inference, allowing the language model to
         identify entities in isolation before inferring relationships among the extracted entities within the same
         textual context.
 
         This separation ensures that entity identification is not confounded by relational reasoning and that relation
-        inference is performed solely over a fixed and well-defined set of entities, migitating peformance degradations
+        inference is performed solely over a fixed and well-defined set of entities, mitigating performance degradations
         and enabling multi-step extractions <a href="#ref-eracot">[8]</a>.
 
         Within this framework, a structured preprocessing strategy supports accurate and scalable entity-relation
@@ -281,27 +301,47 @@
 
     <h2>Hierarchical Artifact Decomposition-Recomposition (HADR)</h2>
     <p>
-        Chunking is a simple, yet effective operation in principle, however, finding the appropriate chunking parameters
+        Chunking is a simple, yet effective operation in principle; however, finding the appropriate chunking parameters
         to model your data is a considerably more challenging task. A commonly adopted approach is selecting a
         fixed-size window \(K\) to segment text (e.g., 512 tokens or characters). While this method performs well in
         practice, there are instances where it can lead to performance issues by severing contextual dependencies
         across chunk boundaries. As a result, consecutive chunks may lack critical information present in preceding
         segments, a limitation often mitigated by overlapping chunks; this introduces an additional overlap parameter
         \(P\). Finding a suitable set of parameters \(K\) and \(P\) can prove challenging in larger, heterogeneous data
-        settings, not to mention expensive if \(K\) and \(P\) are token-based. Recent evaluations demonstrate that
-        adpative chunking strategies significantly outperform these fixed-sized methods in complex and critical
-        decision-making scenarios, particularly in RAG- and LLM-based applications, by dynamically preserving contextual
-        integrity, a strategy we adopt using prompt engineering techniques <a href="#ref-gomez">[9]</a>. To jointly
-        achieve information preservation and effective chunking, we adopt a conventional chunking strategy by
-        introducing two successive operations: branch and leaf chunking.
+        settings, not to mention expensive if \(K\) and \(P\) are token-based.
     </p>
+
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/chunking.svg" alt="Fixed-Size Chunking Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 4</span>
+            Illustration of fixed-size chunking applied to a text artifact.
+        </figcaption>
+    </figure>
+
+    <p>
+        Recent evaluations demonstrate that adaptive chunking strategies significantly outperform these fixed-sized methods in complex and critical decision-making scenarios, particularly in RAG- and LLM-based applications, by dynamically preserving contextual integrity, a strategy we adopt using prompt engineering techniques <a href="#ref-gomez">[9]</a>. To jointly achieve information preservation and effective chunking, we adopt a conventional chunking strategy by introducing two successive operations: branch and leaf chunking.
+    </p>
+
     <h3>Branch and Leaf Chunking</h3>
     <p>Branch chunking creates fixed-size, overlapping partitions (size \(K\) and overlap \(P\)) of an artifact, while
         leaf chunking further subdivides each branch by using an LLM to produce semantically coherent,
-        variable-sized chunks. This hierarchichal approach ensures consistent, high-quality segmentation across
+        variable-sized chunks. This hierarchical approach ensures consistent, high-quality segmentation across
         artifacts of varying lengths. Consequently, we decompose each artifact into a depth-two tree (root
-        \(\rightarrow\) branches \(\rightarrow\) leafs) with a jagged structure, allowing flexible,
+        \(\rightarrow\) branches \(\rightarrow\) leaves) with a jagged structure, allowing flexible,
         information-preserving processing and downstream summarization in the recomposition process.</p>
+
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/branchandleaf.svg" alt="Branch and Leaf Chunking Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 5</span>
+            Illustration of branch and leaf chunking, showing the hierarchical decomposition of text into structured segments.
+        </figcaption>
+    </figure>
 
     <h3>Hierarchical Artifact Decomposition</h3>
     <p>
@@ -317,6 +357,16 @@
         artifact as the root, branch chunks at level one, and leaf chunks as the terminal level.
     </p>
 
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/decomposition.svg" alt="Hierarchical Artifact Decomposition Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 6</span>
+            Illustration of the decomposition process, in which an artifact is partitioned into overlapping branch chunks and further decomposed into variable-sized leaf chunks.
+        </figcaption>
+    </figure>
+
     <h3>Hierarchical Artifact Recomposition</h3>
     <p>
         The recomposition process summarizes the leaf chunks within each branch subtree into a concise branch-level
@@ -326,10 +376,19 @@
         stages to selectively use both chunk and summarized representations as needed.
     </p>
 
-    <h2> The Algorithms</h2>
-    <p> This section is under work. </p>
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/recomposition.svg" alt="Recomposition Process Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 7</span>
+            Illustration of the recomposition process, where lower-level text segments are summarized and aggregated to form a higher-level representation.
+        </figcaption>
+    </figure>
 
-    <!-- References -->
+    <h2>System Algorithm</h2>
+    <p> This section is currently under development. </p>
+
     <div class="references-section">
         <h2>References</h2>
         <ol class="ref-list">
@@ -393,6 +452,7 @@
         </ol>
     </div>
 
+    <script src="js/preview.js"></script>
 </body>
 
 </html>

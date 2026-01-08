@@ -198,6 +198,10 @@ a:hover {
     letter-spacing: 0.05em;
 }
 
+.svg-item figcaption.wide-caption {
+    max-width: 100%;
+}
+
 /* --- Research Tables --- */
 .research-table {
     width: 100%;
