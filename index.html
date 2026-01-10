@@ -46,9 +46,13 @@
         </div>
     </div>
 
-    <h2>Abstract</h2>
+    <h2>Disclaimer</h2>
     <p>
-        This section is currently under development.
+        <i>
+            This project is currently under development. The material presented on this page does not
+            reflect the full scope of the project and may omit important details. The content is intended
+            as a high-level overview; complete technical details will be provided upon project completion.
+        </i>
     </p>
 
     <h2>Project Background</h2>
@@ -412,38 +416,147 @@
         </figcaption>
     </figure>
 
-    <h2>System Algorithm</h2>
+    <h2>Proposed System Algorithm</h2>
     <h3>Branch Chunking</h3>
     <p>
-        Tokenize some artifact \( A \) using the respective LLM's tokenizer. Decompose (segment) \( A \) into an ordered
-        sequence of branch chunks \( C_b = \{C_{b_1}, C_{b_2}, \dots C_{b_N}\} \) parameterized by a fixed token window
-        size \( K \) and overlap \( P \). Some important things to note are:
+        Given an artifact \( A \), first tokenize it using the tokenizer associated with the target LLM. The artifact is then
+        decomposed (segmented) into an ordered sequence of branch chunks
+        \(\{C_{b_1}, C_{b_2}, \dots, C_{b_N}\}\), parameterized by a fixed token window
+        size \( K \) and an overlap \( P \). The following points are important to note:
     </p>
 
+
     <ul class="tech-list">
-        <li>The start of branch chunk \( C_{b_i+1} \) is offset by \( K - P \) tokens relative to the start of \(
-            C_{b_1} \).</li>
-        <li>The final branch chunk \(C_{b_N} \) contains the remaining tokens, where \( 0 \lt | C_{b_N} | \leq K \).
+        <li>
+            The start of branch chunk \( C_{b_{i+1}} \) is offset by \( K - P \) tokens relative to the start of
+            \( C_{b_i} \).
         </li>
-        <li>If total number of tokens of \( A \leq K\), then \( N = 1 \) and \( C_{b_1} = A \) (no further segmenting).
+        <li>
+            The final branch chunk \( C_{b_N} \) contains the remaining tokens, where
+            \( 0 \lt \lvert C_{b_N} \rvert \leq K \).
+        </li>
+        <li>
+            If the total number of tokens in \( A \leq K \), then \( N = 1 \) and
+            \( C_{b_1} = A \) (no further segmentation is performed).
         </li>
     </ul>
+
         <figure class="svg-item">
         <div class="fig-frame">
             <img src="svgs/branchchunking.svg" alt="Branch Chunking Illustration">
         </div>
         <figcaption>
             <span class="fig-num">Figure 8</span>
-            Illustration of tokenization (left) and the branch chunking flowchart (right).  
+            Illustration of tokenization (left) and the branch chunking flowchart (right).
         </figcaption>
     </figure>
 
-    In other words, branch chunking is traditional fixed-size chunking. The uniqueness comes in the proceeding steps.
+    In other words, branch chunking is traditional fixed-size chunking. The uniqueness comes in the proceeding processes.
     <h3>Leaf Chunking</h3>
     <p>
-
+        For each branch chunk \( C_{b_i} \), a leaf-partitioning step is applied to produce a set of leaf chunks
+        \( \{ C_{l_1}, C_{l_2}, \dots, C_{l_M} \} \). These leaf chunks are non-overlapping and contain no duplicates.
+        Formally, they form an exact partition of the branch chunk, such that
+        \( \bigcup_{j=1}^{M} C_{l_j} = C_{b_i} \).
+        This procedure is applied independently to every branch chunk in the decomposed set.
+    </p>
+    
+    <p>
+        Leaf partitioning is implemented via an LLM inference using a constrained prompt that segments each branch
+        chunk into semantically coherent subsegments of variable length. Each leaf chunk is required to remain within
+        the token budget \( K \), which is naturally satisfied given that it is derived from a branch chunk.
+        While individual leaf chunks may vary in size, they collectively reconstruct the full branch chunk
+        \( C_{b_i} \) exactly, with the total token count of their union equal to
+        \( \lvert C_{b_i} \rvert \) (or fewer when the branch chunk is the last of the decomposed set or \( A \) itself).
     </p>
 
+    <h3>Recomposition</h3>
+    <p>
+        A recomposition function takes a set of text chunks and produces a single summarized output.
+        The function is implemented via LLM inference using a summarization prompt that combines
+        information from all inputs into a coherent summary. Given a set of chunks at some level
+        of the hierarchy, recomposition produces a summary corresponding to the level immediately above
+        (i.e., leaf chunks are recomposed into a branch-level summary, and branch chunks into an
+        artifact-level summary).
+    </p>
+    
+    <p>
+        The function is first applied to each branch subtree at the terminal (leaf) level, producing
+        intermediate summaries for their parent branch chunks. To accommodate large artifacts and
+        bounded context windows, recomposition is then applied again over the set of branch-level
+        summaries, yielding a single summary for the full artifact. This recursive aggregation
+        constitutes the recomposition process.
+    </p>
+        
+    <h3>Entity Extraction</h3>
+    <p>
+        During preprocessing, an artifact \( A \) is decomposed into a depth-two tree consisting of a root,
+        branch nodes, and leaf nodes. The entity extraction function operates at the leaf level and takes as
+        input a leaf chunk, its corresponding branch-level summary, and the global artifact-level summary.
+        It produces structured, parseable, entity representations.
+    </p>
+    
+    <p>
+        The function is implemented via LLM inference using a constrained entity-extraction prompt and is
+        applied exclusively at the terminal (leaf) layer. Entity extraction is performed independently for
+        each leaf node. For each branch chunk, the function is applied to every leaf in its subtree using
+        that branch’s summary and the shared artifact summary (of which there is exactly one). Entity
+        extraction is applied to all existing leaf nodes.
+    </p>
+    
+    <h3>Relationship Extraction</h3>
+    <p>
+        Once entities have been independently extracted from all leaf nodes, relationships are inferred at
+        the branch level. Each leaf node produces its own entity set; for a given branch chunk, the entity
+        set used for relationship extraction is formed by taking the union of all entity sets across the
+        leaf nodes in that branch’s subtree. For each branch chunk, a relationship-extraction function is
+        then applied using this unified entity set, the raw branch chunk text (not its summary), and the
+        global artifact-level summary. This process produces relationships grounded in the local branch
+        context while remaining informed by the global artifact context.
+    </p>
+    
+    <p>
+        Relationship extraction is performed independently for each branch chunk. No cross-branch
+        relationships are inferred at this stage; each branch is processed solely using its own entities
+        and context. This ensures localized relational consistency prior to any downstream aggregation.
+    </p>
+
+<h3>Reviewed Relationship Extraction</h3>
+<p>
+    To capture relationships that may have been missed during initial extraction, we introduce a
+    <i>semantic relationship extraction</i> step. This process is governed by a <b>state bit</b>,
+    initialized to 0 at the start of the system. If no documents have been processed, or if only a
+    single document is present, the state bit is set to 1 before proceeding. The semantic relationship
+    function then operates on the appropriate set of artifact trees: either a single tree or multiple
+    trees, depending on the state bit.
+</p>
+
+<p>
+    For each branch chunk, we compute its embedding and perform a cosine similarity search
+    against a branch vector table to identify the top-\(N\) most semantically similar branches. This
+    search can be restricted to a single artifact tree or span all trees, based on the state bit.
+    Relations are then extracted between these branches using four sources of information:
+    (1) the union of all entity sets from the selected branch chunks,
+    (2) the union of previously extracted relations for those chunks,
+    (3) the raw branch chunk texts (rather than summaries), and
+    (4) the global artifact summary of the branch chunk under consideration.
+</p>
+
+<p>
+    While this computation can be resource-intensive, the token count per operation is
+    \( N \cdot K + \lambda \), where \( N \) is the number of similar branches considered,
+    and \( \lambda \) accounts for tokens from prompts, summaries, entities, and relations.
+    This process is applied to all branch chunks. Since similarity computations are independent,
+    the operation is highly parallelizable, producing a "global" set of relations. These are then
+    merged with the master set of relations accumulated during ingestion, and finally, entities
+    and relations are combined to construct the knowledge graph.
+</p>
+
+
+
+
+
+        
     <div class="references-section">
         <h2>References</h2>
         <ol class="ref-list">
@@ -506,6 +619,7 @@
             </li>
         </ol>
     </div>
+    
 
     <script src="js/preview.js"></script>
 </body>
