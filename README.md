@@ -117,6 +117,7 @@ def my_public_function(arg1, arg2):
 Any usage of Generative AI tools is disclosed below. To be clear, AI was not used for any expert knowledge, design analysis, critical thinking, or safety-critical decisions. All core intellectual work, collaboration, and final judgments were entirely human-driven.
 
 I. _Documentation_: Assistance in formatting `README.md`
+II. _Website_: Assitance in styling and formatting of the `tuutrag-open.github.io` website.
 
 ### **NASA-JPL/Caltech Acknowledgement**
 
