@@ -15,9 +15,8 @@
 
 
 ***
-
-## Abstract
-> Requirement traceability, validation, and verification can become difficult within engineering projects, notably as they scale. Technical specification documents detailing these structured processes are primarily expressed using natural language. With the adoption of Large Language Models (LLMs) and their effectiveness in natural language processing tasks such as information and relationship extraction, specification documents can be leveraged. While traditional requirement and test engineering methods rely on human thinking, smaller models can perform goal-aligned reasoning when trained with human feedback. We propose an approach for requirement traceability using Light Retrieval-Augmented Generation (RAG) by fine-tuning an LLM for improved knowledge discovery, primarily entity-relationship extraction. Our approach seeks to induce traceability, which emerges from the knowledge graph component of the RAG system by evaluating responses with human expert feedback for alignment. Motivated by the Feynman Technique, we reinforce areas of misunderstanding or misalignment in LLM-based tasks by fine-tuning with Direct Preference Optimization (DPO), which adjusts from response pairs—inadequate (incorrect) and expert-improved (correct). Quantized Low-Rank Adaptation (QLoRA) is employed to optimize fine-tuning under hardware constraints. The implication is linkage between a provided input and a ranked output set as an emergent property of the model’s understanding. Metrics are derived from human cueing and imitation tests.
+### Project Outline
+Details regarding the outline and structure of this project can be found at the following [site](https://tuutrag-open.github.io/tuutrag-open/)
 
 ***
 
@@ -32,11 +31,6 @@
 | **Release Type** | Open Source |
 
 ***
-
-### **Technology Stack**
-`Python >=3.11`, `Pytorch`, `Qdrant`, `Memgraph`, `Unsloth AI`, `OpenAI`, `Transformers`, `Hugginface`
-***
-
 ### **Development Guidelines**
 All contributors are expected to follow these guidelines to maintain code quality, consistency, and a streamlined development process.
 ***
@@ -51,53 +45,6 @@ To ensure a clear and traceable history, we adhere to specific conventions for c
   <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Conventional Commits">
   <img src="https://img.shields.io/badge/Conventional%20Branches-1.0.0-yellow.svg" alt="Conventional Branches">
 </p>
-
-***
-#### File Formatting
-All files in this project follow a consistent formatting style to ensure readability and maintainability.
-
-##### File Header
-Every Python file (`.py`) must begin with a standardized header comment. This header provides a quick summary of the file's location and purpose. The format is as follows:
-```python
-# ================================================================
-# path: path/to/your/file.py
-# brief: A short, one-line description of the file's purpose.
-# ================================================================
-```
-
-#### Coding Style
-All Python code must adhere to the PEP 8 Style Guide.
-
-#### Defining Constants
-When defining global constants, especially paths, they must be preceded by a specific comment format that acts as a directive and provides a description.
-
-```python
-# <define dir> CONSTANT_NAME: Description
-```
-View the example below:
-```python
-# <define dir> BASE_DIR: Base directory path for the project.
-BASE_DIR = Path(__file__).resolve().parent.parent
-```
-
-#### Exportable Functions
-To maintain a clean public API for each module, any function intended to be used by other parts of the library (i.e., "exported") must be decorated with @export. This decorator explicitly marks functions as part of the public interface.
-
-```python
-from exports import export
-
-@export
-def my_public_function(arg1, arg2):
-    """
-    This function is part of the public API.
-    """
-    # function implementation...
-    pass
-```
-
-
-
-***
 
 ### **Team & Collaborators**
 
@@ -122,3 +69,4 @@ II. _Website_: Assitance in styling and formatting of the `tuutrag-open.github.i
 ### **NASA-JPL/Caltech Acknowledgement**
 
 This research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, and was sponsored by the National Aeronautics and Space Administration. This work is currently being continued at Dominican University.
+
