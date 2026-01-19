@@ -19,6 +19,10 @@
 Details regarding the outline and structure of this project can be found at the following [site](https://tuutrag-open.github.io/tuutrag-open/)
 
 ***
+### Dataset
+-> [PDF -> Image](https://www.kaggle.com/datasets/pablobedolla/pdf-to-image-data/data/data/data/data/data/data)
+
+***
 
 ### **Project & Publication Details**
 
