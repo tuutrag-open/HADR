@@ -92,3 +92,4 @@ if __name__ == "__main__":
         extraction(pdf["path"], pdf["pages"])
 
 
+
