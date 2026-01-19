@@ -1,5 +1,6 @@
 # Ignore log files
 *.log
+batches/
 
 # Ignore loaded models
 data/**/embed/
