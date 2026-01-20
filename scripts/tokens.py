@@ -1,15 +1,30 @@
 # // Using a PDF -> Image conversion for full, accurate
 # // context etraction from PDFs
-
+import os
+import glob
+import tiktoken
+import kagglehub
 
 from openai import OpenAI
-import tiktoken
+from pathlib import Path
 
-# https://community.openai.com/t/whats-the-tokenization-algorithm-gpt-4-1-uses/1245758
-scheme = "o200k_base"  # << gpt-4.1 uses same as 4o
-enc = tiktoken.get_encoding(scheme)
+PDF_TO_IMAGE_DATA = os.path.abspath(
+    os.path.join(os.pardir, "pdf_to_image_data")
+)
+MODEL = 'gpt-4.1-min'
+SCHEME = 'o200k_base'
+MULTIPLIER = 1.62
 
-enc_out = enc.encode("Hello, world!")
+
+def get_pdf_image_dataset_paths() -> list[str]:
+    if not os.path.isdir(PDF_TO_IMAGE_DATA):
+        path = kagglehub.dataset_download("pablobedolla/pdf-to-image-data")
+        print("KAGGLE DATASET DOWNLOADED:", path)
+
+    images = [str(p) for p in Path(PDF_TO_IMAGE_DATA).rglob("*.png")]    
+    
 
 
-# Compare tokens accross Images vs PDFs
+if __name__ == "__main__":
+    # get paths here
+
