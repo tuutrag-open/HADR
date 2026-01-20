@@ -1,6 +1,6 @@
 # Ignore log files
 *.log
-batches/
+pdf_to_image_data/
 
 # Ignore loaded models
 data/**/embed/
