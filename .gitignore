@@ -1,5 +1,6 @@
 # Ignore log files
-*.log
+.swp
+.log
 pdf_to_image_data/
 
 # Ignore loaded models
