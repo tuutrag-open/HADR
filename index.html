@@ -470,6 +470,16 @@
         \( \lvert C_{b_i} \rvert \) (or fewer when the branch chunk is the last of the decomposed set or \( A \) itself).
     </p>
 
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/Chunk to Leaf.svg" alt="Leaf Chunking Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 9</span>
+           Illustration of the leaf chunking process, where each branch chunk is further partitioned into variable-sized chunks.
+        </figcaption>
+    </figure>
+
     <h3>Recomposition</h3>
     <p>
         A recomposition function takes a set of text chunks and produces a single summarized output.
@@ -487,6 +497,15 @@
         summaries, yielding a single summary for the full artifact. This recursive aggregation
         constitutes the recomposition process.
     </p>
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/Summary Recomposition.svg" alt="Summary Recomposition Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 10</span>
+           Illustration of the summary recomposition process, where leaf-level chunks are aggregated into branch-level summaries, and finally into an artifact-level summary.
+        </figcaption>
+    </figure>
         
     <h3>Entity Extraction</h3>
     <p>
@@ -503,7 +522,15 @@
         that branch’s summary and the shared artifact summary (of which there is exactly one). Entity
         extraction is applied to all existing leaf nodes.
     </p>
-    
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/Entity Exctraction.svg" alt="Entity Extraction Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 11</span>
+           Illustration of the entity extraction process, where leaf-level chunks are processed to extract entities.
+        </figcaption>
+    </figure>
     <h3>Relationship Extraction</h3>
     <p>
         Once entities have been independently extracted from all leaf nodes, relationships are inferred at
@@ -520,7 +547,15 @@
         relationships are inferred at this stage; each branch is processed solely using its own entities
         and context. This ensures localized relational consistency prior to any downstream aggregation.
     </p>
-
+    <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/Local Relations Extraction.svg" alt="Local Relations Extraction Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 12</span>
+           Illustration of the local relationship extraction process, where branch-level chunks are processed to extract relationships.
+        </figcaption>
+    </figure>
 <h3>Reviewed Relationship Extraction</h3>
 <p>
     To capture relationships that may have been missed during initial extraction, we introduce a
@@ -552,7 +587,15 @@
     and relations are combined to construct the knowledge graph.
 </p>
 
-
+ <figure class="svg-item">
+        <div class="fig-frame">
+            <img src="svgs/Global Relations Extraction.svg" alt="Global Relations Extraction Illustration">
+        </div>
+        <figcaption>
+            <span class="fig-num">Figure 13</span>
+           Illustration of the global relationship extraction process, where similar branch-level chunks are identified and their relationships are extracted.
+        </figcaption>
+    </figure>
 
 
 
