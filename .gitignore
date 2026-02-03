@@ -1,5 +1,16 @@
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
+
 # Ignore log files
-.swp
 .log
 pdf_to_image_data/
 
