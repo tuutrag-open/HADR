@@ -1,701 +1,934 @@
 [
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.1.1\n\n### Requirement\nPDS will assign a lead node for each data provider submitting data to PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.1.2\n\n### Requirement\nPDS will assign a lead individual, designated by the lead node, who is authorized to negotiate for PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.1.3\n\n### Requirement\nThe PDS lead node will delegate responsibility for subordinate contacts (e.g., instrument teams within a mission) to the appropriate PDS nodes"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.2.1\n\n### Requirement\nPDS will provide examples and suggestions on organization of data products, metadata, documentation and software"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.2.2\n\n### Requirement\nPDS will provide expertise in applying PDS standards"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.2.3\n\n### Requirement\nPDS will provide expertise to support the design of scientifically useful archival data sets"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.2.4\n\n### Requirement\nPDS will provide training to support the design of archival data sets for data providers on PDS standards, tools and services"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.2.5\n\n### Requirement\nPDS will provide training to develop and maintain staff expertise in data engineering, standards and tools"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.3.1\n\n### Requirement\nPDS will provide examples of data management and archive plans (including interface documents, procedures, schedules and templates)"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.3.2\n\n### Requirement\nPDS will determine whether data management and archive plans and relevant interface documents meet PDS requirements"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.3.3\n\n### Requirement\nPDS will provide criteria for validating archival products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.3.4\n\n### Requirement\nPDS will coordinate with the data providers to establish schedules for delivery of archival products to the PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.3.5\n\n### Requirement\nPDS will coordinate with data providers to establish schedules for public release of archival products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.4.1\n\n### Requirement\nPDS will define a standard for organizing, formatting, and documenting planetary science data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.4.2\n\n### Requirement\nPDS will maintain a dictionary of terms, values, and relationships for standardized description of planetary science data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.4.3\n\n### Requirement\nPDS will define a standard grammar for describing planetary science data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.4.4\n\n### Requirement\nPDS will establish minimum content requirements for a data set (primary and ancillary data)"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.4.5\n\n### Requirement\nPDS will, for each mission or other major data provider, produce a list of the minimum components required for archival data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.4.6\n\n### Requirement\nPDS will develop, publish and implement a process for managing changes to the archive standards"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.4.7\n\n### Requirement\nPDS will keep abreast of new developments in archiving standards"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.5.1\n\n### Requirement\nPDS will provide tools to assist data producers in generating PDS compliant products"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.1\n\n### Requirement\nThe system shall provide a tool that assists users in the design of PDS product labels"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.1\n\n### Requirement\nThe tool shall initiate a design session"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.2\n\n### Requirement\nThe tool shall accept the following as input for specifying a schema file"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.3\n\n### Requirement\nThe tool shall facilitate modification of a schema file"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.4\n\n### Requirement\nThe tool shall provide standard editing features"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.5\n\n### Requirement\nThe tool shall indicate when a schema is not valid"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.6\n\n### Requirement\nThe tool shall generate an XML instance file from a schema"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.7\n\n### Requirement\nThe tool shall export the schema for use outside the tool"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.2\n\n### Requirement\nThe system shall provide a tool that assists users in the generation of PDS product labels"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.5.2\n\n### Requirement\nPDS will provide tools to assist data producers in validating products against PDS standards"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.3\n\n### Requirement\nThe system shall provide a tool that assists users in the validation of PDS products"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.1\n\n### Requirement\nThe tool shall accept the following as input for specifying the product(s) to be validated"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.2\n\n### Requirement\nThe tool shall traverse a directory tree and validate products discovered within that tree"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.3\n\n### Requirement\nThe tool shall validate aggregate products and all products referenced by such products"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.4\n\n### Requirement\nThe tool shall merge the contents of label fragments referenced by include elements with the contents of the parent label when validating a product"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.5\n\n### Requirement\nThe tool shall verify that a product label is well-formed XML"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.6\n\n### Requirement\nThe tool shall verify that a product label conforms to its associated schema file(s)"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.7\n\n### Requirement\nThe tool shall accept the following as input for specifying the associated schema file(s)"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.8\n\n### Requirement\nThe tool shall verify that a schema file is valid"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.9\n\n### Requirement\nThe tool shall indicate the schema(s) utilized during validation"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.10\n\n### Requirement\nThe tool shall verify that a file exists when referenced from a product label"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.5.3\n\n### Requirement\nPDS will provide tools to assist data producers in submitting products to the PDS archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n1.5.4\n\n### Requirement\nPDS will provide documentation for installing, using, and interfacing with each tool"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.8\n\n### Requirement\nThe system shall provide documentation detailing capabilities, dependencies, interfaces, installation and operation"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.11\n\n### Requirement\nComponents shall provide documentation detailing their capabilities, dependencies, interfaces, installation and operation"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.1.1\n\n### Requirement\nPDS will compare proposed archival submissions against nominal content standards for similar archives and will seek augmentations when the submission is deficient"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.1.2\n\n### Requirement\nPDS will identify and maintain a list of proposed planetary science data sets to be added to the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.1.3\n\n### Requirement\nPDS will work with relevant NASA program officials to ensure that products resulting from data analysis programs are submitted to the Archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.1.4\n\n### Requirement\nPDS will provide a mechanism for the planetary science community to propose new additions to the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.2.1\n\n### Requirement\nPDS will develop and publish the procedures for delivery of data to the PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.2.2\n\n### Requirement\nPDS will track the status of data deliveries from data providers through the PDS to the deep archive"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.3\n\n### Requirement\nThe system shall generate metrics regarding performance and activity."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.5\n\n### Requirement\nServices shall generate metrics in a format suitable for ingestion by the Report Service."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.6\n\n### Requirement\nApplications shall generate metrics in a format suitable for ingestion by the Report Service."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.7\n\n### Requirement\nTools shall generate a report detailing results from a single execution of the tool."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.3\n\n### Requirement\nThe system shall register products of a data delivery into an instance of the registry."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.1\n\n### Requirement\nThe tool shall accept a configuration file specifying policy for tool behavior."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.2\n\n### Requirement\nThe tool shall provide a command-line interface for execution."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.3\n\n### Requirement\nThe tool shall execute from a scheduler."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.4\n\n### Requirement\nThe tool shall recursively traverse the specified directory or directories in order to identify candidate products for registration."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.5\n\n### Requirement\nThe tool shall determine candidate products for registration through a combination of the following…"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.6\n\n### Requirement\nThe tool shall capture metadata for a candidate product specified by the product type."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.7\n\n### Requirement\nThe tool shall submit the associated metadata for a candidate product to the specified Registry Service instance."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.8\n\n### Requirement\nThe tool shall track each product registration."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.1\n\n### Requirement\nThe service shall accept artifact registrations."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.2\n\n### Requirement\nThe service shall provide a means for relating artifact registrations."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.4\n\n### Requirement\nThe service shall accept metadata for a registered artifact in a defined format."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.5\n\n### Requirement\nThe service shall validate metadata for a registered artifact."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.6\n\n### Requirement\nThe service shall assign a global unique identifier to a registered artifact."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.7\n\n### Requirement\nThe service shall assign a version to a registered artifact based on its logical identifier."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.8\n\n### Requirement\nThe service shall store metadata for a registered artifact in an underlying metadata store."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.1\n\n### Requirement\nThe system shall maintain a repository for collection and storage of PDS-wide metrics."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.1\n\n### Requirement\nThe service shall support periodic submission of metrics."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.6\n\n### Requirement\nThe service shall aggregate and store the metrics in a repository."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.2\n\n### Requirement\nThe system shall collect the following metrics for file access requests at each PDS Node…"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.2\n\n### Requirement\nThe service shall allow the submission of metrics in the form of a log file."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.3\n\n### Requirement\nThe service shall utilize a secure transfer protocol for transferring log files across the Internet."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.4\n\n### Requirement\nThe service shall support log files from the following sources…"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.3\n\n### Requirement\nThe system shall associate a file specification with a registered product in the archive."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.4\n\n### Requirement\nThe system shall associate a registered product in the archive with the following information…"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.5\n\n### Requirement\nThe service shall utilize a secure transfer protocol for transferring log files across the Internet."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.5\n\n### Requirement\nThe system shall allow report generation from collected metrics and their associated information."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.8\n\n### Requirement\nThe service shall allow users to tailor reports and report templates as follows…"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.9\n\n### Requirement\nThe service shall allow users to save report templates for reuse."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.10\n\n### Requirement\nThe service shall allow periodic generation of reports from saved templates."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.11\n\n### Requirement\nThe service shall export reports in the following formats…"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.2.3\n\n### Requirement\nPDS will provide the necessary resources for accepting data deliveries"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.3.1\n\n### Requirement\nPDS will develop and publish procedures for determining syntactic and semantic compliance with its standards"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.3.2\n\n### Requirement\nPDS will implement procedures to validate all data submissions to ensure compliance with standards"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.4.1\n\n### Requirement\nPDS will develop and publish procedures for peer review of archival products (which includes all data submissions and ancillary information)"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.4.2\n\n### Requirement\nPDS will establish success criteria for peer review of archival products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.4.3\n\n### Requirement\nPDS will implement peer reviews, coordinated and conducted by the lead node, to ensure completeness, accuracy and scientific usability of content"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.4.4\n\n### Requirement\nPDS will publish a summary of the results of each peer review"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.4.5\n\n### Requirement\nPDS will track the status of each peer review"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.5.1\n\n### Requirement\nPDS will develop and publish procedures for accepting archival data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.5.2\n\n### Requirement\nPDS will implement procedures for accepting archival data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.5.3\n\n### Requirement\nPDS will inform a data provider why a rejected archival product does not meet archiving standards"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.6.1\n\n### Requirement\nPDS will develop and publish procedures for cataloging archival data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.6.2\n\n### Requirement\nPDS will design and implement a catalog system for managing information about the holdings of the PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.1\n\n### Requirement\nThe system shall maintain distributed registries of products."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.3\n\n### Requirement\nThe service shall maintain policy regarding the classes of artifacts to be registered."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.3\n\n### Requirement\nThe system shall register products of a data delivery into an instance of the registry."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.1\n\n### Requirement\nThe tool shall accept a configuration file specifying policy for tool behavior."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.2\n\n### Requirement\nThe tool shall provide a command-line interface for execution."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.3\n\n### Requirement\nThe tool shall execute from a scheduler."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.4\n\n### Requirement\nThe tool shall recursively traverse the specified directory or directories in order to identify candidate products for registration."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.5\n\n### Requirement\nThe tool shall determine candidate products for registration through a combination of the following…"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.6\n\n### Requirement\nThe tool shall capture metadata for a candidate product specified by the product type."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.7\n\n### Requirement\nThe tool shall submit the associated metadata for a candidate product to the specified Registry Service instance."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.8\n\n### Requirement\nThe tool shall track each product registration."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.1\n\n### Requirement\nThe service shall accept artifact registrations."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.2\n\n### Requirement\nThe service shall provide a means for relating artifact registrations."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.4\n\n### Requirement\nThe service shall accept metadata for a registered artifact in a defined format."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.5\n\n### Requirement\nThe service shall validate metadata for a registered artifact."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.6\n\n### Requirement\nThe service shall assign a global unique identifier to a registered artifact."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.7\n\n### Requirement\nThe service shall assign a version to a registered artifact based on its logical identifier."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.8\n\n### Requirement\nThe service shall store metadata for a registered artifact in an underlying metadata store."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.4\n\n### Requirement\nThe system shall allow for management of the metadata associated with registered artifacts."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.9\n\n### Requirement\nThe service shall allow updates to registered artifacts."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.10\n\n### Requirement\nThe service shall allow approval of registered artifacts."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.11\n\n### Requirement\nThe service shall allow deprecation of registered artifacts."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.12\n\n### Requirement\nThe service shall allow undeprecation of registered artifacts."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.13\n\n### Requirement\nThe service shall allow deletion of registered artifacts."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.6.3\n\n### Requirement\nPDS will integrate the catalog with the system for tracking data throughout the PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.2\n\n### Requirement\nThe system shall provide application programming interfaces for interacting with the components"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.3\n\n### Requirement\nServices shall have an application programming interface"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.7.1\n\n### Requirement\nPDS will develop and publish procedures for storing archival data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.7.2\n\n### Requirement\nPDS will maintain appropriate storage for the PDS archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.7.3\n\n### Requirement\nPDS will review its storage capacity and its anticipated storage requirements on a yearly basis"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.7.4\n\n### Requirement\nPDS will maintain appropriate storage for non-archived data managed by the PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.1\n\n### Requirement\nPDS will maintain a distributed archive where holdings are maintained by Discipline Nodes, specializing in subsets of planetary science"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.1\n\n### Requirement\nThe system shall operate in a distributed environment"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.1\n\n### Requirement\nComponents shall be deployable in a distributed environment"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.2\n\n### Requirement\nComponents shall run on any PDS-supported platform."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.2\n\n### Requirement\nPDS will maintain a distributed catalog system which describes the holdings of the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.1\n\n### Requirement\nThe system shall maintain distributed registries of products."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.3\n\n### Requirement\nThe service shall maintain policy regarding the classes of artifacts to be registered."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.2\n\n### Requirement\nThe system shall federate the registries."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.15\n\n### Requirement\nThe service shall enable replication of registry contents with another instance of the service."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.16\n\n### Requirement\nThe service shall enable verification of registry contents."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.3\n\n### Requirement\nPDS will provide standard protocols for locating, moving, and utilizing data, metadata and computing resources across the distributed archive, among PDS nodes, to and from missions, and to and from the deep archive"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.2\n\n### Requirement\nThe system shall provide application programming interfaces for interacting with the components."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.3\n\n### Requirement\nServices shall have an application programming interface."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.4\n\n### Requirement\nTools shall have an application programming interface."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.4\n\n### Requirement\nPDS will work with other space agencies to provide interoperability among planetary science archives"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.5\n\n### Requirement\nPDS will provide an integrated online interface that provides information about and links to its data, services, and tools"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.6\n\n### Requirement\nPDS will implement common and discipline-specific services within the distributed architecture"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.7\n\n### Requirement\nThe PDS architecture will enable non-PDS developed tools to access PDS holdings and services"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.2\n\n### Requirement\nThe system shall provide application programming interfaces for interacting with the components"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.8.8\n\n### Requirement\nThe PDS architecture will enable computational services on selected archival products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.9.1\n\n### Requirement\nPDS will accept and distribute only those items which are not restricted by the International Traffic in Arms Regulations (ITAR)"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.9\n\n### Requirement\nApplications shall meet Section 508 compliance guidelines"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.9.2\n\n### Requirement\nPDS will ensure that online interfaces comply with required NASA Guidelines"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.5\n\n### Requirement\nThe system shall adhere to NASA-specified guidelines"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.9\n\n### Requirement\nApplications shall meet Section 508 compliance guidelines."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.3\n\n### Requirement\nThe service's browser-based user interface shall be Section 508 compliant and adhere to WCAG level A (or better) standards for accessibility."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.9.3\n\n### Requirement\nPDS will meet U.S. federal regulations for the preservation and management of data"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.6\n\n### Requirement\nThe system shall secure Personally Identifiable Information (PII)."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.3\n\n### Requirement\nThe service shall utilize a secure transfer protocol for transferring log files across the Internet."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.7\n\n### Requirement\nThe service shall control access to the user interface and metrics repository."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.9.4\n\n### Requirement\nPDS will fulfill obligations detailed in any applicable NASA Memorandum of Understanding (MOU)"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.10.1\n\n### Requirement\nPDS will monitor the system and ensure continuous operation"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.4\n\n### Requirement\nThe system shall enable monitoring of component health"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.8\n\n### Requirement\nServices shall provide an interface to enable monitoring of the service's health"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.10.2\n\n### Requirement\nPDS will identify and adopt technology standards for the implementation and operations of the entire PDS system"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.7\n\n### Requirement\nThe system shall control access to component interfaces that allow for ingestion or modification of data"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.10\n\n### Requirement\nComponents shall control access to interfaces that alter content"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n2.10.3\n\n### Requirement\nPDS will ensure that appropriate mechanisms are in place to prevent unauthorized users from compromising the integrity of PDS systems and data"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.7\n\n### Requirement\nThe system shall control access to component interfaces that allow for ingestion or modification of data contained within the system."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.10\n\n### Requirement\nComponents shall control access to interfaces that alter content."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.SEC.1\n\n### Requirement\nThe system shall authorize access to system interfaces that allow for ingestion or modification of data contained within the system."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.1\n\n### Requirement\nThe service shall authenticate a user given identifying credentials for that user."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.2\n\n### Requirement\nThe service shall encrypt the transmission of identifying credentials across the network."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.3\n\n### Requirement\nThe service shall authorize an authenticated user for access to a controlled capability."
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.SEC.2\n\n### Requirement\nThe system shall maintain a list of authorized users."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.4\n\n### Requirement\nThe service shall allow an operator of the system to create, update or delete a user identity."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.5\n\n### Requirement\nThe service shall capture identifying information associated with a user identity."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.6\n\n### Requirement\nThe service shall allow an operator of the system to create, update or delete a group identity."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.7\n\n### Requirement\nThe service shall allow an operator of the system to add or remove a user from a group."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.1.1\n\n### Requirement\nPDS will provide online interfaces allowing users to search the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.QRY.1\n\n### Requirement\nThe system shall provide the capability to search for and identify artifacts registered with the PDS."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.14\n\n### Requirement\nThe service shall allow queries for registered artifacts."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.1\n\n### Requirement\nThe service shall provide a user interface for entering of queries and display of search results accessible from a standards-compliant web browser."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.2\n\n### Requirement\nThe service shall degrade gracefully on browsers that lack modern features and not depend on them for operation."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.4\n\n### Requirement\nThe service shall provide a programmatic interface for entering of queries and return of search results that communicates over HTTP for use by client applications developed by PDS, PDS nodes, and others."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.5\n\n### Requirement\nThe service shall provide the capability to retrieve metadata associated with registered artifacts for the purpose of generating search indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.6\n\n### Requirement\nThe service shall support searching by accepting criteria as a sequence of open text keywords."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.7\n\n### Requirement\nThe service shall support searching by accepting criteria as a series of values for constraints on specified indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.8\n\n### Requirement\nThe service shall support narrowing of additional index results based on specifications of terms and/or values on indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.9\n\n### Requirement\nThe service shall support the ordering of results based on specified criteria including relevance and specified indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.10\n\n### Requirement\nThe service shall provide results to a search as a sequence of matching URIs to resources that contain search desiderata."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.11\n\n### Requirement\nThe service shall annotate each URI of a result with metadata describing the URI."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.12\n\n### Requirement\nThe service shall support configuration on the kinds of indexes maintained on indexed data, including indexes that differ by data type, by data conversion, by index generation methodology, and by metadata maintenance for result annotation."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.13\n\n### Requirement\nThe service shall capture metrics pertaining to its search indexes usage and contents."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.1.2\n\n### Requirement\nPDS will provide online interfaces for discipline-specific searching"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.QRY.2\n\n### Requirement\nThe system shall provide the capability to search for and identify artifacts within a defined scope (i.e., a single discipline)"
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.1\n\n### Requirement\nThe service shall provide a user interface for entering of queries and display of search results accessible from a standards-compliant web browser."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.2\n\n### Requirement\nThe service shall degrade gracefully on browsers that lack modern features and not depend on them for operation."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.4\n\n### Requirement\nThe service shall provide a programmatic interface for entering of queries and return of search results that communicates over HTTP for use by client applications developed by PDS, PDS nodes, and others."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.5\n\n### Requirement\nThe service shall provide the capability to retrieve metadata associated with registered artifacts for the purpose of generating search indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.6\n\n### Requirement\nThe service shall support searching by accepting criteria as a sequence of open text keywords."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.7\n\n### Requirement\nThe service shall support searching by accepting criteria as a series of values for constraints on specified indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.8\n\n### Requirement\nThe service shall support narrowing of additional index results based on specifications of terms and/or values on indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.9\n\n### Requirement\nThe service shall support the ordering of results based on specified criteria including relevance and specified indexes."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.10\n\n### Requirement\nThe service shall provide results to a search as a sequence of matching URIs to resources that contain search desiderata."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.11\n\n### Requirement\nThe service shall annotate each URI of a result with metadata describing the URI."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.12\n\n### Requirement\nThe service shall support configuration on the kinds of indexes maintained on indexed data, including indexes that differ by data type, by data conversion, by index generation methodology, and by metadata maintenance for result annotation."
-  },
-  {
-    "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.13\n\n### Requirement\nThe service shall capture metrics pertaining to its search indexes usage and contents."
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.1.3\n\n### Requirement\nPDS will allow products identified within a search to be selected for retrieval"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.2.1\n\n### Requirement\nPDS will provide online mechanisms allowing users to download portions of the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.2.2\n\n### Requirement\nPDS will provide a mechanism for offline delivery of portions of the archive to users"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.2.3\n\n### Requirement\nPDS will provide mechanisms to ensure that data have been transferred intact"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.3.1\n\n### Requirement\nPDS will provide expert help in use of data from the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.3.2\n\n### Requirement\nPDS will provide a capability for opening and inspecting the contents (e.g. label, objects, groups) of any PDS compliant archival product"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.5\n\n### Requirement\nThe system shall provide a tool for visualizing PDS products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.3.3\n\n### Requirement\nPDS will provide tools for translating archival products between selected formats"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.4\n\n### Requirement\nThe system shall provide a tool for transforming PDS products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.3.4\n\n### Requirement\nPDS will provide tools for translating archival products between selected coordinate systems"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.4\n\n### Requirement\nThe system shall provide a tool for transforming PDS products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.3.5\n\n### Requirement\nPDS will provide tools for visualizing selected archival products"
-  },
-  {
-    "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.5\n\n### Requirement\nThe system shall provide a tool for visualizing PDS products"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.3.6\n\n### Requirement\nPDS will provide a mechanism for notifying subscribed users when a data set is released or updated"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n3.3.7\n\n### Requirement\nPDS will solicit input from the user community on services desired"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.1.1\n\n### Requirement\nPDS will define and maintain a set of quality, quantity, and continuity (QQC) requirements for ensuring long term preservation of the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.1.2\n\n### Requirement\nPDS will develop and implement procedures for periodically ensuring the integrity of the data"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.1.3\n\n### Requirement\nPDS will develop and implement procedures for periodically refreshing the data by updating the underlying storage technology"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.1.4\n\n### Requirement\nPDS will develop and implement a disaster recovery plan for the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.1.5\n\n### Requirement\nPDS will meet U.S. federal regulations for preservation and management of the data through its Memorandum of Understanding (MOU) with the National Space Science Data Center (NSSDC)"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.2.1\n\n### Requirement\nPDS will define and maintain a set of usability requirements to ensure ongoing utility of the data in the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.2.2\n\n### Requirement\nPDS will develop and implement procedures for periodically monitoring the user community interests and practices and verifying the usability of the products in the archive"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.2.3\n\n### Requirement\nPDS will monitor the evolution of technology including physical media, storage, and software in an effort to keep the archiving technology decisions relevant within the PDS"
-  },
-  {
-    "requirement": "# Level\nLevel 3\n\n## ID\n4.2.4\n\n### Requirement\nPDS will provide a mechanism to upgrade products or data sets which do not meet usability requirements (e.g., data sets from old missions)"
-  }
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.1.1\n\n### Requirement\nPDS will assign a lead node for each data provider submitting data to PDS",
+        "uuid": "0e638116-315a-48b3-8daf-3f262debd706"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.1.2\n\n### Requirement\nPDS will assign a lead individual, designated by the lead node, who is authorized to negotiate for PDS",
+        "uuid": "697b1695-fa4d-42ee-90c2-44dd3e81d876"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.1.3\n\n### Requirement\nThe PDS lead node will delegate responsibility for subordinate contacts (e.g., instrument teams within a mission) to the appropriate PDS nodes",
+        "uuid": "bbfb547f-a9ac-47be-b0ee-f4781a60acea"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.2.1\n\n### Requirement\nPDS will provide examples and suggestions on organization of data products, metadata, documentation and software",
+        "uuid": "70adfbc9-d87a-4044-bf98-e8cd5645f146"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.2.2\n\n### Requirement\nPDS will provide expertise in applying PDS standards",
+        "uuid": "14a4ae7d-0f62-4932-ae96-9b575fe06474"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.2.3\n\n### Requirement\nPDS will provide expertise to support the design of scientifically useful archival data sets",
+        "uuid": "5f32e2cf-5e2c-4762-81d4-55ca4f3b6607"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.2.4\n\n### Requirement\nPDS will provide training to support the design of archival data sets for data providers on PDS standards, tools and services",
+        "uuid": "691d1529-ead1-4735-81a7-f57a8f4d3ce0"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.2.5\n\n### Requirement\nPDS will provide training to develop and maintain staff expertise in data engineering, standards and tools",
+        "uuid": "79b58ac1-64f1-4d09-a79b-0e9245bc125a"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.3.1\n\n### Requirement\nPDS will provide examples of data management and archive plans (including interface documents, procedures, schedules and templates)",
+        "uuid": "7ab17935-ec37-4289-a8bd-dd9577e0193f"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.3.2\n\n### Requirement\nPDS will determine whether data management and archive plans and relevant interface documents meet PDS requirements",
+        "uuid": "ac0f9440-e0b5-4938-8851-75542761fb51"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.3.3\n\n### Requirement\nPDS will provide criteria for validating archival products",
+        "uuid": "b81bb57b-017d-4bcc-a71d-ca74c4225fb0"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.3.4\n\n### Requirement\nPDS will coordinate with the data providers to establish schedules for delivery of archival products to the PDS",
+        "uuid": "8b4c23cb-eac1-42b6-a563-25cd98d0fce4"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.3.5\n\n### Requirement\nPDS will coordinate with data providers to establish schedules for public release of archival products",
+        "uuid": "9fe72aff-f250-4fae-a3e3-ee04764896de"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.4.1\n\n### Requirement\nPDS will define a standard for organizing, formatting, and documenting planetary science data",
+        "uuid": "72d37d28-509e-4645-921f-e4a70d795198"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.4.2\n\n### Requirement\nPDS will maintain a dictionary of terms, values, and relationships for standardized description of planetary science data",
+        "uuid": "ae7fc6f8-fb69-4d54-847a-c13b228ab985"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.4.3\n\n### Requirement\nPDS will define a standard grammar for describing planetary science data",
+        "uuid": "c3f35e52-573f-4643-8d9c-b053c71472d7"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.4.4\n\n### Requirement\nPDS will establish minimum content requirements for a data set (primary and ancillary data)",
+        "uuid": "54fcb686-1edd-4d6e-903a-116ca55697a9"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.4.5\n\n### Requirement\nPDS will, for each mission or other major data provider, produce a list of the minimum components required for archival data",
+        "uuid": "32417d8b-d510-4a23-bf3f-d012441399db"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.4.6\n\n### Requirement\nPDS will develop, publish and implement a process for managing changes to the archive standards",
+        "uuid": "187a65e1-1726-4848-af28-86e9f29fab04"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.4.7\n\n### Requirement\nPDS will keep abreast of new developments in archiving standards",
+        "uuid": "4b9e1987-c16b-4821-a9e2-4473bac8e3c4"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.5.1\n\n### Requirement\nPDS will provide tools to assist data producers in generating PDS compliant products",
+        "uuid": "70202b7a-bac7-4255-bdbf-e77b0c99af1a"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.1\n\n### Requirement\nThe system shall provide a tool that assists users in the design of PDS product labels",
+        "uuid": "aab3b641-820c-4543-936c-377c4dc57987"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.1\n\n### Requirement\nThe tool shall initiate a design session",
+        "uuid": "2ebbff1a-11b8-4d4b-9638-1ce654377b62"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.2\n\n### Requirement\nThe tool shall accept the following as input for specifying a schema file",
+        "uuid": "003ea991-a94e-42aa-92ff-72b0461de786"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.3\n\n### Requirement\nThe tool shall facilitate modification of a schema file",
+        "uuid": "7031423e-ccb7-4aad-a0af-b6e7c8b11495"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.4\n\n### Requirement\nThe tool shall provide standard editing features",
+        "uuid": "cdf162aa-31de-4ba8-841c-dcc742861b01"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.5\n\n### Requirement\nThe tool shall indicate when a schema is not valid",
+        "uuid": "af24a4a3-f77b-4877-ae42-f194624ef432"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.6\n\n### Requirement\nThe tool shall generate an XML instance file from a schema",
+        "uuid": "561a9a19-d27c-476d-a49e-553e4ce3f382"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.DE.7\n\n### Requirement\nThe tool shall export the schema for use outside the tool",
+        "uuid": "00dce2f6-32f9-4871-aec9-74216378364d"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.2\n\n### Requirement\nThe system shall provide a tool that assists users in the generation of PDS product labels",
+        "uuid": "179ff962-9232-401e-b164-548b20375dd4"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.5.2\n\n### Requirement\nPDS will provide tools to assist data producers in validating products against PDS standards",
+        "uuid": "6ef24db0-47d3-4b68-95af-233a66d94ec9"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.3\n\n### Requirement\nThe system shall provide a tool that assists users in the validation of PDS products",
+        "uuid": "1659e2a6-e361-4cf9-af11-8de1c98061ca"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.1\n\n### Requirement\nThe tool shall accept the following as input for specifying the product(s) to be validated",
+        "uuid": "2b9e6957-18ec-4497-85e9-caadc6058233"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.2\n\n### Requirement\nThe tool shall traverse a directory tree and validate products discovered within that tree",
+        "uuid": "22ed7d01-f853-4c14-9f6a-4b4e9feee806"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.3\n\n### Requirement\nThe tool shall validate aggregate products and all products referenced by such products",
+        "uuid": "bbbb71c2-8f07-40d4-93a8-c83973579bb3"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.4\n\n### Requirement\nThe tool shall merge the contents of label fragments referenced by include elements with the contents of the parent label when validating a product",
+        "uuid": "ef9d0ab4-98de-4669-9290-b6eba46b44ee"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.5\n\n### Requirement\nThe tool shall verify that a product label is well-formed XML",
+        "uuid": "e3cd48dc-3995-42cb-8f2a-8018a84f70d7"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.6\n\n### Requirement\nThe tool shall verify that a product label conforms to its associated schema file(s)",
+        "uuid": "7fdbcf0c-f210-4a52-84ae-479741dc0981"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.7\n\n### Requirement\nThe tool shall accept the following as input for specifying the associated schema file(s)",
+        "uuid": "00487e49-f246-48f4-afb8-66bc95d037ea"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.8\n\n### Requirement\nThe tool shall verify that a schema file is valid",
+        "uuid": "328c49a9-75b8-45a3-9dc0-460c7ef33616"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.9\n\n### Requirement\nThe tool shall indicate the schema(s) utilized during validation",
+        "uuid": "c001fe79-28c1-41a4-bb80-39fac7b07661"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.PRP.VA.10\n\n### Requirement\nThe tool shall verify that a file exists when referenced from a product label",
+        "uuid": "129900b1-5403-4dd4-88ac-fd5af6733796"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.5.3\n\n### Requirement\nPDS will provide tools to assist data producers in submitting products to the PDS archive",
+        "uuid": "2e1fad6b-5e2b-426e-a2da-b58c21aae31a"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n1.5.4\n\n### Requirement\nPDS will provide documentation for installing, using, and interfacing with each tool",
+        "uuid": "ad004091-5314-4e75-9720-78c01ce088a9"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.8\n\n### Requirement\nThe system shall provide documentation detailing capabilities, dependencies, interfaces, installation and operation",
+        "uuid": "62e88f86-c5e7-4da5-8aca-58f1536687e8"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.11\n\n### Requirement\nComponents shall provide documentation detailing their capabilities, dependencies, interfaces, installation and operation",
+        "uuid": "aa9a11e7-99b2-4db8-8276-8dca2e46e8cf"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.1.1\n\n### Requirement\nPDS will compare proposed archival submissions against nominal content standards for similar archives and will seek augmentations when the submission is deficient",
+        "uuid": "26ccc3a5-5020-4889-88d7-17061f31d1b1"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.1.2\n\n### Requirement\nPDS will identify and maintain a list of proposed planetary science data sets to be added to the archive",
+        "uuid": "9c0da925-e0fd-449d-b106-d842ee19737b"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.1.3\n\n### Requirement\nPDS will work with relevant NASA program officials to ensure that products resulting from data analysis programs are submitted to the Archive",
+        "uuid": "0fdc1785-8a08-43f3-a1d5-fcd6709ec2a0"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.1.4\n\n### Requirement\nPDS will provide a mechanism for the planetary science community to propose new additions to the archive",
+        "uuid": "958fa71d-6de1-45f8-ac26-d190160f45c6"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.2.1\n\n### Requirement\nPDS will develop and publish the procedures for delivery of data to the PDS",
+        "uuid": "0e24d146-0e58-49c7-bc61-c1e8810d6fdd"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.2.2\n\n### Requirement\nPDS will track the status of data deliveries from data providers through the PDS to the deep archive",
+        "uuid": "b0b34a53-b45d-4e6a-9117-3580fd397ef9"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.3\n\n### Requirement\nThe system shall generate metrics regarding performance and activity.",
+        "uuid": "b5745146-4fcb-4150-aa7a-5bb98f021c16"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.5\n\n### Requirement\nServices shall generate metrics in a format suitable for ingestion by the Report Service.",
+        "uuid": "4e3421b5-b4da-46f4-9d4e-25279b366b82"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.6\n\n### Requirement\nApplications shall generate metrics in a format suitable for ingestion by the Report Service.",
+        "uuid": "9fe6450e-31fc-47b5-969a-03365f606a36"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.7\n\n### Requirement\nTools shall generate a report detailing results from a single execution of the tool.",
+        "uuid": "2eecba8e-4837-4a60-be85-8bd79da14aa5"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.3\n\n### Requirement\nThe system shall register products of a data delivery into an instance of the registry.",
+        "uuid": "4460ca6d-e2cc-48af-839b-3d8c22941415"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.1\n\n### Requirement\nThe tool shall accept a configuration file specifying policy for tool behavior.",
+        "uuid": "9bf1266b-c463-445a-ae5e-dac363d73abe"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.2\n\n### Requirement\nThe tool shall provide a command-line interface for execution.",
+        "uuid": "9a67fa98-544b-4c32-95e4-de5d1d7f5569"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.3\n\n### Requirement\nThe tool shall execute from a scheduler.",
+        "uuid": "18a7bde8-5e9b-4f84-b10b-ab8ba8c66ca6"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.4\n\n### Requirement\nThe tool shall recursively traverse the specified directory or directories in order to identify candidate products for registration.",
+        "uuid": "b1457323-5dfb-4ab0-9c91-16e106a37d21"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.5\n\n### Requirement\nThe tool shall determine candidate products for registration through a combination of the following…",
+        "uuid": "58eff232-ace3-4f92-bbb7-d7cbb500100b"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.6\n\n### Requirement\nThe tool shall capture metadata for a candidate product specified by the product type.",
+        "uuid": "171d1c9e-dfaf-490f-b346-7036b676305f"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.7\n\n### Requirement\nThe tool shall submit the associated metadata for a candidate product to the specified Registry Service instance.",
+        "uuid": "f713afd4-e682-471c-bb19-04eb16749b43"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.8\n\n### Requirement\nThe tool shall track each product registration.",
+        "uuid": "76f52f67-ca95-4f0a-b2db-97203cd5f3bc"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.1\n\n### Requirement\nThe service shall accept artifact registrations.",
+        "uuid": "d5f061b3-524f-49b4-a15c-71ae1e36ac01"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.2\n\n### Requirement\nThe service shall provide a means for relating artifact registrations.",
+        "uuid": "5601056c-b0a7-4adf-92ab-0bdf71696f68"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.4\n\n### Requirement\nThe service shall accept metadata for a registered artifact in a defined format.",
+        "uuid": "088c3d4c-f463-4b6d-9fdb-ea5b9f9f8499"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.5\n\n### Requirement\nThe service shall validate metadata for a registered artifact.",
+        "uuid": "85ecefe3-8e73-49af-b69d-0ecec062889e"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.6\n\n### Requirement\nThe service shall assign a global unique identifier to a registered artifact.",
+        "uuid": "58192255-1629-430d-b6ca-63c7ee4113e2"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.7\n\n### Requirement\nThe service shall assign a version to a registered artifact based on its logical identifier.",
+        "uuid": "7b7dbca6-acd4-4f25-900f-0b9ae9b86d91"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.8\n\n### Requirement\nThe service shall store metadata for a registered artifact in an underlying metadata store.",
+        "uuid": "6a8c490e-0b9e-402c-b781-539b0c0aad8e"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.1\n\n### Requirement\nThe system shall maintain a repository for collection and storage of PDS-wide metrics.",
+        "uuid": "64fd35a9-401f-4c5f-ad14-a94097089d09"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.1\n\n### Requirement\nThe service shall support periodic submission of metrics.",
+        "uuid": "8f26ec67-b10f-492e-8c01-49d234edef03"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.6\n\n### Requirement\nThe service shall aggregate and store the metrics in a repository.",
+        "uuid": "76b748cc-ab63-4269-a617-32f57e5c906d"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.2\n\n### Requirement\nThe system shall collect the following metrics for file access requests at each PDS Node…",
+        "uuid": "4443ac5d-7db6-4fe7-8edb-38a45a5b26c3"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.2\n\n### Requirement\nThe service shall allow the submission of metrics in the form of a log file.",
+        "uuid": "eb27b85c-c5ab-403c-a529-f3757db9c653"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.3\n\n### Requirement\nThe service shall utilize a secure transfer protocol for transferring log files across the Internet.",
+        "uuid": "c719a3bd-22bd-4bab-ae6a-91ba2a6cbcfb"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.4\n\n### Requirement\nThe service shall support log files from the following sources…",
+        "uuid": "91e8c812-fd31-4646-ad64-b3d764f1b223"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.3\n\n### Requirement\nThe system shall associate a file specification with a registered product in the archive.",
+        "uuid": "4c4bddcb-1e22-4349-a182-0278f7a70fae"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.4\n\n### Requirement\nThe system shall associate a registered product in the archive with the following information…",
+        "uuid": "2388a246-7d93-44b1-83c4-7974c53c8c2e"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.5\n\n### Requirement\nThe service shall utilize a secure transfer protocol for transferring log files across the Internet.",
+        "uuid": "06f54581-3f47-4aa3-806e-5c3b1cd7570d"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.RPT.5\n\n### Requirement\nThe system shall allow report generation from collected metrics and their associated information.",
+        "uuid": "5fc19fed-eb72-4d11-86b1-e61b785b1023"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.8\n\n### Requirement\nThe service shall allow users to tailor reports and report templates as follows…",
+        "uuid": "9f9e877d-d641-4965-8d45-07b7503b06e6"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.9\n\n### Requirement\nThe service shall allow users to save report templates for reuse.",
+        "uuid": "fd3ae133-ecd9-4bbe-a86f-a1777e67dae6"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.10\n\n### Requirement\nThe service shall allow periodic generation of reports from saved templates.",
+        "uuid": "f1433f06-3302-44d5-827e-40e4f51bcaa3"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.11\n\n### Requirement\nThe service shall export reports in the following formats…",
+        "uuid": "86fa9007-d44b-46e9-9c0f-effb94ac011f"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.2.3\n\n### Requirement\nPDS will provide the necessary resources for accepting data deliveries",
+        "uuid": "06377f03-7f78-48cd-a510-47449745d291"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.3.1\n\n### Requirement\nPDS will develop and publish procedures for determining syntactic and semantic compliance with its standards",
+        "uuid": "09a601b5-5dc6-48ad-8813-060a1f65e925"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.3.2\n\n### Requirement\nPDS will implement procedures to validate all data submissions to ensure compliance with standards",
+        "uuid": "af6229a8-a700-40c9-be95-ad6a2ed64535"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.4.1\n\n### Requirement\nPDS will develop and publish procedures for peer review of archival products (which includes all data submissions and ancillary information)",
+        "uuid": "1bb8da4d-6281-4af3-aee8-7972c7b38a46"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.4.2\n\n### Requirement\nPDS will establish success criteria for peer review of archival products",
+        "uuid": "e7936bcf-1235-4e5c-bf5d-6c82fce0e28b"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.4.3\n\n### Requirement\nPDS will implement peer reviews, coordinated and conducted by the lead node, to ensure completeness, accuracy and scientific usability of content",
+        "uuid": "154db725-d7e5-4d55-a892-d22da36ba97a"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.4.4\n\n### Requirement\nPDS will publish a summary of the results of each peer review",
+        "uuid": "b32f6b9f-bdaa-4c71-8d68-d4693db81c67"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.4.5\n\n### Requirement\nPDS will track the status of each peer review",
+        "uuid": "e08c5421-ca42-4425-8f51-4cc739a18fec"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.5.1\n\n### Requirement\nPDS will develop and publish procedures for accepting archival data",
+        "uuid": "fd22523d-5f85-46d9-aa7f-91a10eb32372"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.5.2\n\n### Requirement\nPDS will implement procedures for accepting archival data",
+        "uuid": "8bbeeadf-012a-4dfc-81be-77474398d6a5"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.5.3\n\n### Requirement\nPDS will inform a data provider why a rejected archival product does not meet archiving standards",
+        "uuid": "3f64ecb3-8a3d-4cfb-b5c8-79a68f2ca868"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.6.1\n\n### Requirement\nPDS will develop and publish procedures for cataloging archival data",
+        "uuid": "69801857-2f29-42a6-b8da-d19e86a9e374"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.6.2\n\n### Requirement\nPDS will design and implement a catalog system for managing information about the holdings of the PDS",
+        "uuid": "acac1d9d-8bde-4279-a20c-fff61d85aaa4"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.1\n\n### Requirement\nThe system shall maintain distributed registries of products.",
+        "uuid": "02d9b074-fbd1-4f7b-91f3-208b5f37615a"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.3\n\n### Requirement\nThe service shall maintain policy regarding the classes of artifacts to be registered.",
+        "uuid": "cb9fea44-17dc-4a1c-827c-4351c78e9610"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.3\n\n### Requirement\nThe system shall register products of a data delivery into an instance of the registry.",
+        "uuid": "7484048b-a495-4295-874b-eb5724c4b33a"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.1\n\n### Requirement\nThe tool shall accept a configuration file specifying policy for tool behavior.",
+        "uuid": "daa31459-a021-44be-9f01-4397a46b0983"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.2\n\n### Requirement\nThe tool shall provide a command-line interface for execution.",
+        "uuid": "071ff300-c4a9-440e-8435-2b260f45f9ec"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.3\n\n### Requirement\nThe tool shall execute from a scheduler.",
+        "uuid": "1a2a7578-d6be-407c-88fa-4ae959f68ad1"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.4\n\n### Requirement\nThe tool shall recursively traverse the specified directory or directories in order to identify candidate products for registration.",
+        "uuid": "73b7f113-da80-46bf-83a8-95e84b37181a"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.5\n\n### Requirement\nThe tool shall determine candidate products for registration through a combination of the following…",
+        "uuid": "d397ca26-87f9-4ebb-be61-90abc29e998e"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.6\n\n### Requirement\nThe tool shall capture metadata for a candidate product specified by the product type.",
+        "uuid": "2032b4d8-1dcf-40ac-bf6e-84204927c9d1"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.7\n\n### Requirement\nThe tool shall submit the associated metadata for a candidate product to the specified Registry Service instance.",
+        "uuid": "add69576-4a1a-495f-b139-fd547c763cc7"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.HVT.8\n\n### Requirement\nThe tool shall track each product registration.",
+        "uuid": "264a3c96-e844-499a-9226-274ec9bc4c93"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.1\n\n### Requirement\nThe service shall accept artifact registrations.",
+        "uuid": "ff47679b-a9b8-4473-b981-56c928e0f4b9"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.2\n\n### Requirement\nThe service shall provide a means for relating artifact registrations.",
+        "uuid": "7253357a-9843-490b-8310-9add987b2787"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.4\n\n### Requirement\nThe service shall accept metadata for a registered artifact in a defined format.",
+        "uuid": "e321cd0c-d01a-430e-bea2-86d3944c96ab"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.5\n\n### Requirement\nThe service shall validate metadata for a registered artifact.",
+        "uuid": "7cdbb8fd-a010-481c-80da-b5e6c2191009"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.6\n\n### Requirement\nThe service shall assign a global unique identifier to a registered artifact.",
+        "uuid": "51f2d816-b1bd-404e-9b7b-c2fac857b321"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.7\n\n### Requirement\nThe service shall assign a version to a registered artifact based on its logical identifier.",
+        "uuid": "aa418d3b-3873-40c1-a021-2f96736c0767"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.8\n\n### Requirement\nThe service shall store metadata for a registered artifact in an underlying metadata store.",
+        "uuid": "9979054d-28c3-4ba8-8140-0959b8196a09"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.4\n\n### Requirement\nThe system shall allow for management of the metadata associated with registered artifacts.",
+        "uuid": "83d06d29-84f6-4923-a27f-f854cb5a5e9e"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.9\n\n### Requirement\nThe service shall allow updates to registered artifacts.",
+        "uuid": "75fb227e-b003-4a92-8854-49730ec1cce9"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.10\n\n### Requirement\nThe service shall allow approval of registered artifacts.",
+        "uuid": "fc7cb0d3-7579-40b2-9bdc-d63971fc6b9b"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.11\n\n### Requirement\nThe service shall allow deprecation of registered artifacts.",
+        "uuid": "05d6b441-d2c0-4d6a-abbd-cfa22dc0c0f8"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.12\n\n### Requirement\nThe service shall allow undeprecation of registered artifacts.",
+        "uuid": "ecea56a3-bb89-48fa-9a82-1549cae55844"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.13\n\n### Requirement\nThe service shall allow deletion of registered artifacts.",
+        "uuid": "8b87f7b3-37ab-4966-99d8-13bb036623cf"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.6.3\n\n### Requirement\nPDS will integrate the catalog with the system for tracking data throughout the PDS",
+        "uuid": "a6322d01-c2b6-4107-b657-65a553294ddc"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.2\n\n### Requirement\nThe system shall provide application programming interfaces for interacting with the components",
+        "uuid": "22570331-bd3d-4b47-9421-ec8427c6c28b"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.3\n\n### Requirement\nServices shall have an application programming interface",
+        "uuid": "aec92918-ea02-4dcd-a4e7-36a6f8ae6019"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.7.1\n\n### Requirement\nPDS will develop and publish procedures for storing archival data",
+        "uuid": "b5307d5f-80dc-44ef-9bba-9cec96c53277"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.7.2\n\n### Requirement\nPDS will maintain appropriate storage for the PDS archive",
+        "uuid": "6806fc44-ff54-4340-99bc-36f6763bcb45"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.7.3\n\n### Requirement\nPDS will review its storage capacity and its anticipated storage requirements on a yearly basis",
+        "uuid": "c94f41ff-01d0-4ea2-b861-174741ec7fe8"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.7.4\n\n### Requirement\nPDS will maintain appropriate storage for non-archived data managed by the PDS",
+        "uuid": "c32ce69d-f94f-4080-ad94-c1a4d8a864da"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.1\n\n### Requirement\nPDS will maintain a distributed archive where holdings are maintained by Discipline Nodes, specializing in subsets of planetary science",
+        "uuid": "7457d264-dcdc-4b20-b076-036e09173c4a"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.1\n\n### Requirement\nThe system shall operate in a distributed environment",
+        "uuid": "2b44f72c-65d4-462d-b77a-eb3e30b374bb"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.1\n\n### Requirement\nComponents shall be deployable in a distributed environment",
+        "uuid": "e4268353-d1b4-4fbc-82ed-eef97221a16f"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.2\n\n### Requirement\nComponents shall run on any PDS-supported platform.",
+        "uuid": "36b0449d-f8f2-4af1-b554-9ad85ba4bc72"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.2\n\n### Requirement\nPDS will maintain a distributed catalog system which describes the holdings of the archive",
+        "uuid": "59de20c5-ae2c-4ddb-a90d-79e10223047d"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.1\n\n### Requirement\nThe system shall maintain distributed registries of products.",
+        "uuid": "157d923c-e99f-455f-881e-12dd309c2754"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.3\n\n### Requirement\nThe service shall maintain policy regarding the classes of artifacts to be registered.",
+        "uuid": "88441699-1885-42ba-b1f7-aadc16958fbd"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.REG.2\n\n### Requirement\nThe system shall federate the registries.",
+        "uuid": "4b80adec-e3be-4821-bab6-2df97981522a"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.15\n\n### Requirement\nThe service shall enable replication of registry contents with another instance of the service.",
+        "uuid": "840a0435-09bd-46ce-a957-9a25cc45cedf"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.16\n\n### Requirement\nThe service shall enable verification of registry contents.",
+        "uuid": "73dd4e80-5ce5-4535-9d32-3380eab223e2"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.3\n\n### Requirement\nPDS will provide standard protocols for locating, moving, and utilizing data, metadata and computing resources across the distributed archive, among PDS nodes, to and from missions, and to and from the deep archive",
+        "uuid": "b29574c1-b0de-43f0-b6e7-1dd07cfa7f01"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.2\n\n### Requirement\nThe system shall provide application programming interfaces for interacting with the components.",
+        "uuid": "2ba113ae-1a94-4830-97ce-9b774af2e0b9"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.3\n\n### Requirement\nServices shall have an application programming interface.",
+        "uuid": "3be1c463-e2c8-4d03-8621-544ceafdf38c"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.4\n\n### Requirement\nTools shall have an application programming interface.",
+        "uuid": "b0fb57c5-9f7a-4b42-be5e-81f7040d1d12"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.4\n\n### Requirement\nPDS will work with other space agencies to provide interoperability among planetary science archives",
+        "uuid": "69c9bfe8-3e34-41ac-acb3-43b05830e90b"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.5\n\n### Requirement\nPDS will provide an integrated online interface that provides information about and links to its data, services, and tools",
+        "uuid": "33ea3bcf-9b44-4abc-bd15-52eec997672b"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.6\n\n### Requirement\nPDS will implement common and discipline-specific services within the distributed architecture",
+        "uuid": "fa373cda-27dd-4738-9610-a84e6b4b873f"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.7\n\n### Requirement\nThe PDS architecture will enable non-PDS developed tools to access PDS holdings and services",
+        "uuid": "98f574d7-d6bb-44ca-99bb-8f1fe91478a4"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.2\n\n### Requirement\nThe system shall provide application programming interfaces for interacting with the components",
+        "uuid": "a049f605-ad28-4441-bfef-fe06c4884ad9"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.8.8\n\n### Requirement\nThe PDS architecture will enable computational services on selected archival products",
+        "uuid": "fe96e3a3-6b76-4020-98f1-df918db61e83"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.9.1\n\n### Requirement\nPDS will accept and distribute only those items which are not restricted by the International Traffic in Arms Regulations (ITAR)",
+        "uuid": "868d3a5d-9f23-423e-af15-c7549ce0f28b"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.9\n\n### Requirement\nApplications shall meet Section 508 compliance guidelines",
+        "uuid": "12e083e9-93cc-42ed-939b-a27da6bf41bf"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.9.2\n\n### Requirement\nPDS will ensure that online interfaces comply with required NASA Guidelines",
+        "uuid": "13dd5f00-d3bf-4714-84de-aaa2882bd64f"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.5\n\n### Requirement\nThe system shall adhere to NASA-specified guidelines",
+        "uuid": "84fe9977-8507-410c-8341-98d44e8d3d01"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.9\n\n### Requirement\nApplications shall meet Section 508 compliance guidelines.",
+        "uuid": "d5bd6d8e-6884-4fe9-87f4-cd3ce6f8864a"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.3\n\n### Requirement\nThe service's browser-based user interface shall be Section 508 compliant and adhere to WCAG level A (or better) standards for accessibility.",
+        "uuid": "61a35cd1-a602-46f0-9b51-8f632cd30eb8"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.9.3\n\n### Requirement\nPDS will meet U.S. federal regulations for the preservation and management of data",
+        "uuid": "2d86d2f0-c646-43a5-b85d-45dfbb349f68"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.6\n\n### Requirement\nThe system shall secure Personally Identifiable Information (PII).",
+        "uuid": "48574528-5a46-469a-bc4d-5fe18bf1978f"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.3\n\n### Requirement\nThe service shall utilize a secure transfer protocol for transferring log files across the Internet.",
+        "uuid": "242c02f1-4c3c-4360-a8df-532114327830"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.RPT.7\n\n### Requirement\nThe service shall control access to the user interface and metrics repository.",
+        "uuid": "393cb6b1-c47a-4204-a59c-f2a6b3cda942"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.9.4\n\n### Requirement\nPDS will fulfill obligations detailed in any applicable NASA Memorandum of Understanding (MOU)",
+        "uuid": "656618a2-7c22-4112-a3de-88bfb1646e19"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.10.1\n\n### Requirement\nPDS will monitor the system and ensure continuous operation",
+        "uuid": "226d5717-2c00-4b7c-8c4a-009f974d83b2"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.4\n\n### Requirement\nThe system shall enable monitoring of component health",
+        "uuid": "f3adfd64-939d-4330-ba82-e75f9a2c8750"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.8\n\n### Requirement\nServices shall provide an interface to enable monitoring of the service's health",
+        "uuid": "e2a26fbc-f86b-4ef3-a9cf-8bebce430873"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.10.2\n\n### Requirement\nPDS will identify and adopt technology standards for the implementation and operations of the entire PDS system",
+        "uuid": "887a4939-0ec8-4288-aa10-b443d8397560"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.7\n\n### Requirement\nThe system shall control access to component interfaces that allow for ingestion or modification of data",
+        "uuid": "3608e1d0-56a3-4598-958b-1b269c14db04"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.10\n\n### Requirement\nComponents shall control access to interfaces that alter content",
+        "uuid": "ae59bdca-e1b8-4900-9f92-0dcabc83e012"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n2.10.3\n\n### Requirement\nPDS will ensure that appropriate mechanisms are in place to prevent unauthorized users from compromising the integrity of PDS systems and data",
+        "uuid": "dacaac5b-061b-4334-8273-839ff551b659"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.GEN.7\n\n### Requirement\nThe system shall control access to component interfaces that allow for ingestion or modification of data contained within the system.",
+        "uuid": "becdda2a-19eb-449e-82d0-ef1565ff8a93"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.GEN.10\n\n### Requirement\nComponents shall control access to interfaces that alter content.",
+        "uuid": "d5318d9f-8646-4dcf-9303-7b3392c19b74"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.SEC.1\n\n### Requirement\nThe system shall authorize access to system interfaces that allow for ingestion or modification of data contained within the system.",
+        "uuid": "96a75374-d9a5-4e22-9921-ea77e5b9451a"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.1\n\n### Requirement\nThe service shall authenticate a user given identifying credentials for that user.",
+        "uuid": "89212a54-4290-4273-ba68-aaa0b2b76044"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.2\n\n### Requirement\nThe service shall encrypt the transmission of identifying credentials across the network.",
+        "uuid": "d6a1f9d6-f332-4ea8-8f81-9cac0332d6bc"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.3\n\n### Requirement\nThe service shall authorize an authenticated user for access to a controlled capability.",
+        "uuid": "430486cc-4854-40e7-8ae3-019b8acef14f"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.SEC.2\n\n### Requirement\nThe system shall maintain a list of authorized users.",
+        "uuid": "c7ebb09e-fb9c-4c6e-8a7a-98cb695701d5"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.4\n\n### Requirement\nThe service shall allow an operator of the system to create, update or delete a user identity.",
+        "uuid": "1c09809e-95cc-4d24-8cd6-e2ec37576da6"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.5\n\n### Requirement\nThe service shall capture identifying information associated with a user identity.",
+        "uuid": "1dd39934-3ff1-4fc6-b266-bae239e2fed2"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.6\n\n### Requirement\nThe service shall allow an operator of the system to create, update or delete a group identity.",
+        "uuid": "177e1477-5783-410a-bd36-b2522871e9b4"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SEC.7\n\n### Requirement\nThe service shall allow an operator of the system to add or remove a user from a group.",
+        "uuid": "b3ec5dfe-46ce-445e-9245-da0a58250c5c"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.1.1\n\n### Requirement\nPDS will provide online interfaces allowing users to search the archive",
+        "uuid": "fe98e447-1042-41dc-9c63-73b26faab322"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.QRY.1\n\n### Requirement\nThe system shall provide the capability to search for and identify artifacts registered with the PDS.",
+        "uuid": "69530a9e-3dc6-4306-8ac3-d168dc72c698"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.REG.14\n\n### Requirement\nThe service shall allow queries for registered artifacts.",
+        "uuid": "a25b106e-e1eb-4b7b-b4f6-b7d63605ed8d"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.1\n\n### Requirement\nThe service shall provide a user interface for entering of queries and display of search results accessible from a standards-compliant web browser.",
+        "uuid": "bdc14256-23f1-4981-8fd4-94cda24b816c"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.2\n\n### Requirement\nThe service shall degrade gracefully on browsers that lack modern features and not depend on them for operation.",
+        "uuid": "956718b5-3118-4552-8e8c-5a37dd3e2cda"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.4\n\n### Requirement\nThe service shall provide a programmatic interface for entering of queries and return of search results that communicates over HTTP for use by client applications developed by PDS, PDS nodes, and others.",
+        "uuid": "383aa95b-765a-4cc5-ac8d-c2a59ee460fe"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.5\n\n### Requirement\nThe service shall provide the capability to retrieve metadata associated with registered artifacts for the purpose of generating search indexes.",
+        "uuid": "cdf0d9a6-58a5-4ef7-a38b-e8b506809fa5"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.6\n\n### Requirement\nThe service shall support searching by accepting criteria as a sequence of open text keywords.",
+        "uuid": "635187bd-2f8f-455f-8a53-9ce6f065fb13"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.7\n\n### Requirement\nThe service shall support searching by accepting criteria as a series of values for constraints on specified indexes.",
+        "uuid": "a4350140-c0f6-4c9e-b508-12569149896f"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.8\n\n### Requirement\nThe service shall support narrowing of additional index results based on specifications of terms and/or values on indexes.",
+        "uuid": "1f30f454-1a2c-464e-a78a-7aa03c83c957"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.9\n\n### Requirement\nThe service shall support the ordering of results based on specified criteria including relevance and specified indexes.",
+        "uuid": "aa87fa55-0816-4fbd-a5ab-528e940fb170"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.10\n\n### Requirement\nThe service shall provide results to a search as a sequence of matching URIs to resources that contain search desiderata.",
+        "uuid": "013ec577-2912-4177-9b46-1584a1faa84e"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.11\n\n### Requirement\nThe service shall annotate each URI of a result with metadata describing the URI.",
+        "uuid": "1ef51526-706c-4fd6-a5e8-21154b981ba4"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.12\n\n### Requirement\nThe service shall support configuration on the kinds of indexes maintained on indexed data, including indexes that differ by data type, by data conversion, by index generation methodology, and by metadata maintenance for result annotation.",
+        "uuid": "a924eed3-88ba-4f20-83c3-311051c67946"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.13\n\n### Requirement\nThe service shall capture metrics pertaining to its search indexes usage and contents.",
+        "uuid": "dcd57bcf-94ea-424c-8b74-d617f0365f07"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.1.2\n\n### Requirement\nPDS will provide online interfaces for discipline-specific searching",
+        "uuid": "08e533b7-b9d2-42ca-8d85-e30f329cd617"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.QRY.2\n\n### Requirement\nThe system shall provide the capability to search for and identify artifacts within a defined scope (i.e., a single discipline)",
+        "uuid": "c959d016-fa3e-4744-8f4a-4f77d9aea218"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.1\n\n### Requirement\nThe service shall provide a user interface for entering of queries and display of search results accessible from a standards-compliant web browser.",
+        "uuid": "c1ee5fed-8747-4876-91a5-7bbd04ae29f8"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.2\n\n### Requirement\nThe service shall degrade gracefully on browsers that lack modern features and not depend on them for operation.",
+        "uuid": "9095826a-e4a1-40d1-9175-b2260516b8b1"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.4\n\n### Requirement\nThe service shall provide a programmatic interface for entering of queries and return of search results that communicates over HTTP for use by client applications developed by PDS, PDS nodes, and others.",
+        "uuid": "19779aa6-2515-4e4d-ae9e-3d61031604fd"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.5\n\n### Requirement\nThe service shall provide the capability to retrieve metadata associated with registered artifacts for the purpose of generating search indexes.",
+        "uuid": "63331a56-b137-426a-b1b5-affab7497e12"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.6\n\n### Requirement\nThe service shall support searching by accepting criteria as a sequence of open text keywords.",
+        "uuid": "b7269aa9-8915-4239-88c2-624feef32b16"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.7\n\n### Requirement\nThe service shall support searching by accepting criteria as a series of values for constraints on specified indexes.",
+        "uuid": "3fb48f4c-8fd6-4247-892a-c054c27b9915"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.8\n\n### Requirement\nThe service shall support narrowing of additional index results based on specifications of terms and/or values on indexes.",
+        "uuid": "40114223-e1d2-4d7b-9820-fffce69dad7a"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.9\n\n### Requirement\nThe service shall support the ordering of results based on specified criteria including relevance and specified indexes.",
+        "uuid": "3e1e8c72-d9e6-4421-a05e-76aecb9625d5"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.10\n\n### Requirement\nThe service shall provide results to a search as a sequence of matching URIs to resources that contain search desiderata.",
+        "uuid": "b07d7f9e-5ae5-4351-8f94-2c471b73f2d7"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.11\n\n### Requirement\nThe service shall annotate each URI of a result with metadata describing the URI.",
+        "uuid": "8f85a0a2-9a0a-46da-a4bb-73392d9f225b"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.12\n\n### Requirement\nThe service shall support configuration on the kinds of indexes maintained on indexed data, including indexes that differ by data type, by data conversion, by index generation methodology, and by metadata maintenance for result annotation.",
+        "uuid": "90f7c0f6-9ed8-46eb-b135-5bf53cb97500"
+    },
+    {
+        "requirement": "# Level\nLevel 5\n\n## ID\nL5.SCH.13\n\n### Requirement\nThe service shall capture metrics pertaining to its search indexes usage and contents.",
+        "uuid": "1e402a21-1e6a-4ef3-847c-c8d1d1a3ca95"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.1.3\n\n### Requirement\nPDS will allow products identified within a search to be selected for retrieval",
+        "uuid": "ec7205fe-35fe-435d-8eb2-cd32d0804386"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.2.1\n\n### Requirement\nPDS will provide online mechanisms allowing users to download portions of the archive",
+        "uuid": "d077a4dd-1249-4e2f-b0a4-e5b10bf6590f"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.2.2\n\n### Requirement\nPDS will provide a mechanism for offline delivery of portions of the archive to users",
+        "uuid": "316db367-f493-4e7f-8079-6a5cac58c901"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.2.3\n\n### Requirement\nPDS will provide mechanisms to ensure that data have been transferred intact",
+        "uuid": "d252166f-5517-42c7-9daf-84978c210dbd"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.3.1\n\n### Requirement\nPDS will provide expert help in use of data from the archive",
+        "uuid": "6f9be087-5d91-47e8-a5bd-b8a0c2c9e07a"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.3.2\n\n### Requirement\nPDS will provide a capability for opening and inspecting the contents (e.g. label, objects, groups) of any PDS compliant archival product",
+        "uuid": "b24de300-b11a-4d4a-b8ab-b8e5bdc23902"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.5\n\n### Requirement\nThe system shall provide a tool for visualizing PDS products",
+        "uuid": "124db170-fb26-4770-84b4-769acbfd488a"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.3.3\n\n### Requirement\nPDS will provide tools for translating archival products between selected formats",
+        "uuid": "99e3e2e8-3ad8-46a8-905e-5f1ed66fa578"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.4\n\n### Requirement\nThe system shall provide a tool for transforming PDS products",
+        "uuid": "efae8ea2-1af0-47d1-8843-4dcc2bdc0063"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.3.4\n\n### Requirement\nPDS will provide tools for translating archival products between selected coordinate systems",
+        "uuid": "a6c383d2-d6de-44e0-84e0-59588142abfc"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.4\n\n### Requirement\nThe system shall provide a tool for transforming PDS products",
+        "uuid": "f6102cc7-7083-4b03-bf93-9b49039bcc51"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.3.5\n\n### Requirement\nPDS will provide tools for visualizing selected archival products",
+        "uuid": "f56ac776-ada6-4142-ba35-57e77ed662b0"
+    },
+    {
+        "requirement": "# Level\nLevel 4\n\n## ID\nL4.PRP.5\n\n### Requirement\nThe system shall provide a tool for visualizing PDS products",
+        "uuid": "37528e48-22cc-400c-874f-742a332bfb26"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.3.6\n\n### Requirement\nPDS will provide a mechanism for notifying subscribed users when a data set is released or updated",
+        "uuid": "d2e3f435-6feb-4155-9918-970578314b62"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n3.3.7\n\n### Requirement\nPDS will solicit input from the user community on services desired",
+        "uuid": "f45cbbfc-a224-42fa-9ad4-db9c230f31a9"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.1.1\n\n### Requirement\nPDS will define and maintain a set of quality, quantity, and continuity (QQC) requirements for ensuring long term preservation of the archive",
+        "uuid": "eabd546f-a42b-4a7b-ae95-9a1fc8f8329a"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.1.2\n\n### Requirement\nPDS will develop and implement procedures for periodically ensuring the integrity of the data",
+        "uuid": "0c93728d-d0a7-40c1-ae7e-cc86ec89195e"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.1.3\n\n### Requirement\nPDS will develop and implement procedures for periodically refreshing the data by updating the underlying storage technology",
+        "uuid": "bbe85388-47c4-4ad6-9c00-244ada7107fd"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.1.4\n\n### Requirement\nPDS will develop and implement a disaster recovery plan for the archive",
+        "uuid": "a2656f08-ddbd-44b7-a295-fb914533f68e"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.1.5\n\n### Requirement\nPDS will meet U.S. federal regulations for preservation and management of the data through its Memorandum of Understanding (MOU) with the National Space Science Data Center (NSSDC)",
+        "uuid": "9855019b-2aa0-4406-9005-e9a6c5b5002b"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.2.1\n\n### Requirement\nPDS will define and maintain a set of usability requirements to ensure ongoing utility of the data in the archive",
+        "uuid": "6a22d389-735f-49f8-a29e-5dad1d707e9a"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.2.2\n\n### Requirement\nPDS will develop and implement procedures for periodically monitoring the user community interests and practices and verifying the usability of the products in the archive",
+        "uuid": "f7d68f9e-fc16-488d-a064-65c2d9532eb8"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.2.3\n\n### Requirement\nPDS will monitor the evolution of technology including physical media, storage, and software in an effort to keep the archiving technology decisions relevant within the PDS",
+        "uuid": "2b84e03b-bd14-41b8-83da-dff571741163"
+    },
+    {
+        "requirement": "# Level\nLevel 3\n\n## ID\n4.2.4\n\n### Requirement\nPDS will provide a mechanism to upgrade products or data sets which do not meet usability requirements (e.g., data sets from old missions)",
+        "uuid": "3ea2fcfa-4b14-4155-b968-e0f242852bb6"
+    }
 ]
