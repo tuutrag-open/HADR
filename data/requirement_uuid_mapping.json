@@ -1,0 +1,1167 @@
+[
+    {
+        "uuid": "49f3d9c0-2520-45a2-9f5f-494d9e7a6416",
+        "level": "Level 3",
+        "requirement": "1.1.1"
+    },
+    {
+        "uuid": "0178be71-7385-40dd-b979-c70c7cff8fdf",
+        "level": "Level 3",
+        "requirement": "1.1.2"
+    },
+    {
+        "uuid": "2526ee0f-2294-46fb-bc5c-703144d45610",
+        "level": "Level 3",
+        "requirement": "1.1.3"
+    },
+    {
+        "uuid": "0631d417-a73e-4fea-a01e-792e259b4160",
+        "level": "Level 3",
+        "requirement": "1.2.1"
+    },
+    {
+        "uuid": "12c6562d-71d2-44ee-a366-df69abea672c",
+        "level": "Level 3",
+        "requirement": "1.2.2"
+    },
+    {
+        "uuid": "7f4448e2-b112-4d4d-9ff0-bc3ba1843083",
+        "level": "Level 3",
+        "requirement": "1.2.3"
+    },
+    {
+        "uuid": "b6f77727-9ee2-47b3-afee-6d984539e4fd",
+        "level": "Level 3",
+        "requirement": "1.2.4"
+    },
+    {
+        "uuid": "d64d8bc0-632e-4223-bb84-b6f286bd2a59",
+        "level": "Level 3",
+        "requirement": "1.2.5"
+    },
+    {
+        "uuid": "12487c37-536e-43f9-bf94-c489fbb741ca",
+        "level": "Level 3",
+        "requirement": "1.3.1"
+    },
+    {
+        "uuid": "e40efe3a-5ebf-4423-b418-924cc7187f82",
+        "level": "Level 3",
+        "requirement": "1.3.2"
+    },
+    {
+        "uuid": "cd0c95b6-034c-4584-80fb-a37c6bd40671",
+        "level": "Level 3",
+        "requirement": "1.3.3"
+    },
+    {
+        "uuid": "31598faf-5492-421a-a11c-7b8608e11cfc",
+        "level": "Level 3",
+        "requirement": "1.3.4"
+    },
+    {
+        "uuid": "c034e9f0-3f70-4183-a87d-577e353a78c7",
+        "level": "Level 3",
+        "requirement": "1.3.5"
+    },
+    {
+        "uuid": "2e47105b-9460-42d4-b6a6-25078d137332",
+        "level": "Level 3",
+        "requirement": "1.4.1"
+    },
+    {
+        "uuid": "db4b526a-8638-4ec6-8398-04d4c5d15bef",
+        "level": "Level 3",
+        "requirement": "1.4.2"
+    },
+    {
+        "uuid": "ec915485-fdce-491d-afc1-627419733f85",
+        "level": "Level 3",
+        "requirement": "1.4.3"
+    },
+    {
+        "uuid": "cd54d484-90ef-4e04-aafc-3972e1446aff",
+        "level": "Level 3",
+        "requirement": "1.4.4"
+    },
+    {
+        "uuid": "e0a7af77-044c-41d3-b9bd-d7585fab1b3d",
+        "level": "Level 3",
+        "requirement": "1.4.5"
+    },
+    {
+        "uuid": "f7d03cf1-26fe-42c6-a9e3-40ae35bdad88",
+        "level": "Level 3",
+        "requirement": "1.4.6"
+    },
+    {
+        "uuid": "7ed10f48-94bd-496d-a110-18f44a8316b9",
+        "level": "Level 3",
+        "requirement": "1.4.7"
+    },
+    {
+        "uuid": "387486be-a85e-430f-abff-1353ec4b6156",
+        "level": "Level 3",
+        "requirement": "1.5.1"
+    },
+    {
+        "uuid": "c2eb34c5-2c07-40f6-973f-2946e9d36b77",
+        "level": "Level 4",
+        "requirement": "L4.PRP.1"
+    },
+    {
+        "uuid": "3fae388e-41bd-4654-adf0-ce93fa60cab8",
+        "level": "Level 5",
+        "requirement": "L5.PRP.DE.1"
+    },
+    {
+        "uuid": "d0d1efac-2de0-4284-a86b-f6ec2bd958e9",
+        "level": "Level 5",
+        "requirement": "L5.PRP.DE.2"
+    },
+    {
+        "uuid": "3c6887ac-b719-4e6a-9ed1-b93e771de0e4",
+        "level": "Level 5",
+        "requirement": "L5.PRP.DE.3"
+    },
+    {
+        "uuid": "83775530-fb4a-4002-b86f-45f17af7fe27",
+        "level": "Level 5",
+        "requirement": "L5.PRP.DE.4"
+    },
+    {
+        "uuid": "c57fd931-6766-4d77-afc8-017ca6b7a7f9",
+        "level": "Level 5",
+        "requirement": "L5.PRP.DE.5"
+    },
+    {
+        "uuid": "c1450030-260e-493c-b027-b0703d2c3931",
+        "level": "Level 5",
+        "requirement": "L5.PRP.DE.6"
+    },
+    {
+        "uuid": "4dd04e0b-5416-4aaf-b824-5bad5d5d60de",
+        "level": "Level 5",
+        "requirement": "L5.PRP.DE.7"
+    },
+    {
+        "uuid": "c7e5e098-1d13-4424-bd97-44f7f270a972",
+        "level": "Level 4",
+        "requirement": "L4.PRP.2"
+    },
+    {
+        "uuid": "011fbbd1-01a1-4e77-9cff-05a31bce38a1",
+        "level": "Level 3",
+        "requirement": "1.5.2"
+    },
+    {
+        "uuid": "bb87a587-6539-4d9a-975a-8d71691b7c71",
+        "level": "Level 4",
+        "requirement": "L4.PRP.3"
+    },
+    {
+        "uuid": "4faaf777-e29f-4c68-b73d-5f76a68aeedb",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.1"
+    },
+    {
+        "uuid": "bad498a3-a4bf-483c-9a29-d3a9e8e18e24",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.2"
+    },
+    {
+        "uuid": "1014d726-01e7-47ce-84a8-89352bcf7eec",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.3"
+    },
+    {
+        "uuid": "d4836042-60ec-44c9-8f17-d634f57e2091",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.4"
+    },
+    {
+        "uuid": "8192d656-3490-45d1-8ae6-ee936a207c1d",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.5"
+    },
+    {
+        "uuid": "8e667ea0-b6ce-4ec1-9299-e1bc95a04016",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.6"
+    },
+    {
+        "uuid": "b0ae8ea2-ad8f-4677-b08a-8d7bd10cfd5a",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.7"
+    },
+    {
+        "uuid": "21115cb9-8504-4279-8688-5624990b39db",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.8"
+    },
+    {
+        "uuid": "e67ff293-9e6c-40dd-93ad-c6c371fc6bcd",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.9"
+    },
+    {
+        "uuid": "2d1a4499-b3ab-40da-bb66-0e73cb5d6917",
+        "level": "Level 5",
+        "requirement": "L5.PRP.VA.10"
+    },
+    {
+        "uuid": "d73f6f8f-2bcf-450f-92b2-3e2214949781",
+        "level": "Level 3",
+        "requirement": "1.5.3"
+    },
+    {
+        "uuid": "bd8aa6ae-9e1e-40a6-9962-4348d6a2a395",
+        "level": "Level 3",
+        "requirement": "1.5.4"
+    },
+    {
+        "uuid": "bf76170e-acc6-4dd8-abec-692caabe90da",
+        "level": "Level 4",
+        "requirement": "L4.GEN.8"
+    },
+    {
+        "uuid": "38d6d312-21ff-48b7-b81c-2af5c3f1619c",
+        "level": "Level 5",
+        "requirement": "L5.GEN.11"
+    },
+    {
+        "uuid": "a093df9c-3181-45a4-afaf-2726a3e62851",
+        "level": "Level 3",
+        "requirement": "2.1.1"
+    },
+    {
+        "uuid": "fe7ffaef-c567-4386-b158-7208896e322e",
+        "level": "Level 3",
+        "requirement": "2.1.2"
+    },
+    {
+        "uuid": "38aee5e6-96ec-47d9-88ae-2de9106d75fa",
+        "level": "Level 3",
+        "requirement": "2.1.3"
+    },
+    {
+        "uuid": "b4fb22e1-63fb-4ba7-9782-73e0acad28ae",
+        "level": "Level 3",
+        "requirement": "2.1.4"
+    },
+    {
+        "uuid": "2a52457a-1e20-4919-a0d7-9929c08ae778",
+        "level": "Level 3",
+        "requirement": "2.2.1"
+    },
+    {
+        "uuid": "5c32b5e9-3f11-44b3-814c-e297e5e9773c",
+        "level": "Level 3",
+        "requirement": "2.2.2"
+    },
+    {
+        "uuid": "71049bf2-f224-4903-a545-abb1c721b2c7",
+        "level": "Level 4",
+        "requirement": "L4.GEN.3"
+    },
+    {
+        "uuid": "fc5ac337-5597-4fc3-8cd9-41588f72753b",
+        "level": "Level 5",
+        "requirement": "L5.GEN.5"
+    },
+    {
+        "uuid": "a2676869-3a74-4a9e-8da2-4899e014f01c",
+        "level": "Level 5",
+        "requirement": "L5.GEN.6"
+    },
+    {
+        "uuid": "83b45bb5-ec7c-4e50-838c-200fc530a229",
+        "level": "Level 5",
+        "requirement": "L5.GEN.7"
+    },
+    {
+        "uuid": "74def5e1-bbdb-46cd-a57a-303cb18fa542",
+        "level": "Level 4",
+        "requirement": "L4.REG.3"
+    },
+    {
+        "uuid": "1bf5d4b6-5968-4a2f-934c-feebc1051a08",
+        "level": "Level 5",
+        "requirement": "L5.HVT.1"
+    },
+    {
+        "uuid": "651bf9f9-2635-4c24-9ad4-bc1f6598760f",
+        "level": "Level 5",
+        "requirement": "L5.HVT.2"
+    },
+    {
+        "uuid": "e2636a46-d9e2-4b9c-8ba9-066a672f8968",
+        "level": "Level 5",
+        "requirement": "L5.HVT.3"
+    },
+    {
+        "uuid": "ad0602ba-3707-427c-8bdd-165ff35b73cb",
+        "level": "Level 5",
+        "requirement": "L5.HVT.4"
+    },
+    {
+        "uuid": "e35d1a94-1ee7-4569-af91-b7cd505ffc7e",
+        "level": "Level 5",
+        "requirement": "L5.HVT.5"
+    },
+    {
+        "uuid": "32eb9554-0f06-4e0c-b31d-732da72302fa",
+        "level": "Level 5",
+        "requirement": "L5.HVT.6"
+    },
+    {
+        "uuid": "707706c2-10ea-451d-96ef-dc7d101b95ec",
+        "level": "Level 5",
+        "requirement": "L5.HVT.7"
+    },
+    {
+        "uuid": "5b38282e-70a0-4289-9b6a-524590254228",
+        "level": "Level 5",
+        "requirement": "L5.HVT.8"
+    },
+    {
+        "uuid": "84d9df76-ddb0-41db-b892-1410523d0ee3",
+        "level": "Level 5",
+        "requirement": "L5.REG.1"
+    },
+    {
+        "uuid": "03b9074d-3bba-4382-aa1e-d53381616eaf",
+        "level": "Level 5",
+        "requirement": "L5.REG.2"
+    },
+    {
+        "uuid": "f5fc90d3-c5a3-4d3b-8906-59cc95106bab",
+        "level": "Level 5",
+        "requirement": "L5.REG.4"
+    },
+    {
+        "uuid": "296c3bef-6341-4cd2-894b-a9e87fdf2434",
+        "level": "Level 5",
+        "requirement": "L5.REG.5"
+    },
+    {
+        "uuid": "afd6b2c0-fdeb-4e45-b59d-8c864731197d",
+        "level": "Level 5",
+        "requirement": "L5.REG.6"
+    },
+    {
+        "uuid": "dd50c545-db11-48f4-8414-db9e3c51e4e8",
+        "level": "Level 5",
+        "requirement": "L5.REG.7"
+    },
+    {
+        "uuid": "8c7b93d1-28e9-4f51-aa50-019f6e26ade7",
+        "level": "Level 5",
+        "requirement": "L5.REG.8"
+    },
+    {
+        "uuid": "cf260993-f776-451e-95fd-88c8b03b039a",
+        "level": "Level 4",
+        "requirement": "L4.RPT.1"
+    },
+    {
+        "uuid": "e6bd650b-e137-4af8-b542-f95829ec1fcb",
+        "level": "Level 5",
+        "requirement": "L5.RPT.1"
+    },
+    {
+        "uuid": "787a0ddd-2130-4203-865b-24487e0c9d7d",
+        "level": "Level 5",
+        "requirement": "L5.RPT.6"
+    },
+    {
+        "uuid": "58a70678-0e17-4df4-83ab-f4b18dbce003",
+        "level": "Level 4",
+        "requirement": "L4.RPT.2"
+    },
+    {
+        "uuid": "4efc7c97-c464-4573-8c9a-a7c208de2da9",
+        "level": "Level 5",
+        "requirement": "L5.RPT.2"
+    },
+    {
+        "uuid": "62cab909-6e80-46c1-ab6c-81af9bd4ca91",
+        "level": "Level 5",
+        "requirement": "L5.RPT.3"
+    },
+    {
+        "uuid": "7c26b989-4685-4454-aa6d-53eb7b5f0387",
+        "level": "Level 5",
+        "requirement": "L5.RPT.4"
+    },
+    {
+        "uuid": "fc79e4a1-717a-4310-861a-9d258634a92a",
+        "level": "Level 4",
+        "requirement": "L4.RPT.3"
+    },
+    {
+        "uuid": "5b1eeaaa-2964-4bf8-bb93-60733b157152",
+        "level": "Level 4",
+        "requirement": "L4.RPT.4"
+    },
+    {
+        "uuid": "89ad7829-1dd9-4d73-85e6-5b01bf944dde",
+        "level": "Level 5",
+        "requirement": "L5.RPT.5"
+    },
+    {
+        "uuid": "f4ee92b6-a0e1-4400-8ea0-b0803c731d58",
+        "level": "Level 4",
+        "requirement": "L4.RPT.5"
+    },
+    {
+        "uuid": "f2bf2a2f-56e1-403f-bbe9-6e2069e9e307",
+        "level": "Level 5",
+        "requirement": "L5.RPT.8"
+    },
+    {
+        "uuid": "5b510fcb-f65c-4280-ac34-b2f83f054cc5",
+        "level": "Level 5",
+        "requirement": "L5.RPT.9"
+    },
+    {
+        "uuid": "efb2ad07-8d73-49d6-a4c1-3ced81a03bb3",
+        "level": "Level 5",
+        "requirement": "L5.RPT.10"
+    },
+    {
+        "uuid": "2b69d9c9-f4da-4b70-889c-331cda08a954",
+        "level": "Level 5",
+        "requirement": "L5.RPT.11"
+    },
+    {
+        "uuid": "dd2d091b-05e2-4521-8d03-c15fb3926a71",
+        "level": "Level 3",
+        "requirement": "2.2.3"
+    },
+    {
+        "uuid": "c9f13a63-79d4-43ee-8de7-c2cc2f14d2c7",
+        "level": "Level 3",
+        "requirement": "2.3.1"
+    },
+    {
+        "uuid": "fddedef4-c72d-42e9-8972-69229f2356e0",
+        "level": "Level 3",
+        "requirement": "2.3.2"
+    },
+    {
+        "uuid": "221e8e85-772b-4263-8c4f-1f8cbf48ccdf",
+        "level": "Level 3",
+        "requirement": "2.4.1"
+    },
+    {
+        "uuid": "5edf9490-c194-45a4-944e-e301a5d86bee",
+        "level": "Level 3",
+        "requirement": "2.4.2"
+    },
+    {
+        "uuid": "7bf18035-4ca2-4a1d-8c94-a40b09411480",
+        "level": "Level 3",
+        "requirement": "2.4.3"
+    },
+    {
+        "uuid": "e3eee867-9854-444d-9374-ae2869b1d411",
+        "level": "Level 3",
+        "requirement": "2.4.4"
+    },
+    {
+        "uuid": "690f5257-c413-452c-82c0-d145463254c2",
+        "level": "Level 3",
+        "requirement": "2.4.5"
+    },
+    {
+        "uuid": "00faeeb4-de65-43c9-8aae-425a3cdb374e",
+        "level": "Level 3",
+        "requirement": "2.5.1"
+    },
+    {
+        "uuid": "116dcca9-ee7d-4e68-af2d-7b7baa487df1",
+        "level": "Level 3",
+        "requirement": "2.5.2"
+    },
+    {
+        "uuid": "cf28dff8-9e68-4bae-b408-485c790582f7",
+        "level": "Level 3",
+        "requirement": "2.5.3"
+    },
+    {
+        "uuid": "f0761ae6-6dad-4677-97e6-57a4a3a2e525",
+        "level": "Level 3",
+        "requirement": "2.6.1"
+    },
+    {
+        "uuid": "7764e163-f894-45a1-9556-b123ef132ee6",
+        "level": "Level 3",
+        "requirement": "2.6.2"
+    },
+    {
+        "uuid": "2b17a434-083a-49d0-90e6-973f9bab2d73",
+        "level": "Level 4",
+        "requirement": "L4.REG.1"
+    },
+    {
+        "uuid": "3e0f4f68-badb-4d7e-b699-35bf4fde967f",
+        "level": "Level 5",
+        "requirement": "L5.REG.3"
+    },
+    {
+        "uuid": "7c027675-747f-46ab-8789-da721ca12690",
+        "level": "Level 4",
+        "requirement": "L4.REG.3"
+    },
+    {
+        "uuid": "574b4f90-a1af-4300-9c75-cb0352714b64",
+        "level": "Level 5",
+        "requirement": "L5.HVT.1"
+    },
+    {
+        "uuid": "4ba5b7c4-475f-4616-b209-0addc48e8c48",
+        "level": "Level 5",
+        "requirement": "L5.HVT.2"
+    },
+    {
+        "uuid": "afaad1aa-997a-4e13-9dbc-d2a8612407b1",
+        "level": "Level 5",
+        "requirement": "L5.HVT.3"
+    },
+    {
+        "uuid": "6d67275c-8357-476b-b511-85309211632e",
+        "level": "Level 5",
+        "requirement": "L5.HVT.4"
+    },
+    {
+        "uuid": "25ea2a19-7491-4023-9ea4-8d2b0d2a256b",
+        "level": "Level 5",
+        "requirement": "L5.HVT.5"
+    },
+    {
+        "uuid": "b1ea4bef-45d5-4290-a9e5-8ae7844fd2c9",
+        "level": "Level 5",
+        "requirement": "L5.HVT.6"
+    },
+    {
+        "uuid": "b3b5258c-c229-4d10-a0c2-973d137d8071",
+        "level": "Level 5",
+        "requirement": "L5.HVT.7"
+    },
+    {
+        "uuid": "e176ac6d-454b-4953-a3b0-e5705dcd1c8c",
+        "level": "Level 5",
+        "requirement": "L5.HVT.8"
+    },
+    {
+        "uuid": "8b39e644-8237-4aab-8214-22af69b62187",
+        "level": "Level 5",
+        "requirement": "L5.REG.1"
+    },
+    {
+        "uuid": "2f72a030-dac1-44fb-a05d-974fe3dd3a13",
+        "level": "Level 5",
+        "requirement": "L5.REG.2"
+    },
+    {
+        "uuid": "d0a5cb60-6164-420e-aa28-9f4cc1683a79",
+        "level": "Level 5",
+        "requirement": "L5.REG.4"
+    },
+    {
+        "uuid": "a670ce12-1400-4285-978b-8c91c0ee9b87",
+        "level": "Level 5",
+        "requirement": "L5.REG.5"
+    },
+    {
+        "uuid": "a292dcf1-4486-4acf-9b30-84dfbfd20bcf",
+        "level": "Level 5",
+        "requirement": "L5.REG.6"
+    },
+    {
+        "uuid": "1c54761f-4696-492c-9a41-75ab9ee423f6",
+        "level": "Level 5",
+        "requirement": "L5.REG.7"
+    },
+    {
+        "uuid": "1e793462-a86f-47f0-ba6d-fb68ae7b2bb3",
+        "level": "Level 5",
+        "requirement": "L5.REG.8"
+    },
+    {
+        "uuid": "1547b79d-d2bf-47dc-b7b9-4ef5a2a3e3ec",
+        "level": "Level 4",
+        "requirement": "L4.REG.4"
+    },
+    {
+        "uuid": "25c56dbb-9e6a-4826-a083-e33e4d8483f8",
+        "level": "Level 5",
+        "requirement": "L5.REG.9"
+    },
+    {
+        "uuid": "c586872f-b979-492e-9e46-cdb9eba80e1e",
+        "level": "Level 5",
+        "requirement": "L5.REG.10"
+    },
+    {
+        "uuid": "8fb5f86b-a8a7-494b-b8b4-e2a1bbfd97e9",
+        "level": "Level 5",
+        "requirement": "L5.REG.11"
+    },
+    {
+        "uuid": "2f4a0523-f58e-4c36-8e5a-39e386cb4bad",
+        "level": "Level 5",
+        "requirement": "L5.REG.12"
+    },
+    {
+        "uuid": "af5c4eb9-30be-4ec1-9159-035c3196bbc0",
+        "level": "Level 5",
+        "requirement": "L5.REG.13"
+    },
+    {
+        "uuid": "b6e09b0c-93c5-4cb3-9515-bf41cdc3e560",
+        "level": "Level 3",
+        "requirement": "2.6.3"
+    },
+    {
+        "uuid": "b2b0a756-711c-43b1-9b21-e9089b8ff615",
+        "level": "Level 4",
+        "requirement": "L4.GEN.2"
+    },
+    {
+        "uuid": "300eb7e5-a54f-4fa4-9e78-a7f0f6117a14",
+        "level": "Level 5",
+        "requirement": "L5.GEN.3"
+    },
+    {
+        "uuid": "345265ab-dc46-48cb-a597-46876f4e2571",
+        "level": "Level 3",
+        "requirement": "2.7.1"
+    },
+    {
+        "uuid": "03cfebd4-cbc1-4d79-b876-23216e59e1fc",
+        "level": "Level 3",
+        "requirement": "2.7.2"
+    },
+    {
+        "uuid": "e80042ca-53dd-4a4c-a44b-9c01d22c950e",
+        "level": "Level 3",
+        "requirement": "2.7.3"
+    },
+    {
+        "uuid": "ae740af7-bf84-4a6a-8043-e6d76441cdc6",
+        "level": "Level 3",
+        "requirement": "2.7.4"
+    },
+    {
+        "uuid": "d1553cdf-fc37-4634-b529-68de96cbb9f7",
+        "level": "Level 3",
+        "requirement": "2.8.1"
+    },
+    {
+        "uuid": "dde52e05-d9f3-432e-82d5-e0104703b0c4",
+        "level": "Level 4",
+        "requirement": "L4.GEN.1"
+    },
+    {
+        "uuid": "23683bf2-7657-4751-9d45-4b667ae3d36d",
+        "level": "Level 5",
+        "requirement": "L5.GEN.1"
+    },
+    {
+        "uuid": "8a93d8a0-44b4-42cc-9e75-dd6ebe602b84",
+        "level": "Level 5",
+        "requirement": "L5.GEN.2"
+    },
+    {
+        "uuid": "21c43185-f988-4752-bfdf-e610f640c6ad",
+        "level": "Level 3",
+        "requirement": "2.8.2"
+    },
+    {
+        "uuid": "19e137aa-7898-4682-8e70-95daf1f289a5",
+        "level": "Level 4",
+        "requirement": "L4.REG.1"
+    },
+    {
+        "uuid": "7e517ea7-f0a1-4598-979f-d11daf193720",
+        "level": "Level 5",
+        "requirement": "L5.REG.3"
+    },
+    {
+        "uuid": "cf2f1d1b-262c-4d21-b0e3-910152ec63f6",
+        "level": "Level 4",
+        "requirement": "L4.REG.2"
+    },
+    {
+        "uuid": "4c89fde2-67ae-429b-b8fe-25ef6a85c8ef",
+        "level": "Level 5",
+        "requirement": "L5.REG.15"
+    },
+    {
+        "uuid": "8fcf989a-88db-4db6-afb2-434bd91c3ce4",
+        "level": "Level 5",
+        "requirement": "L5.REG.16"
+    },
+    {
+        "uuid": "080c293a-e2e8-4042-a9df-fe5fd15e3ed2",
+        "level": "Level 3",
+        "requirement": "2.8.3"
+    },
+    {
+        "uuid": "14045bc5-9a65-4c4c-808c-b60acdecd4ca",
+        "level": "Level 4",
+        "requirement": "L4.GEN.2"
+    },
+    {
+        "uuid": "3c00accc-87a3-4ec4-882e-df336bfeee36",
+        "level": "Level 5",
+        "requirement": "L5.GEN.3"
+    },
+    {
+        "uuid": "296ecd86-d6fa-4b00-b87a-9a984f10ed68",
+        "level": "Level 5",
+        "requirement": "L5.GEN.4"
+    },
+    {
+        "uuid": "1e19b23b-f26d-4385-a5a6-32384b3e4703",
+        "level": "Level 3",
+        "requirement": "2.8.4"
+    },
+    {
+        "uuid": "242f0d70-9ce8-4d60-ae58-e49b25339e36",
+        "level": "Level 3",
+        "requirement": "2.8.5"
+    },
+    {
+        "uuid": "b6109377-22c3-40a0-a63c-377acd63493c",
+        "level": "Level 3",
+        "requirement": "2.8.6"
+    },
+    {
+        "uuid": "8bf6118f-a03a-412d-aa50-85988773282a",
+        "level": "Level 3",
+        "requirement": "2.8.7"
+    },
+    {
+        "uuid": "c3a6e9ef-3998-42f2-9858-488e468f6e66",
+        "level": "Level 4",
+        "requirement": "L4.GEN.2"
+    },
+    {
+        "uuid": "f560c986-6ba6-46f3-bd9a-ddcd75d29c82",
+        "level": "Level 3",
+        "requirement": "2.8.8"
+    },
+    {
+        "uuid": "6498bab6-926a-4814-8223-3f6b969d8dba",
+        "level": "Level 3",
+        "requirement": "2.9.1"
+    },
+    {
+        "uuid": "1f2e65d3-07d7-4d8a-9923-17e287055832",
+        "level": "Level 5",
+        "requirement": "L5.GEN.9"
+    },
+    {
+        "uuid": "45d62826-60c9-489c-bba9-683955add957",
+        "level": "Level 3",
+        "requirement": "2.9.2"
+    },
+    {
+        "uuid": "c184bdcc-3b89-408c-965c-65ca274fb1c8",
+        "level": "Level 4",
+        "requirement": "L4.GEN.5"
+    },
+    {
+        "uuid": "f5df8e6e-64a9-49b6-af1f-366920132964",
+        "level": "Level 5",
+        "requirement": "L5.GEN.9"
+    },
+    {
+        "uuid": "0b21a800-6314-4735-a7a5-396c38fdc30e",
+        "level": "Level 5",
+        "requirement": "L5.SCH.3"
+    },
+    {
+        "uuid": "fd8bafd1-656c-46dd-adbd-7ec0974f49f6",
+        "level": "Level 3",
+        "requirement": "2.9.3"
+    },
+    {
+        "uuid": "2781fb0c-b6ef-4ac1-b915-afb910cb6220",
+        "level": "Level 4",
+        "requirement": "L4.GEN.6"
+    },
+    {
+        "uuid": "44b978c7-3054-468b-b006-a61acb7ff3c8",
+        "level": "Level 5",
+        "requirement": "L5.RPT.3"
+    },
+    {
+        "uuid": "5a5d6c5e-185f-47fa-9f56-b2c2ef286d6e",
+        "level": "Level 5",
+        "requirement": "L5.RPT.7"
+    },
+    {
+        "uuid": "0d4c3e8e-c1d6-42d8-9195-efaf0c010c85",
+        "level": "Level 3",
+        "requirement": "2.9.4"
+    },
+    {
+        "uuid": "c405ecae-3960-4e38-97ef-cb59a9538277",
+        "level": "Level 3",
+        "requirement": "2.10.1"
+    },
+    {
+        "uuid": "21724306-9d57-4028-a940-4fa1addf39a7",
+        "level": "Level 4",
+        "requirement": "L4.GEN.4"
+    },
+    {
+        "uuid": "fe86abb5-f0ad-4c8d-8626-1ac4de27af31",
+        "level": "Level 5",
+        "requirement": "L5.GEN.8"
+    },
+    {
+        "uuid": "d64beaa1-8e0a-4e4c-9f4c-a08c706cc9ba",
+        "level": "Level 3",
+        "requirement": "2.10.2"
+    },
+    {
+        "uuid": "d8d9e6f5-bef7-4fc2-8651-0d716bfee0a5",
+        "level": "Level 4",
+        "requirement": "L4.GEN.7"
+    },
+    {
+        "uuid": "3be90ef0-ec9c-43d7-bf48-c66587f99932",
+        "level": "Level 5",
+        "requirement": "L5.GEN.10"
+    },
+    {
+        "uuid": "d346dc51-ad62-436c-b05a-7f2f7d0b655d",
+        "level": "Level 3",
+        "requirement": "2.10.3"
+    },
+    {
+        "uuid": "24faf786-1237-4768-991f-fc818d83c279",
+        "level": "Level 4",
+        "requirement": "L4.GEN.7"
+    },
+    {
+        "uuid": "56ed2043-9511-47a5-9b6b-6995fdcd62e1",
+        "level": "Level 5",
+        "requirement": "L5.GEN.10"
+    },
+    {
+        "uuid": "eb50d620-f81f-48ed-a077-612f8b5d93dc",
+        "level": "Level 4",
+        "requirement": "L4.SEC.1"
+    },
+    {
+        "uuid": "6e46bc14-7298-4d7b-bc16-de9a7a075835",
+        "level": "Level 5",
+        "requirement": "L5.SEC.1"
+    },
+    {
+        "uuid": "b9f1866f-2234-4362-8d2d-b58547956516",
+        "level": "Level 5",
+        "requirement": "L5.SEC.2"
+    },
+    {
+        "uuid": "b84ddf66-d4ed-466f-9a96-9063af3cb3e8",
+        "level": "Level 5",
+        "requirement": "L5.SEC.3"
+    },
+    {
+        "uuid": "a0d1eb81-a1a7-4179-8fe8-21c6fa1a1b61",
+        "level": "Level 4",
+        "requirement": "L4.SEC.2"
+    },
+    {
+        "uuid": "6374e319-c44f-4631-9abb-834c51abc8bb",
+        "level": "Level 5",
+        "requirement": "L5.SEC.4"
+    },
+    {
+        "uuid": "8716f09d-733a-4bda-96fa-48c64c3d45c2",
+        "level": "Level 5",
+        "requirement": "L5.SEC.5"
+    },
+    {
+        "uuid": "a4c29ded-e3cb-4906-9507-0f37616ca265",
+        "level": "Level 5",
+        "requirement": "L5.SEC.6"
+    },
+    {
+        "uuid": "3dc897d0-840d-4f07-a6de-e7a752bb44b3",
+        "level": "Level 5",
+        "requirement": "L5.SEC.7"
+    },
+    {
+        "uuid": "3b4c2e46-fb1e-4e8a-917a-6314f8182a14",
+        "level": "Level 3",
+        "requirement": "3.1.1"
+    },
+    {
+        "uuid": "53e3ff64-5bb0-4635-abcf-5b5e584e90fe",
+        "level": "Level 4",
+        "requirement": "L4.QRY.1"
+    },
+    {
+        "uuid": "1f9c4e4d-059b-47fb-bd41-f761fffaacf9",
+        "level": "Level 5",
+        "requirement": "L5.REG.14"
+    },
+    {
+        "uuid": "8607abc9-f04f-40c9-bbed-2249af55f4c4",
+        "level": "Level 5",
+        "requirement": "L5.SCH.1"
+    },
+    {
+        "uuid": "79523846-0301-40ae-9150-23945a016de6",
+        "level": "Level 5",
+        "requirement": "L5.SCH.2"
+    },
+    {
+        "uuid": "6779f6f1-a939-4e2e-8a87-deb5bbabeb8c",
+        "level": "Level 5",
+        "requirement": "L5.SCH.4"
+    },
+    {
+        "uuid": "5e106ae0-2600-4202-8306-53e609d6b836",
+        "level": "Level 5",
+        "requirement": "L5.SCH.5"
+    },
+    {
+        "uuid": "5c017e25-04df-4681-a0c5-204c0e0a34ee",
+        "level": "Level 5",
+        "requirement": "L5.SCH.6"
+    },
+    {
+        "uuid": "6af4b790-6726-4bb8-91e9-00c43c77817f",
+        "level": "Level 5",
+        "requirement": "L5.SCH.7"
+    },
+    {
+        "uuid": "4bc0ab23-b181-4a44-a9ac-5662c48b1059",
+        "level": "Level 5",
+        "requirement": "L5.SCH.8"
+    },
+    {
+        "uuid": "97b1add1-d5e4-4c28-a6eb-4924464dd3f8",
+        "level": "Level 5",
+        "requirement": "L5.SCH.9"
+    },
+    {
+        "uuid": "f2b46b66-a4ad-45d7-9b11-d80f8ddaabd5",
+        "level": "Level 5",
+        "requirement": "L5.SCH.10"
+    },
+    {
+        "uuid": "25133b69-1ff2-4baf-a061-59f95acdf815",
+        "level": "Level 5",
+        "requirement": "L5.SCH.11"
+    },
+    {
+        "uuid": "343e4151-51d7-48dd-88b2-527806b4792d",
+        "level": "Level 5",
+        "requirement": "L5.SCH.12"
+    },
+    {
+        "uuid": "043ca06e-a45a-4501-9e3f-5bdf62538321",
+        "level": "Level 5",
+        "requirement": "L5.SCH.13"
+    },
+    {
+        "uuid": "7800b0f2-e13d-44f5-8b0e-542bf36b8b95",
+        "level": "Level 3",
+        "requirement": "3.1.2"
+    },
+    {
+        "uuid": "8fc5b377-8baf-4b88-bc51-59d52015863f",
+        "level": "Level 4",
+        "requirement": "L4.QRY.2"
+    },
+    {
+        "uuid": "7853526d-23a6-478f-a011-511003158de1",
+        "level": "Level 5",
+        "requirement": "L5.SCH.1"
+    },
+    {
+        "uuid": "f3038361-b395-4f0f-8f39-499b514c8030",
+        "level": "Level 5",
+        "requirement": "L5.SCH.2"
+    },
+    {
+        "uuid": "c3f7e1f9-85df-49de-95c1-f86efe41ec46",
+        "level": "Level 5",
+        "requirement": "L5.SCH.4"
+    },
+    {
+        "uuid": "b8752ee0-0c2c-4af9-8e85-976acdc42739",
+        "level": "Level 5",
+        "requirement": "L5.SCH.5"
+    },
+    {
+        "uuid": "93e98dda-b351-4a4c-95c8-fdf0ea2b3dab",
+        "level": "Level 5",
+        "requirement": "L5.SCH.6"
+    },
+    {
+        "uuid": "d414c764-03cc-47d7-8b68-a564b3fd5635",
+        "level": "Level 5",
+        "requirement": "L5.SCH.7"
+    },
+    {
+        "uuid": "91dc536b-bd47-4c77-b5ab-ca663b85841a",
+        "level": "Level 5",
+        "requirement": "L5.SCH.8"
+    },
+    {
+        "uuid": "fbc59d18-4ebd-4521-a423-f418bd792592",
+        "level": "Level 5",
+        "requirement": "L5.SCH.9"
+    },
+    {
+        "uuid": "6a84c45c-fec3-4c41-987c-e68ea30dc677",
+        "level": "Level 5",
+        "requirement": "L5.SCH.10"
+    },
+    {
+        "uuid": "27671c67-1821-4d07-ae13-b4826072d5e3",
+        "level": "Level 5",
+        "requirement": "L5.SCH.11"
+    },
+    {
+        "uuid": "4aeb57e6-1861-41c4-b1fc-e0eec7c135bb",
+        "level": "Level 5",
+        "requirement": "L5.SCH.12"
+    },
+    {
+        "uuid": "4781622c-7da0-474d-ac94-74a4f9b7454e",
+        "level": "Level 5",
+        "requirement": "L5.SCH.13"
+    },
+    {
+        "uuid": "96a55f28-8644-4efb-bf51-34b1a7c62100",
+        "level": "Level 3",
+        "requirement": "3.1.3"
+    },
+    {
+        "uuid": "4569fdef-0cbe-4499-aef4-b40f4106050a",
+        "level": "Level 3",
+        "requirement": "3.2.1"
+    },
+    {
+        "uuid": "96b6a959-a0fa-4504-93f5-ab2a4f62dc2f",
+        "level": "Level 3",
+        "requirement": "3.2.2"
+    },
+    {
+        "uuid": "2c40ed42-2e21-4a45-817e-cd47e9735535",
+        "level": "Level 3",
+        "requirement": "3.2.3"
+    },
+    {
+        "uuid": "1300a352-ea83-4242-96b2-ea7cf1c81cc6",
+        "level": "Level 3",
+        "requirement": "3.3.1"
+    },
+    {
+        "uuid": "ef9d845a-2360-4de7-909b-e0247ab41eac",
+        "level": "Level 3",
+        "requirement": "3.3.2"
+    },
+    {
+        "uuid": "88162fae-6692-457b-bc05-74f9f111dcaf",
+        "level": "Level 4",
+        "requirement": "L4.PRP.5"
+    },
+    {
+        "uuid": "ec011f15-109f-4eef-87a0-1c8fe29a0f01",
+        "level": "Level 3",
+        "requirement": "3.3.3"
+    },
+    {
+        "uuid": "b42abaf8-31ff-4640-be0c-f5b3cc1b6174",
+        "level": "Level 4",
+        "requirement": "L4.PRP.4"
+    },
+    {
+        "uuid": "2adb3154-3305-43ad-a0d0-b2d0bc608870",
+        "level": "Level 3",
+        "requirement": "3.3.4"
+    },
+    {
+        "uuid": "dd77b0b5-00b3-41a2-b136-6928c67ec3e1",
+        "level": "Level 4",
+        "requirement": "L4.PRP.4"
+    },
+    {
+        "uuid": "b08fc07e-6fb1-4394-b43c-39fa5dd8a3b1",
+        "level": "Level 3",
+        "requirement": "3.3.5"
+    },
+    {
+        "uuid": "9b91fef4-19f5-45de-ac75-5a6e91c37dd7",
+        "level": "Level 4",
+        "requirement": "L4.PRP.5"
+    },
+    {
+        "uuid": "db1b126a-719e-4149-bc66-2fde727a48c9",
+        "level": "Level 3",
+        "requirement": "3.3.6"
+    },
+    {
+        "uuid": "51bceaca-214c-4368-85a0-cc0100ea5239",
+        "level": "Level 3",
+        "requirement": "3.3.7"
+    },
+    {
+        "uuid": "b33a5e4c-5421-40b6-843c-abb398d0b9d1",
+        "level": "Level 3",
+        "requirement": "4.1.1"
+    },
+    {
+        "uuid": "4eea91cc-97a0-4104-a2bd-550896d733f1",
+        "level": "Level 3",
+        "requirement": "4.1.2"
+    },
+    {
+        "uuid": "7c4a0bc4-59b3-4997-802e-2edbf912bc2f",
+        "level": "Level 3",
+        "requirement": "4.1.3"
+    },
+    {
+        "uuid": "fbad1c8d-daf5-4250-a7c8-1251613b32a7",
+        "level": "Level 3",
+        "requirement": "4.1.4"
+    },
+    {
+        "uuid": "286c9987-0cff-4f14-90b8-c231c70e0c57",
+        "level": "Level 3",
+        "requirement": "4.1.5"
+    },
+    {
+        "uuid": "35e25b79-8411-48c7-a960-6b03e3738d9b",
+        "level": "Level 3",
+        "requirement": "4.2.1"
+    },
+    {
+        "uuid": "2fd4f73e-eb58-49a0-ae41-5fc33e0bd55a",
+        "level": "Level 3",
+        "requirement": "4.2.2"
+    },
+    {
+        "uuid": "03c99c9c-9beb-4c3b-81bb-f699f7e3724b",
+        "level": "Level 3",
+        "requirement": "4.2.3"
+    },
+    {
+        "uuid": "47978eb8-2aa3-43eb-81f8-e103d49d1f07",
+        "level": "Level 3",
+        "requirement": "4.2.4"
+    }
+]

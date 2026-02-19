@@ -1,0 +1,82 @@
+[
+    {
+        "uuid": "041f16b3-f3b7-488f-a27c-074e63a9d300",
+        "file": "PDS4_MSSS_CAM_MH_1O00_1030.JSON"
+    },
+    {
+        "uuid": "412d3a83-5c23-4f1a-ad0f-26618b57d266",
+        "file": "PDS4_SP_1O00_1320.JSON"
+    },
+    {
+        "uuid": "39fc3c2d-959e-4d96-b3fd-ee4b9bf81745",
+        "file": "PDS4_GEOM_1O00_19B0.JSON"
+    },
+    {
+        "uuid": "3b3704a7-5302-4980-84d3-7cb479c03d06",
+        "file": "PDS4_IMG_1O00_1920.JSON"
+    },
+    {
+        "uuid": "dd987c0f-9f62-4aa5-948b-577848b9f904",
+        "file": "PDS4_PDS_1O00.JSON"
+    },
+    {
+        "uuid": "0ca0feed-1f14-4bcb-9477-b897e17714a1",
+        "file": "PDS4_CART_1O00_1970.JSON"
+    },
+    {
+        "uuid": "b9f9849c-3ea5-40f3-815c-579d8778b6eb",
+        "file": "PDS4_SPECLIB_1O00_1500.JSON"
+    },
+    {
+        "uuid": "2394dbc8-4815-4976-a1ce-5863b16110b9",
+        "file": "PDS4_NUCSPEC_1O00_1100.JSON"
+    },
+    {
+        "uuid": "da108325-9139-467e-8e29-e7df6f5d4f86",
+        "file": "PDS4_RADAR_1O00_1200.JSON"
+    },
+    {
+        "uuid": "88f8ed99-f66a-45cd-945a-4ab449b602e9",
+        "file": "PDS4_ML_1O00_1211.JSON"
+    },
+    {
+        "uuid": "3910b90b-2cb6-4325-81c7-e330408ea961",
+        "file": "doc_info_model_spec.html"
+    },
+    {
+        "uuid": "f0036c9c-1811-4f62-8e9f-e9e22be81146",
+        "file": "PDS4_SURVEY_1O00_1100.JSON"
+    },
+    {
+        "uuid": "58460460-bc83-40cc-ae02-e24d41e050ac",
+        "file": "PDS4_SB_1O00_1110.JSON"
+    },
+    {
+        "uuid": "123cc1c8-008f-47f1-b1a2-e0a8ec9f1c3a",
+        "file": "PDS4_MSN_SURFACE_1O00_1300.JSON"
+    },
+    {
+        "uuid": "3c87a27e-6191-4ed2-ad21-313b6f41125d",
+        "file": "PDS4_PROC_1O00_1300.JSON"
+    },
+    {
+        "uuid": "f5b2dfed-43eb-4d06-bfd2-8080fcd00637",
+        "file": "PDS4_IMG_SURFACE_1O00_1280.JSON"
+    },
+    {
+        "uuid": "fb9b660e-2935-414a-88cc-9c7390887cee",
+        "file": "PDS4_DISP_1O00_1510.JSON"
+    },
+    {
+        "uuid": "fea9095f-b752-4313-a0fe-66677c05f641",
+        "file": "PDS4_RINGS_1O00_1F00.JSON"
+    },
+    {
+        "uuid": "dfd11609-01fa-43f2-a50f-0fc5e16c6440",
+        "file": "PDS4_MSN_1O00_1310.JSON"
+    },
+    {
+        "uuid": "72ba976f-6698-4d48-959c-96b7bddb0fec",
+        "file": "PDS4_AMA_1O00_1300.JSON"
+    }
+]
