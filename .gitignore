@@ -11,16 +11,19 @@ tags
 
 # ignore local batch inferences
 batch/
+pdf_to_image_data/
+
 
 # Ignore log files
 .log
-pdf_to_image_data/
 
 # Ignore loaded models
 data/**/embed/
 data/**/llm/
 data/**/vision/
 data/pdf_to_image/
+data/gemini_batches
+data/qdrant
 
 # Ignore local database
 data/database_sqlite/
