@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "b3467c4a-2d06-4131-9bdd-fcd1d60d1f27.1",
+    "chunk": "##Test ID\nAAFUNCTION.1\n##Description\nCreate a PDS4 Product Label using a design tool based on PDS’s schema.\n\n##Requirements\nL5.PRP.DE.*\n\n##Success Criteria\nDesign tool produces a syntactically valid PDS Product Label else indicates where the label is invalid.\n\n##Test Steps\nIn general:\n• Consult Append D of the Data Providers’ Handbook (DPH), Version 0.3.10\n\n##Test Results\nCreation of a label-template (xml) from the master-schema (xsd).\n\n##Comments\nResults met test successful criteria\n\n##Date of Testing\n2013.04.08\n\n##Test Personnel\nRichard Chen\n\n",
+    "test case": "AAFUNCTION.1"
+  },
+  {
+    "uuid": "a570cf13-5d9d-4251-a26e-e800e5e94e90.1",
+    "chunk": "##Test ID\nAAFUNCTION.2\n##Description\nValidate PDS4 label\n\n##Requirements\nL5.PRP.VA.1, L5.PRP.VA.2, L5.PRP.VA.5, L5.PRP.VA.6, L5.PRP.VA.7, L5.PRP.VA.9\n\n##Success Criteria\nValidation tool validates a file or all eligible products in a directory tree, indicates the schemas utilized during the validation, and ensures that a product label is well formed XML and conforms to its schemas. Also validate for content as well as syntax.\n\n##Test Steps\n1. cd testDir/context_bundle_20130326\n2. validate . -x PDS4_PDS_0310b.xsd -S PDS4_PDS_0310b.sch -e \"*.xml\"\n\n##Test Results\nStep 2: This step produces much positive output, e.g.\nPASS: file:testDir/context_bundle_20130326/./Product_Bundle_1.0.xml\nPASS: file:testDir/context_bundle_20130326/./context_attribute/aaCollection_1.0.xml\nPASS: file:\ntestDir/context_bundle_20130326/./context_attribute/Product_20130322/attribute_a_axis_radius_1.0.xml\nPASS: file:\ntestDir/context_bundle_20130326/./context_attribute/Product_20130322/attribute_abstract_desc_1.0.xml\n...\n\nTo see better output, run step 2 as:\n• validate . -x PDS4_PDS_0310b.xsd -S PDS4_PDS_0310b.sch -e \"*.xml\" | grep -v PASS | uniq\n\nwhich produces\nPDS Validate Tool Report\nConfiguration:\nVersion 1.3.0\nTime Mon, Apr 08 2013 at 10:45:02 PM\nParameters:\nTarget(s) [.]\nUser-Specified Schemas [PDS4_PDS_0310b.xsd]\nUser-Specified Schematrons [PDS4_PDS_0310b.sch]\nSeverity Level Warnings\nRecurse Directories true\nFile Filter(s) Used [*.xml]\nValidation Details:\nSummary:\n26872 of 26872 file(s) processed, 0 skipped\n26872 of 26872 file(s) passed validation\nEnd of Report\n\n##Comments\nResults met test successful criteria\n\n##Date of Testing\n2013.04.",
+    "test case": "AAFUNCTION.2"
+  },
+  {
+    "uuid": "a570cf13-5d9d-4251-a26e-e800e5e94e90.2",
+    "chunk": "08\n\n##Test Personnel\nRichard Chen\n\n",
+    "test case": "AAFUNCTION.2"
+  }
+]
