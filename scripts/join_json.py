@@ -28,7 +28,7 @@ def get_all_results() -> list:
             data = json.load(f)
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON from file {all_results}: {e}")
-            return
+            return []
 
         for element in data:
             content = element.get("content")
