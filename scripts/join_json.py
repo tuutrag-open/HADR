@@ -215,6 +215,7 @@ def supplemental(path) -> list:
                 file_data = json.load(f)
             except json.JSONDecodeError as e:
                 print(f"Error decoding JSON from file {path}: {e}")
+                return local_supplemental_list
 
             file_data_tokens = encoding.encode(str(file_data))
 
