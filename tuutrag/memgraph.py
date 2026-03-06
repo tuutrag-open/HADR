@@ -9,10 +9,12 @@ class MemgraphConnection:
     obj_name = "MemgraphConnection"
     workspace = "kg"
 
-    def __init__(self, port: int, frontend_port: int, host: str):
+    def __init__(self, port: int, frontend_port: int, host: str) -> None:
         self.driver = self.__connect(port, frontend_port, host)
 
-    def __connect(self, port: int, frontend_port: int, host: str):
+    def __connect(
+        self, port: int, frontend_port: int, host: str
+    ) -> GraphDatabase.driver:
         """Establishes a connection to the Memgraph database and verifies connectivity."""
 
         port = int(port)
@@ -53,7 +55,7 @@ class MemgraphConnection:
 
         return parts
 
-    def upsert(self, data: List):
+    def upsert(self, data: List) -> None:
         """Upserts entity relationships into Memgraph from a JSONL file."""
 
         parts = data
