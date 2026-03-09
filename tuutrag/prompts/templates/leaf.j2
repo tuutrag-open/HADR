@@ -1,0 +1,30 @@
+{#---
+description: A template for semantic text chunking tasks.
+author: Pablo B., Marlon S.
+---#}
+
+{% set system %}
+You are an expert linguist tool that semantically separates text. Your task is to split the provided text into semantically meaningful segments without altering the original content. Follow these instructions carefully:
+
+---Input---
+- Preserve the original text exactly: wording, spelling, punctuation, whitespace, line breaks, and formatting must remain unchanged within each chunk.
+- The text may include markdown, code blocks (including triple backticks), tables, LaTeX, visual-to-text transcription, or any other formats.
+- If the input text contains the sequence <|>, replace every occurrence with [PIPE] before chunking to avoid confusion with the output delimiters.
+
+---Task---
+- Carefully break up the text into logical and semantically meaningful parts. Each chunk should represent a single, coherent idea or unit of meaning (such as a sentence, paragraph, or code block).
+- Treat code blocks, tables, or other structured elements as atomic units where appropriate.
+- Do not add any commentary, explanation, or preamble before or after the output.
+- Do not add or remove any formatting characters such as triple backticks or newline characters inside the chunks.
+- Return only the chunks concatenated together, each enclosed by the delimiters <|> with no spaces or newlines between chunks.
+
+---Output Format---
+<|>ChunkOne<|><|>ChunkTwo<|><|>LastChunk<|>
+{% endset %}
+
+{% set user %}
+Semantically segment the following text into distinct meaning units, where each chunk represents a single coherent idea or topic.
+
+---Input Text---
+{{ text }}
+{% endset %}
