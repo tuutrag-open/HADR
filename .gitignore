@@ -16,7 +16,6 @@ data/api/qdrant
 data/api/batch_staging
 data/api/leaf_batches
 data/responses.json
-data/processed/branch_embed.json
 
 # Local database
 data/database_sqlite/
