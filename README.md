@@ -18,8 +18,12 @@
 ---
 
 ## What this repo is
-**HADR** is the official implementation of **“Teaching to Understand, Understanding to Teach: Retrieval Augmented Generation for Requirements Traceability”**.  
-It builds a **traceability-focused knowledge graph** from natural-language engineering artifacts and uses it inside a **RAG pipeline** to retrieve evidence, rank candidate links, and summarize results.
+
+**HADR** is the official open-source implementation of **"Teaching to Understand, Understanding to Teach: Retrieval Augmented Generation for Requirements Traceability"** — a NASA-JPL–originated system for automated, scalable requirements traceability across engineering artifacts.
+
+The system accepts engineering artifacts — requirements, test cases, and supplemental documents — and suggests bidirectional traceability mappings between them. It does so by constructing a **knowledge graph** from the artifact corpus via structured entity–relation extraction, then driving retrieval-augmented generation (RAG) over that graph to surface, rank, and summarize evidence for trace links.
+
+At its core, the system introduces **Hierarchical Artifact Decomposition-Recomposition (HADR)**: a preprocessing method that decomposes artifacts of arbitrary length into a depth-two tree of branch and leaf chunks, recomposes context upward through multi-level summarization, and extracts entities and relations in a decoupled, structured manner — ensuring implicit dependencies between requirements and tests are made explicit before graph construction ever begins. All system logic is governed through a custom API, enabling modularity and extensibility across the full pipeline.
 
 ---
 
@@ -29,14 +33,20 @@ Requirement traceability, validation, and verification grow increasingly complex
 ---
 
 ## Core idea (HADR → KG → RAG)
-A minimalist mental model of the pipeline:
 
-1. **Ingest artifacts** (requirements, tests, specs, etc.).
-2. **HADR decomposition**: build hierarchical chunk trees (branch/leaf operations).
-3. **Recomposition**: summarize upward to preserve global context while keeping full content.
-4. **Extract entities** (decoupled from relation inference).
-5. **Infer relations** to form a **knowledge graph** of trace links.
-6. **RAG over the KG**: retrieve, rank, and summarize traceability evidence across artifacts.
+The pipeline proceeds in six conceptual stages:
+
+1. **Ingest artifacts** — Requirements, test cases, and supplemental documents are submitted one at a time. Each artifact is checked for duplicates before entering the pipeline. The system supports bidirectional traceability (requirements ↔ test cases) as well as intra-type traceability (requirements ↔ requirements, test cases ↔ test cases).
+
+2. **HADR decomposition** — Each artifact is tokenized and partitioned into overlapping, fixed-size *branch chunks*. Each branch is further subdivided by an LLM into semantically coherent, variable-size *leaf chunks*, forming a depth-two hierarchical tree that balances consistent segmentation with adaptive, meaning-preserving subdivision.
+
+3. **Recomposition** — Leaf chunks within each branch subtree are summarized into a branch-level summary; branch summaries are then aggregated into a single artifact-level summary. No content is lost: all original chunk text is preserved alongside its summarized counterpart, giving downstream stages access to both granular and high-level representations.
+
+4. **Entity extraction** — At the leaf level, an LLM extracts structured entity representations from each leaf chunk, guided by its parent branch summary and the global artifact summary. Extraction is performed independently per leaf, deliberately decoupled from relational reasoning to prevent confounding between the two tasks.
+
+5. **Relation inference** — Relations are first inferred at the branch level using the union of all leaf-level entity sets within each branch, grounded in raw branch text and informed by the artifact summary. A semantic similarity step then identifies the most related branches across the corpus and extracts cross-artifact "global" relations via cosine similarity over branch embeddings. Local and global relations are merged to form the final **knowledge graph**.
+
+6. **RAG over the KG** — The knowledge graph drives retrieval: given a query artifact, the system traverses the graph to retrieve evidence, ranks candidate trace links, and generates a summarized traceability result.
 
 ---
 
