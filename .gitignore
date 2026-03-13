@@ -157,10 +157,10 @@ Session.vim
 tags
 
 # PyCharm / JetBrains
-#.idea/
+.idea/
 
 # Visual Studio Code
-# .vscode/
+.vscode/
 
 # Cursor
 .cursorignore
