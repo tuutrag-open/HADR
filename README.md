@@ -19,8 +19,6 @@
 
 ## What this repo is
 
-**HADR** is the official open-source implementation of **"Teaching to Understand, Understanding to Teach: Retrieval Augmented Generation for Requirements Traceability"** — a NASA-JPL–originated system for automated, scalable requirements traceability across engineering artifacts.
-
 The system accepts engineering artifacts — requirements, test cases, and supplemental documents — and suggests bidirectional traceability mappings between them. It does so by constructing a **knowledge graph** from the artifact corpus via structured entity–relation extraction, then driving retrieval-augmented generation (RAG) over that graph to surface, rank, and summarize evidence for trace links.
 
 At its core, the system introduces **Hierarchical Artifact Decomposition-Recomposition (HADR)**: a preprocessing method that decomposes artifacts of arbitrary length into a depth-two tree of branch and leaf chunks, recomposes context upward through multi-level summarization, and extracts entities and relations in a decoupled, structured manner — ensuring implicit dependencies between requirements and tests are made explicit before graph construction ever begins. All system logic is governed through a custom API, enabling modularity and extensibility across the full pipeline.
@@ -61,18 +59,6 @@ Project structure, docs, and additional notes:
 
 ---
 
-## Project & publication details
-
-| Resource | Details |
-| :--- | :--- |
-| Original Code | https://github.com/bedolpab/tuutrag |
-| NASA Release | https://software.nasa.gov/software/NPO-53610-1 |
-| Reference Number | NPO-53610-1 |
-| Category | Aeronautics |
-| Release Type | Open Source |
-
----
-
 ## Development guidelines (minimal)
 - **Commits**: Conventional Commits  
 - **Branches**: Conventional Branches  
@@ -93,14 +79,3 @@ Project structure, docs, and additional notes:
 | Academic Collaborator | Bryan Gaborit | J Sterling Morton East High School |
 
 ---
-
-## Usage of generative AI
-Any usage of Generative AI tools is disclosed below. To be clear, AI was not used for any expert knowledge, design analysis, critical thinking, or safety-critical decisions. All core intellectual work, collaboration, and final judgments were entirely human-driven.
-
-I. _Documentation_: Assistance in formatting `README.md`  
-II. _Website_: Assistance in styling and formatting of the `tuutrag-open.github.io` website.
-
----
-
-## NASA-JPL / Caltech acknowledgement
-The original research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, and was sponsored by the National Aeronautics and Space Administration. This existing work is currently being continued at Dominican University.
