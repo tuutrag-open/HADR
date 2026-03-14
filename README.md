@@ -27,7 +27,7 @@ Integrated into a **RAG pipeline**, the resulting knowledge graph supports scala
 
 ## Project
 
-Documentation and project structure:  
+Documentation and project:  
 https://tuutrag-open.github.io/tuutrag-open/
 
 ---
