@@ -15,6 +15,14 @@
 
 ---
 
+## What this repo is
+
+The system accepts engineering artifacts — requirements, test cases, and supplemental documents — and suggests bidirectional traceability mappings between them. It does so by constructing a **knowledge graph** from the artifact corpus via structured entity–relation extraction, then driving retrieval-augmented generation (RAG) over that graph to surface, rank, and summarize evidence for trace links.
+
+At its core, the system introduces **Hierarchical Artifact Decomposition-Recomposition (HADR)**: a preprocessing method that decomposes artifacts of arbitrary length into a depth-two tree of branch and leaf chunks, recomposes context upward through multi-level summarization, and extracts entities and relations in a decoupled, structured manner — ensuring implicit dependencies between requirements and tests are made explicit before graph construction ever begins. All system logic is governed through a custom API, enabling modularity and extensibility across the full pipeline.
+
+---
+
 ## Abstract
 
 Requirement traceability, validation, and verification grow increasingly complex as engineering projects scale in size and interdependence. Technical specifications contain valuable structural information in natural language form. Advances in Large Language Models (LLMs) and their effectiveness in natural language processing and reasoning make specifications corpora amenable to information extraction and relational reasoning. While traditional requirements and test engineering methods rely on human expertise, LLMs have shown comparable performance in retrieval-augmented reasoning tasks.
@@ -32,10 +40,10 @@ https://tuutrag-open.github.io/tuutrag-open/
 
 ---
 
-## Dataset
-
-PDF → Image dataset:  
-https://www.kaggle.com/datasets/pablobedolla/pdf-to-image-data/data/data/data/data/data/data
+## Development guidelines (minimal)
+- **Commits**: Conventional Commits  
+- **Branches**: Conventional Branches  
+- **Reviews**: 2 approvals required before merge to `main`
 
 ---
 
@@ -50,3 +58,5 @@ https://www.kaggle.com/datasets/pablobedolla/pdf-to-image-data/data/data/data/da
 | Academic Collaborator | Marlon Selvi | Dominican University |
 | Academic Collaborator | Eduardo Gaborit | University of Illinois Urbana-Champaign |
 | Academic Collaborator | Bryan Gaborit | J Sterling Morton East High School |
+
+---
