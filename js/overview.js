@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* --- Popup Setup & Injection --- */
+    /* ── Scroll Reveal ── */
+    if ('IntersectionObserver' in window) {
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+        );
+        reveals.forEach(el => observer.observe(el));
+    } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+
+    /* ── Link Preview Popup ── */
     const popup = document.createElement('div');
     popup.className = 'wiki-popup';
     popup.innerHTML = `
@@ -17,11 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const pText = popup.querySelector('p');
     let currentTarget = null;
 
-    /* --- Event Listeners --- */
     const links = document.querySelectorAll('a[href]');
 
     links.forEach(link => {
-        link.addEventListener('mouseenter', async (e) => {
+        link.addEventListener('mouseenter', async () => {
             currentTarget = link;
             const url = link.href;
             const hrefAttr = link.getAttribute('href');
@@ -31,14 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
             pText.innerHTML = '';
 
             if (hrefAttr.startsWith('#')) {
-                const targetId = hrefAttr.substring(1);
-                const targetEl = document.getElementById(targetId);
+                const targetEl = document.getElementById(hrefAttr.substring(1));
                 if (targetEl) {
-                    pTitle.textContent = "Reference";
+                    pTitle.textContent = 'Reference';
                     pText.innerHTML = targetEl.innerHTML;
                 } else { return; }
-            }
-            else if (url.includes('en.wikipedia.org/wiki/')) {
+            } else if (url.includes('en.wikipedia.org/wiki/')) {
                 const title = url.split('/').pop();
                 try {
                     const res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${title}`);
@@ -50,27 +65,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         pImg.src = data.thumbnail.source;
                         pImg.style.display = 'block';
                     }
-                } catch (err) { return; }
-            }
-            else if (link.dataset.preview) {
-                pTitle.textContent = link.dataset.title || "Note";
+                } catch { return; }
+            } else if (link.dataset.preview) {
+                pTitle.textContent = link.dataset.title || 'Note';
                 pText.textContent = link.dataset.preview;
-            }
-            else { return; }
+            } else { return; }
 
             const rect = link.getBoundingClientRect();
-            const viewportWidth = window.innerWidth;
-            const popupWidth = 300;
-            let leftPos = rect.left;
-            if (leftPos + popupWidth > viewportWidth - 20) {
-                leftPos = viewportWidth - popupWidth - 20;
-            }
-            if (leftPos < 10) { leftPos = 10; }
-            popup.style.left = `${leftPos}px`;
+            const vw = window.innerWidth;
+            const pw = 300;
+            let left = rect.left;
+            if (left + pw > vw - 20) left = vw - pw - 20;
+            if (left < 10) left = 10;
+            popup.style.left = `${left}px`;
 
-            const estimatedHeight = 250;
-            const spaceAbove = rect.top;
-            if (spaceAbove < estimatedHeight) {
+            if (rect.top < 250) {
                 popup.classList.add('flipped');
                 popup.style.top = (rect.bottom + 12) + 'px';
             } else {
@@ -82,8 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         link.addEventListener('mouseleave', () => {
             currentTarget = null;
-            popup.classList.remove('active');
-            popup.classList.remove('flipped');
+            popup.classList.remove('active', 'flipped');
         });
     });
 });

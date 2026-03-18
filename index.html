@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching to Understand, Understanding to Teach</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>HADR — Hierarchical Artifact Decomposition-Recomposition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/newsprint.css">
     <link rel="stylesheet" href="css/code.css">
     <link rel="stylesheet" href="css/latex.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-
 <body>
 
-    <header class="intro">
-        <h1>Teaching to Understand, Understanding to Teach: Retrieval-Augmented Generation for Requirements Traceability
-        </h1>
+<div class="page-container">
 
-        <div class="authors">
+    <!-- ════════════════════════════════════════════════════ -->
+    <!--  MASTHEAD                                            -->
+    <!-- ════════════════════════════════════════════════════ -->
+
+    <header class="masthead">
+        <p class="masthead-edition">Research - Open Source</p>
+        <h1 class="masthead-title">HADR</h1>
+        <p class="masthead-subtitle">Hierarchical Artifact Decomposition-Recomposition</p>
+        <nav class="masthead-nav">
+            <a href="https://github.com/tuutrag-open/HADR" class="accent-link">GitHub</a>
+            <a href="https://www.kaggle.com/datasets/pablobedolla/pdf-to-image-data">Dataset</a>
+        </nav>
+    </header>
+
+    <div class="content-rail">
+
+        <!-- ═══ Authors ═══ -->
+
+        <div class="authors-bar">
             <ul>
                 <li><a href="https://www.linkedin.com/in/gusrazo/">Gus Razo</a><sup>1</sup></li>
                 <li><a href="https://www.linkedin.com/in/kaesawada/">Kae Sawada</a><sup>1</sup></li>
@@ -28,643 +45,1274 @@
                 <li><a href="#">Bryan Gaborit</a><sup>4</sup></li>
             </ul>
             <div class="affiliations">
-                <span class="affil"><sup>1</sup>Jet Propulsion Laboratory/California Institute of Technology</span>
+                <span class="affil"><sup>1</sup>JPL / Caltech</span>
                 <span class="affil"><sup>2</sup>Dominican University</span>
-                <span class="affil"><sup>3</sup>University of Illinois Urbana-Champaign</span>
-                <span class="affil"><sup>4</sup>J Sterling Morton East High School</span>
+                <span class="affil"><sup>3</sup>UIUC</span>
+                <span class="affil"><sup>4</sup>J Sterling Morton East HS</span>
             </div>
         </div>
-    </header>
 
-    <div class="meta">
-        <span class="venue"><strong>WORK IN PROGRESS</strong></span>
-        <div class="links">
-            <a href="#">[Paper]</a>
-            <a href="https://github.com/tuutrag-open/tuutrag-open">[Code]</a>
-            <a href="#">[Data]</a>
-            <a href="https://software.nasa.gov/software/NPO-53610-1">[NASA Release]</a>
+        <aside class="disclosure-banner" id="prompt-disclosure">
+            <strong>Note on prompt examples.</strong> All examples shown within prompt templates on this page
+            (e.g. names, organizations, case numbers, compounds) are entirely fictional and were composed
+            solely for prompt-engineering purposes. They do not reflect real events, persons, or data.
+        </aside>
+
+        <!-- ═══ Abstract ═══ -->
+
+        <section class="section reveal" id="abstract">
+            <span class="section-label">Abstract</span>
+            <h2>A Knowledge Graph for Requirements Tracing</h2>
+            <p class="drop-cap">
+                Requirement traceability, validation, and verification grow increasingly complex as engineering
+                projects scale in size and interdependence. Technical specifications contain valuable structural
+                information in natural language form. Advances in Large Language Models (LLMs) and their
+                effectiveness in natural language processing and reasoning make specifications corpora amenable
+                to information extraction and relational reasoning. While traditional requirements and test
+                engineering methods rely on human expertise, LLMs have shown comparable performance in
+                retrieval-augmented reasoning tasks.
+            </p>
+            <p>
+                We propose Hierarchical Artifact Decomposition-Recomposition (HADR), a knowledge graph
+                construction method for reasoning-based requirements tracing that decomposes artifacts into
+                hierarchical chunk trees via branch and leaf operations, recomposing context through upward
+                summarization while preserving all artifact content. By explicitly decoupling entity extraction from
+                relation inference, HADR surfaces implicit relational information prior to graph construction,
+                enabling context-aware retrieval and reasoning across linked artifacts. Integrated into a RAG
+                pipeline, the resulting knowledge graph supports scalable, multi-artifact requirements
+                traceability by enabling ranked traceability linkages, knowledge graph search, and summarized
+                reasoning across requirements and test cases.
+            </p>
+        </section>
+
+        <!-- ═══ Architecture ═══ -->
+
+        <section class="section reveal" id="pipeline">
+            <span class="section-label">System Design</span>
+            <h2>Architecture at a Glance</h2>
+            <p>
+                HADR operates as a linear pipeline. An artifact enters, is decomposed into a depth-two tree,
+                recomposed via summarization, stored in a relational + vector database, then enriched with
+                entities and relationships that are upserted into a knowledge graph.
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Full-bleed pipeline -->
+    <div class="full-bleed arch-band reveal">
+        <div class="arch-flow">
+            <div class="arch-stage">
+                <div class="arch-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                </div>
+                <span class="arch-label">Artifact</span>
+                <span class="arch-detail">PDF → OCR → Text (Multimodal) </span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-stage">
+                <div class="arch-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                </div>
+                <span class="arch-label">Branch</span>
+                <span class="arch-detail">Fixed \(K\), overlap \(P\)</span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-stage">
+                <div class="arch-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M8 8H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h4"/><path d="M16 6h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4"/><path d="M16 14h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4"/></svg>
+                </div>
+                <span class="arch-label">Leaf</span>
+                <span class="arch-detail">LLM semantic split</span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-stage">
+                <div class="arch-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                </div>
+                <span class="arch-label">Recompose</span>
+                <span class="arch-detail">Leaf → Branch → Root</span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-stage">
+                <div class="arch-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                </div>
+                <span class="arch-label">Store</span>
+                <span class="arch-detail">SQLite + Qdrant</span>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-stage">
+                <div class="arch-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="5" cy="5" r="2"/><path d="M12 9 7 5"/><path d="M15 12l4-7"/><path d="M9 15l-4 4"/></svg>
+                </div>
+                <span class="arch-label">KG Build</span>
+                <span class="arch-detail">Entities → Relations</span>
+            </div>
         </div>
     </div>
 
-    <h2>Disclaimer</h2>
-    <p>
-        <i>
-            This project is currently under development. The material presented on this page does not
-            reflect the full scope of the project and may omit important details. The content is intended
-            as a high-level overview; complete technical details will be provided upon project completion.
-        </i>
-    </p>
+    <div class="content-rail">
 
-    <h2>Project Background</h2>
-    <p>This report details the research for the project titled “Teaching to Understand, Understanding to Teach:
-        Retrieval-Augmented Generation for Requirements Traceability.” The research was initially conducted for the Jet
-        Propulsion Laboratory (“JPL”), California Institute of Technology (“Caltech”), under the sponsorship of the
-        National Aeronautics and Space Administration (“NASA”).</p>
+        <!-- ═══ Scale ═══ -->
 
-    <h2>Definitions</h2>
-    <table class="research-table">
-        <thead>
-            <tr>
-                <th>Term</th>
-                <th>Definition</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>RAG</td>
-                <td>Retrieval-Augmented Generation; a technique enhancing LLMs with external data.</td>
-            </tr>
-            <tr>
-                <td>Embeddings</td>
-                <td>Vector representations of text segments used for semantic search.</td>
-            </tr>
-            <tr>
-                <td>Information Supply</td>
-                <td>The existing, ingested corpus of data used by the system.</td>
-            </tr>
-            <tr>
-                <td>Traceability</td>
-                <td>The ability to link requirements to their corresponding code implementation.</td>
-            </tr>
-            <tr>
-                <td>Artifact(s)</td>
-                <td>Pieces of information pertaining to the system information supply. </td>
-            </tr>
-            <tr>
-                <td>Requirement</td>
-                <td>A formally agreed-upon "shall" statement defining a system condition, capability, or constraint.
-                </td>
-            </tr>
-            <tr>
-                <td>Test Case</td>
-                <td>Detailed, step-by-step series of instructions on an end product used to verify and validate a
-                    specific requisite or requirement.</td>
-            </tr>
-            <tr>
-                <td>Entity</td>
-                <td>A distinct object or thing acting individually.</td>
-            </tr>
-            <tr>
-                <td>Relationship</td>
-                <td>A link between two entities.</td>
-            </tr>
-            <tr>
-                <td>Branch Chunk</td>
-                <td>Fixed-size, overlapping subset of tokens from an artifact.</td>
-            </tr>
-            <tr>
-                <td>Leaf Chunk</td>
-                <td>Variable-size, non-overlapping semantic subset of tokens from a branch chunk.</td>
-            </tr>
-        </tbody>
-    </table>
+        <section class="section reveal" id="scale">
+            <span class="section-label">By the Numbers</span>
+            <h2>Pipeline Scale</h2>
+        </section>
 
-    <h2>Notation</h2>
-    <table class="research-table">
-        <thead>
-            <tr>
-                <th>Symbol</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>\( N \)</td>
-                <td>Sample size of the set under consideration</td>
-            </tr>
-            <tr>
-                <td>\( A \)</td>
-                <td>Artifact</td>
-            </tr>
-            <tr>
-                <td>\( R \)</td>
-                <td>Requirement</td>
-            </tr>
-            <tr>
-                <td>\( T \)</td>
-                <td>Test Case</td>
-            </tr>
-            <tr>
-                <td>\( C_b \)</td>
-                <td>Branch chunk</td>
-            </tr>
-            <tr>
-                <td>\( C_l \)</td>
-                <td>Leaf chunk</td>
-            </tr>
-            <tr>
-                <td>\( E \)</td>
-                <td>Entity</td>
-            </tr>
-            <tr>
-                <td>\( Rel(E, E') \)</td>
-                <td>Relation</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Entry Point</h2>
-    <p>The initial state of our tracing system, whether in the first or repeated usage of the tool, is the entry point.
-        The goal of the system is to suggest <a
-            href="https://en.wikipedia.org/wiki/Requirements_traceability">traceability mappings</a> from either an
-        individual requirement (\(R\)) or test case (\(T\)) to trace sets of \(T\) or \(R\), respectively. Two types of
-        input, traceable artifacts and contextual artifacts, govern the input space. In our work, artifacts are pieces
-        of information that make up the data corpus upon which the system depends.</p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/entry.svg" alt="Flowchart of Entry Point">
+        <div class="stat-grid reveal">
+            <div class="stat-card">
+                <span class="stat-num">453</span>
+                <span class="stat-label">Artifacts</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">37,239</span>
+                <span class="stat-label">Branch Chunks</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">322,120</span>
+                <span class="stat-label">Leaf Chunks</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">18.9M</span>
+                <span class="stat-label">Tokens (o200k)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">3,072</span>
+                <span class="stat-label">Embedding Dim</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">~15 GB</span>
+                <span class="stat-label">Database Size</span>
+            </div>
         </div>
-        <figcaption>
-            <span class="fig-num">Figure 1</span>
-            An artifact classified as <i>Support</i>, <i>Requirement</i>, or <i>Test Case</i> is submitted to the
-            system.
-            The <i>[+] Type</i> field specifies the selected artifact type in conjunction with the provided artifact.
-        </figcaption>
-    </figure>
 
-    <p>A traceable artifact is an information artifact that represents system intent or system verification and is
-        eligible to participate as a source or target in a traceability relationship; in this system, requirements and
-        test cases encode such features. Contextual artifacts are support artifacts, non-requirement and test
-        artifacts, that provide auxiliary information to the information supply for context-retrieval support.
-        Contextual artifacts are non-traceable units, contrary to traceable artifacts, whose purpose is to be in a
-        source or target set.</p>
+        <!-- ═══ Decomposition ═══ -->
 
-    <h3>Artifact Submission</h3>
-    <p>
-        System input consists of a single artifact, which may be a support, requirement, or test document. The system
-        accepts only one artifact per input operation. If either a requirement or a test case is selected, the system
-        operates under a bidirectional traceability model. A requirement may be related to and/or dependent on a set of
-        test cases, a set which may be empty, singular, or contain multiple. Likewise, a test case may be related to
-        and/or dependent on a set of requirements, a set which may be empty, singular, or contain multiple.
-        Additionally, the system supports intra-traceable-artifact traceability, allowing requirements to be traced to
-        other requirements \(( R \rightarrow \{ R\} )\) and test cases to be traced to other test cases \(( T
-        \rightarrow \{ T\} )\), capturing inter-requirement and inter-test relationships that may exist within the same
-        or different artifacts.
-    </p>
-    <p>Once an artifact is ingested, the system will check if the artifact exists. If the artifact does not exist, we
-        move the submission to the preprocessing stage. If the artifact already exists, we return a warning to the user
-        and reprompt for a different submission. This is done to avoid duplicates from existing in the information
-        supply.</p>
+        <section class="section reveal" id="decomposition">
+            <span class="section-label">Stage 1</span>
+            <h2>Decomposition</h2>
+            <p>
+                An artifact \(A\) is first tokenized with <code>o200k_base</code> (tiktoken) then sliced into
+                overlapping <strong>branch chunks</strong> of fixed window \(K\) and overlap \(P\). Each branch
+                chunk is then passed to an LLM with the <code>leaf.j2</code> prompt, which semantically
+                partitions it into non-overlapping <strong>leaf chunks</strong> whose union exactly
+                reconstructs the branch. The result is a depth-two tree:
+                root → branches → leaves.
+            </p>
+        </section>
 
-    <h3>API</h3>
-    <p>All logic handling, i.e., information sending, receiving, processing, and displaying, will be executed through a
-        custom Application Programming Interface (API). The API will govern the entire system workflow and manage the
-        logic handling of all data pipelines, model interactions, data ingestions, benchmarking, and UI-related
-        operations, allowing for modularity and ease of development.</p>
-
-    <h2>Technical Framework</h2>
-
-    <h3>Preprocessing</h3>
-    <p>
-        <a href="https://en.wikipedia.org/wiki/Data_preprocessing">Preprocessing</a> is an essential step in data
-        manipulation that comes before examining or working with that data. Recent analyses indicate that learning
-        performance is driven less by dataset noisiness or size and more by the preservation of informative, unique
-        tokens <a href="#ref-zhou">[1]</a>. Building on this, token-level cleaning methods demonstrate that filtering
-        out 30–40% of uninformative tokens, while retaining task-relevant data, can enhance tokenization quality and
-        downstream performance, challenging assumptions that aggressive cleaning is inherently detrimental <a
-            href="#ref-pang">[2]</a>.
-
-        Rather than pretraining a <a href="https://en.wikipedia.org/wiki/Model">model</a>, our system is designed to
-        achieve its objectives using <a href="https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)">fine-tuning</a>
-        and <a href="https://en.wikipedia.org/wiki/Prompt_engineering"> prompt engineering</a> techniques. The system
-        primarily relies on a <a href="https://en.wikipedia.org/wiki/Knowledge_graph">knowledge graph</a> constructed
-        via <a href="https://nlpprogress.com/english/relationship_extraction.html"
-            data-title="Entity-Relation Extraction"
-            data-preview="Using a large language model to identify individual entities and the relationships between them.">entity–relation
-            extraction</a>, inspired by the LightRAG architecture <a href="#ref-lightrag">[3]</a>. The knowledge graph
-        component is derived from processed text segments obtained during inferencing stages using unique prompt
-        templates. Additional metadata, including fields like descriptions or related information, is derived alongside
-        entity–relation extraction to enrich the knowledge graph and other relevant processes.
-    </p>
-
-    <h3>Chunking</h3>
-    <p>
-        <a href="https://en.wikipedia.org/wiki/Large_language_model">Large language models </a> have a fixed-sized
-        context window, which is the amount of text, in tokens, the model can receive as input. A common technique to
-        handle large context inputs is to shorten the input into smaller segments, otherwise known as chunking. Chunking
-        enables artifacts to be processed within the required context length by partitioning the text into smaller,
-        fixed-sized segments of constant size, typically well below the maximum context window.
-    </p>
-
-    <p>
-        Although inputs with length just below the maximum context window could be provided as a single prompt,
-        operating near this limit is not recommended as inference performance tends to degrade with increasing input
-        size <a href="#ref-chroma">[4]</a>. Chunking, in our case, will serve a greater purpose, other than fitting
-        within allowable window sizes, in a technique we call <em>Hierarchical Artifact Decomposition-Recomposition
-            (HADR)</em>, which we will later introduce.
-    </p>
-
-    <h3>Entity-Relation</h3>
-    <p>
-        Entity-relation refers to the structured representation of real-world concepts as entities and the semantic
-        links that connect them, relations, providing an explicit model of how information is related across artifacts.
-        In contrast, entity-relation extraction is the process by which these entities and relationships are identified
-        from unstructured natural language text, typically using LLMs to interpret meaning and context. Together,
-        entity-relation structures enable the construction of knowledge graphs, where entities form nodes and
-        relationships form edges, allowing information to be interconnected, queried, and reasoned over systematically
-        <a href="#ref-chen">[5]</a>.
-    </p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/entityrelation.svg" alt="Example Entity–Relation Graph">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 2</span>
-            An example entity–relation graph derived from a text segment on the <a
-                href="https://en.wikipedia.org/wiki/NASA">NASA</a> Wikipedia page.
-            This illustration is provided for conceptual clarity and does not represent experimental results.
-        </figcaption>
-    </figure>
-
-    <p>
-        This structure becomes particularly valuable for traceability, as it makes implicit dependencies between
-        requirements, test cases, and supporting information explicit and navigable. While complex statements such as
-        requirements do not explicitly specify their relationships to other requirement or test cases, nor the
-        information necessary to support such conclusions, our proposed method supports this reasoning process by
-        decomposing statements, before entity-relation extraction and retrieval, into support components that facilitate
-        and strengthen the implicit relation inference reasoning steps <a href="#ref-katz">[6]</a>. When integrated into
-        <a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation"> retrieval-augmented generation systems
-            (RAG)</a>, entity-relation representations move retrieval beyond isolated text similarity, enabling
-        context-aware retrieval and reasoning over linked information across multiple artifacts <a
-            href="#ref-graphrag">[7]</a>.
-    </p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="imgs/kg.png" alt="Partial Entity–Relation Knowledge Graph">
-        </div>
-        <figcaption style="max-width: 100%; text-align: left;">
-            <span class="fig-num" id="kg-og">Figure 3</span>
-            A partial entity–relation knowledge graph representing requirements, test cases, and supplemental artifacts
-            from the <i>Mission Control Systems Integration, Test &amp; Deployment</i> group at JPL. The graph was
-            developed
-            using Memgraph by <a href="https://pablobedolla.com/">Pablo Cesar Bedolla Ortiz</a> during a JPL Student
-            Internship in the summer of 2025, marking the initial phase of this project. The original source code is
-            available through the NASA Technology Transfer Program release
-            <a href="https://software.nasa.gov/software/NPO-53610-1">“RAG for Requirements: Teaching LLMs to Trace and
-                Reason (NPO-53610-1)”</a>.
-        </figcaption>
-    </figure>
-
-    <p>
-        Our method explicitly decouples entity extraction from relation inference, allowing the language model to
-        identify entities in isolation before inferring relationships among the extracted entities within the same
-        textual context.
-
-        This separation ensures that entity identification is not confounded by relational reasoning and that relation
-        inference is performed solely over a fixed and well-defined set of entities, mitigating performance degradations
-        and enabling multi-step extractions <a href="#ref-eracot">[8]</a>.
-
-        Within this framework, a structured preprocessing strategy supports accurate and scalable entity-relation
-        extraction in RAG systems. The resulting entities and relationships are subsequently integrated into a
-        structured knowledge graph that supports downstream traceability and retrieval tasks.
-    </p>
-
-    <h2>Hierarchical Artifact Decomposition-Recomposition (HADR)</h2>
-    <p>
-        Chunking is a simple, yet effective operation in principle; however, finding the appropriate chunking parameters
-        to model your data is a considerably more challenging task. A commonly adopted approach is selecting a
-        fixed-size window \(K\) to segment text (e.g., 512 tokens or characters). While this method performs well in
-        practice, there are instances where it can lead to performance issues by severing contextual dependencies
-        across chunk boundaries. As a result, consecutive chunks may lack critical information present in preceding
-        segments, a limitation often mitigated by overlapping chunks; this introduces an additional overlap parameter
-        \(P\). Finding a suitable set of parameters \(K\) and \(P\) can prove challenging in larger, heterogeneous data
-        settings, not to mention expensive if \(K\) and \(P\) are token-based.
-    </p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/chunking.svg" alt="Fixed-Size Chunking Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 4</span>
-            Illustration of fixed-size chunking applied to a text artifact.
-        </figcaption>
-    </figure>
-
-    <p>
-        Recent evaluations demonstrate that adaptive chunking strategies significantly outperform these fixed-sized
-        methods in complex and critical decision-making scenarios, particularly in RAG- and LLM-based applications, by
-        dynamically preserving contextual integrity, a strategy we adopt using prompt engineering techniques <a
-            href="#ref-gomez">[9]</a>. To jointly achieve information preservation and effective chunking, we adopt a
-        conventional chunking strategy by introducing two successive operations: branch and leaf chunking.
-    </p>
-
-    <h3>Branch and Leaf Chunking</h3>
-    <p>Branch chunking creates fixed-size, overlapping partitions (size \(K\) and overlap \(P\)) of an artifact, while
-        leaf chunking further subdivides each branch by using an LLM to produce semantically coherent,
-        variable-sized chunks. This hierarchical approach ensures consistent, high-quality segmentation across
-        artifacts of varying lengths. Consequently, we decompose each artifact into a depth-two tree (root
-        \(\rightarrow\) branches \(\rightarrow\) leaves) with a jagged structure, allowing flexible,
-        information-preserving processing and downstream summarization in the recomposition process.</p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/branchandleaf.svg" alt="Branch and Leaf Chunking Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 5</span>
-            Illustration of branch and leaf chunking, showing the hierarchical decomposition of text into structured
-            segments.
-        </figcaption>
-    </figure>
-
-    <h3>Hierarchical Artifact Decomposition</h3>
-    <p>
-        Hierarchical Artifact Decomposition-Recomposition (HADR) is a preprocessing method we introduce to enable
-        effective chunking of artifacts of arbitrary size, both large and small, while preserving contextual
-        dependencies. The decomposition process decomposes an artifact into a hierarchical tree of chunks and
-        subsequently recomposes the information by appending summaries at multiple levels. Formally, an artifact \(A\)
-        is first decomposed into a set of branch chunks \(B\), defined as overlapping, order-preserving segments of
-        fixed token size \(K\) with overlap \(P\), whose union collectively covers \(A\). Subsequently, each branch
-        chunk \(B_i\) is partitioned into a family of variable-sized non-overlapping leaf chunks, whose union exactly
-        reconstructs \(B_i\). Branch chunks are fixed-parameter
-        decomposed, while leaf chunks are LLM-inference decomposed. The artifact hierarchy is a depth-two tree, with the
-        artifact as the root, branch chunks at level one, and leaf chunks as the terminal level.
-    </p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/decomposition.svg" alt="Hierarchical Artifact Decomposition Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 6</span>
-            Illustration of the decomposition process, in which an artifact is partitioned into overlapping branch
-            chunks and further decomposed into variable-sized leaf chunks.
-        </figcaption>
-    </figure>
-
-    <h3>Hierarchical Artifact Recomposition</h3>
-    <p>
-        The recomposition process summarizes the leaf chunks within each branch subtree into a concise branch-level
-        summary. These branch-level summaries are then aggregated to produce a final root-level summary of the artifact.
-        HADR is notably information-preserving, i.e., no content of an artifact is lost during either process as we make
-        the assumption all information about an artifact serves an importance. Our design enables downstream
-        stages to selectively use both chunk and summarized representations as needed.
-    </p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/recomposition.svg" alt="Recomposition Process Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 7</span>
-            Illustration of the recomposition process, where lower-level text segments are summarized and aggregated to
-            form a higher-level representation.
-        </figcaption>
-    </figure>
-
-    <h2>Proposed System Algorithm</h2>
-    <h3>Branch Chunking</h3>
-    <p>
-        Given an artifact \( A \), first tokenize it using the tokenizer associated with the target LLM. The artifact is then
-        decomposed (segmented) into an ordered sequence of branch chunks
-        \(\{C_{b_1}, C_{b_2}, \dots, C_{b_N}\}\), parameterized by a fixed token window
-        size \( K \) and an overlap \( P \). The following points are important to note:
-    </p>
-
-
-    <ul class="tech-list">
-        <li>
-            The start of branch chunk \( C_{b_{i+1}} \) is offset by \( K - P \) tokens relative to the start of
-            \( C_{b_i} \).
-        </li>
-        <li>
-            The final branch chunk \( C_{b_N} \) contains the remaining tokens, where
-            \( 0 \lt \lvert C_{b_N} \rvert \leq K \).
-        </li>
-        <li>
-            If the total number of tokens in \( A \leq K \), then \( N = 1 \) and
-            \( C_{b_1} = A \) (no further segmentation is performed).
-        </li>
-    </ul>
-
-        <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/branchchunking.svg" alt="Branch Chunking Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 8</span>
-            Illustration of tokenization (left) and the branch chunking flowchart (right).
-        </figcaption>
-    </figure>
-
-    In other words, branch chunking is traditional fixed-size chunking. The uniqueness comes in the proceeding processes.
-    <h3>Leaf Chunking</h3>
-    <p>
-        For each branch chunk \( C_{b_i} \), a leaf-partitioning step is applied to produce a set of leaf chunks
-        \( \{ C_{l_1}, C_{l_2}, \dots, C_{l_M} \} \). These leaf chunks are non-overlapping and contain no duplicates.
-        Formally, they form an exact partition of the branch chunk, such that
-        \( \bigcup_{j=1}^{M} C_{l_j} = C_{b_i} \).
-        This procedure is applied independently to every branch chunk in the decomposed set.
-    </p>
-    
-    <p>
-        Leaf partitioning is implemented via an LLM inference using a constrained prompt that segments each branch
-        chunk into semantically coherent subsegments of variable length. Each leaf chunk is required to remain within
-        the token budget \( K \), which is naturally satisfied given that it is derived from a branch chunk.
-        While individual leaf chunks may vary in size, they collectively reconstruct the full branch chunk
-        \( C_{b_i} \) exactly, with the total token count of their union equal to
-        \( \lvert C_{b_i} \rvert \) (or fewer when the branch chunk is the last of the decomposed set or \( A \) itself).
-    </p>
-
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/Chunk to Leaf.svg" alt="Leaf Chunking Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 9</span>
-           Illustration of the leaf chunking process, where each branch chunk is further partitioned into variable-sized chunks.
-        </figcaption>
-    </figure>
-
-    <h3>Recomposition</h3>
-    <p>
-        A recomposition function takes a set of text chunks and produces a single summarized output.
-        The function is implemented via LLM inference using a summarization prompt that combines
-        information from all inputs into a coherent summary. Given a set of chunks at some level
-        of the hierarchy, recomposition produces a summary corresponding to the level immediately above
-        (i.e., leaf chunks are recomposed into a branch-level summary, and branch chunks into an
-        artifact-level summary).
-    </p>
-    
-    <p>
-        The function is first applied to each branch subtree at the terminal (leaf) level, producing
-        intermediate summaries for their parent branch chunks. To accommodate large artifacts and
-        bounded context windows, recomposition is then applied again over the set of branch-level
-        summaries, yielding a single summary for the full artifact. This recursive aggregation
-        constitutes the recomposition process.
-    </p>
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/Summary Recomposition.svg" alt="Summary Recomposition Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 10</span>
-           Illustration of the summary recomposition process, where leaf-level chunks are aggregated into branch-level summaries, and finally into an artifact-level summary.
-        </figcaption>
-    </figure>
-        
-    <h3>Entity Extraction</h3>
-    <p>
-        During preprocessing, an artifact \( A \) is decomposed into a depth-two tree consisting of a root,
-        branch nodes, and leaf nodes. The entity extraction function operates at the leaf level and takes as
-        input a leaf chunk, its corresponding branch-level summary, and the global artifact-level summary.
-        It produces structured, parseable, entity representations.
-    </p>
-    
-    <p>
-        The function is implemented via LLM inference using a constrained entity-extraction prompt and is
-        applied exclusively at the terminal (leaf) layer. Entity extraction is performed independently for
-        each leaf node. For each branch chunk, the function is applied to every leaf in its subtree using
-        that branch’s summary and the shared artifact summary (of which there is exactly one). Entity
-        extraction is applied to all existing leaf nodes.
-    </p>
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/Entity Exctraction.svg" alt="Entity Extraction Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 11</span>
-           Illustration of the entity extraction process, where leaf-level chunks are processed to extract entities.
-        </figcaption>
-    </figure>
-    <h3>Relationship Extraction</h3>
-    <p>
-        Once entities have been independently extracted from all leaf nodes, relationships are inferred at
-        the branch level. Each leaf node produces its own entity set; for a given branch chunk, the entity
-        set used for relationship extraction is formed by taking the union of all entity sets across the
-        leaf nodes in that branch’s subtree. For each branch chunk, a relationship-extraction function is
-        then applied using this unified entity set, the raw branch chunk text (not its summary), and the
-        global artifact-level summary. This process produces relationships grounded in the local branch
-        context while remaining informed by the global artifact context.
-    </p>
-    
-    <p>
-        Relationship extraction is performed independently for each branch chunk. No cross-branch
-        relationships are inferred at this stage; each branch is processed solely using its own entities
-        and context. This ensures localized relational consistency prior to any downstream aggregation.
-    </p>
-    <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/Local Relations Extraction.svg" alt="Local Relations Extraction Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 12</span>
-           Illustration of the local relationship extraction process, where branch-level chunks are processed to extract relationships.
-        </figcaption>
-    </figure>
-<h3>Reviewed Relationship Extraction</h3>
-<p>
-    To capture relationships that may have been missed during initial extraction, we introduce a
-    <i>semantic relationship extraction</i> step. This process is governed by a <b>state bit</b>,
-    initialized to 0 at the start of the system. If no documents have been processed, or if only a
-    single document is present, the state bit is set to 1 before proceeding. The semantic relationship
-    function then operates on the appropriate set of artifact trees: either a single tree or multiple
-    trees, depending on the state bit.
-</p>
-
-<p>
-    For each branch chunk, we compute its embedding and perform a cosine similarity search
-    against a branch vector table to identify the top-\(N\) most semantically similar branches. This
-    search can be restricted to a single artifact tree or span all trees, based on the state bit.
-    Relations are then extracted between these branches using four sources of information:
-    (1) the union of all entity sets from the selected branch chunks,
-    (2) the union of previously extracted relations for those chunks,
-    (3) the raw branch chunk texts (rather than summaries), and
-    (4) the global artifact summary of the branch chunk under consideration.
-</p>
-
-<p>
-    While this computation can be resource-intensive, the token count per operation is
-    \( N \cdot K + \lambda \), where \( N \) is the number of similar branches considered,
-    and \( \lambda \) accounts for tokens from prompts, summaries, entities, and relations.
-    This process is applied to all branch chunks. Since similarity computations are independent,
-    the operation is highly parallelizable, producing a "global" set of relations. These are then
-    merged with the master set of relations accumulated during ingestion, and finally, entities
-    and relations are combined to construct the knowledge graph.
-</p>
-
- <figure class="svg-item">
-        <div class="fig-frame">
-            <img src="svgs/Global Relations Extraction.svg" alt="Global Relations Extraction Illustration">
-        </div>
-        <figcaption>
-            <span class="fig-num">Figure 13</span>
-           Illustration of the global relationship extraction process, where similar branch-level chunks are identified and their relationships are extracted.
-        </figcaption>
-    </figure>
-
-
-
-        
-    <div class="references-section">
-        <h2>References</h2>
-        <ol class="ref-list">
-            <li id="ref-zhou">
-                <a href="https://arxiv.org/abs/2305.11206" target="_blank">
-                    Zhou, C., Liu, P., Xu, P., Iyer, S., Sun, J., Mao, Y., ... & Levy, O. (2023). <em>Lima: Less is more
-                        for alignment</em>. Advances in Neural Information Processing Systems, 36, 55006-55021.
-                </a>
-            </li>
-
-            <li id="ref-pang">
-                <a href="https://arxiv.org/abs/2502.01968" target="_blank">
-                    Pang, J., Di, N., Zhu, Z., Wei, J., Cheng, H., Qian, C., & Liu, Y. (2025). <em>Token Cleaning:
-                        Fine-Grained Data Selection for LLM Supervised Fine-Tuning.</em> ArXiv, abs/2502.01968.
-                </a>
-            </li>
-            <li id="ref-lightrag">
-                <a href="https://arxiv.org/abs/2410.05779" target="_blank">
-                    Guo, Z., Xia, L., Yu, Y., Ao, T., & Huang, C. (2024). <em>LightRAG: Simple and Fast
-                        Retrieval-Augmented Generation.</em> ArXiv, abs/2410.05779.
-                </a>
-            </li>
-            <li id="ref-chroma">
-                <a href="https://www.trychroma.com/blog/context-rot" target="_blank">
-                    Hong, K., Troynikov, A., & Huber, J. (2025). <em>Context Rot: How Increasing Input Tokens Impacts
-                        LLM Performance.</em> Chroma Technical Report.
-                </a>
-            </li>
-            <li id="ref-chen">
-                <a href="https://doi.org/10.1145/320434.320440" target="_blank">
-                    Chen, P. P-S. (1976). <em>The entity-relationship model—toward a unified view of data.</em> ACM
-                    Trans. Database Syst., 1(1), 9–36.
-                </a>
-            </li>
-            <li id="ref-katz">
-                <a href="https://arxiv.org/abs/2204.13778" target="_blank">
-                    Katz, U., Geva, M., & Berant, J. (2022). <em>Inferring implicit relations in complex questions with
-                        language models.</em> arXiv preprint arXiv:2204.13778.
-                </a>
-            </li>
-            <li id="ref-graphrag">
-                <a href="https://arxiv.org/abs/2501.00309" target="_blank">
-                    Han, H., et al. (2024). <em>Retrieval-augmented generation with graphs (graphrag).</em> arXiv
-                    preprint arXiv:2501.00309.
-                </a>
-            </li>
-            <li id="ref-eracot">
-                <a href="https://arxiv.org/abs/2403.06932" target="_blank">
-                    Liu, Y., et al. (2024). <em>ERA-CoT: improving chain-of-thought through entity relationship
-                        analysis.</em> arXiv preprint arXiv:2403.06932.
-                </a>
-            </li>
-
-            <li id="ref-gomez">
-                <a href="https://doi.org/10.3390/bioengineering12111194" target="_blank">
-                    Gomez-Cabello, C. A., et al. (2025). <em>Comparative Evaluation of Advanced Chunking for
-                        Retrieval-Augmented Generation in Large Language Models for Clinical Decision Support.</em>
-                    Bioengineering, 12(11), 1194.
-                </a>
-            </li>
-        </ol>
     </div>
-    
 
-    <script src="js/preview.js"></script>
+    <!-- Full-bleed decomposition -->
+    <div class="full-bleed decomp-band reveal">
+        <div class="decomp-canvas">
+            <div class="decomp-level">
+                <div class="d-node d-root">
+                    <span>Artifact \(A\)</span>
+                    <span class="d-tag">root</span>
+                </div>
+            </div>
+            <div class="decomp-connector">
+                <svg viewBox="0 0 200 32" preserveAspectRatio="none">
+                    <line x1="100" y1="0" x2="30" y2="32" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                    <line x1="100" y1="0" x2="75" y2="32" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                    <line x1="100" y1="0" x2="130" y2="32" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                    <line x1="100" y1="0" x2="170" y2="32" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                </svg>
+            </div>
+            <div class="decomp-level">
+                <div class="d-node d-branch">\(C_{b_1}\)<span class="d-tag">branch</span></div>
+                <div class="d-node d-branch">\(C_{b_2}\)<span class="d-tag">branch</span></div>
+                <div class="d-node d-branch dim">…</div>
+                <div class="d-node d-branch">\(C_{b_N}\)<span class="d-tag">branch</span></div>
+            </div>
+            <div class="decomp-connector">
+                <svg viewBox="0 0 200 32" preserveAspectRatio="none">
+                    <line x1="30" y1="0" x2="15" y2="32" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                    <line x1="30" y1="0" x2="45" y2="32" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                    <line x1="75" y1="0" x2="65" y2="32" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                    <line x1="75" y1="0" x2="85" y2="32" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                    <line x1="75" y1="0" x2="105" y2="32" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                    <line x1="170" y1="0" x2="155" y2="32" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                    <line x1="170" y1="0" x2="185" y2="32" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+                </svg>
+            </div>
+            <div class="decomp-level leaves">
+                <div class="d-node d-leaf">\(C_{l_1}\)</div>
+                <div class="d-node d-leaf">\(C_{l_2}\)</div>
+                <div class="d-node d-leaf">\(C_{l_3}\)</div>
+                <div class="d-node d-leaf">\(C_{l_4}\)</div>
+                <div class="d-node d-leaf">\(C_{l_5}\)</div>
+                <div class="d-node d-leaf dim">…</div>
+                <div class="d-node d-leaf">\(C_{l_M}\)</div>
+            </div>
+            <div class="decomp-annotation">
+                <span class="ann-branch">Fixed-size, overlapping</span>
+                <span class="ann-sep">·</span>
+                <span class="ann-leaf">Variable-size, non-overlapping, LLM-inferred</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-rail">
+
+        <!-- Code preview + collapsible for leaf.j2 -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/prompts/templates/leaf.j2</span>
+                    <span class="code-card-badge">Jinja2</span>
+                </div>
+<pre><code><span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are an expert linguist tool that semantically separates text.
+Your task is to split the provided text into semantically meaningful
+segments without altering the original content.
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>leaf.j2</code> prompt</summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/prompts/templates/leaf.j2</span>
+                        <span class="code-card-badge">Jinja2</span>
+                    </div>
+<pre><code><span class="tok-cmt">{#---
+description: A template for semantic text chunking tasks.
+author: Pablo B., Marlon S.
+---#}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are an expert linguist tool that semantically separates text.
+Your task is to split the provided text into semantically meaningful
+segments without altering the original content. Follow these
+instructions carefully:
+
+---Input---
+- Preserve the original text exactly: wording, spelling, punctuation,
+  whitespace, line breaks, and formatting must remain unchanged
+  within each chunk.
+- The text may include markdown, code blocks (including triple
+  backticks), tables, LaTeX, visual-to-text transcription, or any
+  other formats.
+- If the input text contains the sequence <span class="tok-pipe">&lt;|&gt;</span>, replace every
+  occurrence with [PIPE] before chunking to avoid confusion with
+  the output delimiters.
+
+---Task---
+- Carefully break up the text into logical and semantically meaningful
+  parts. Each chunk should represent a single, coherent idea or unit
+  of meaning (such as a sentence, paragraph, or code block).
+- Treat code blocks, tables, or other structured elements as atomic
+  units where appropriate.
+- Do not add any commentary, explanation, or preamble before or after
+  the output.
+- Do not add or remove any formatting characters such as triple
+  backticks or newline characters inside the chunks.
+- Return only the chunks concatenated together, each enclosed by the
+  delimiters <span class="tok-pipe">&lt;|&gt;</span> with no spaces or newlines between chunks.
+
+---Output Format---
+<span class="tok-pipe">&lt;|&gt;</span>ChunkOne<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>ChunkTwo<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>LastChunk<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-jinja">{% endset %}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">user</span> <span class="tok-jinja">%}</span>
+Semantically segment the following text into distinct meaning units,
+where each chunk represents a single coherent idea or topic.
+
+---Input Text---
+<span class="tok-var">{{ text }}</span>
+<span class="tok-jinja">{% endset %}</span></code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- ═══ Recomposition ═══ -->
+
+        <section class="section reveal" id="recomposition">
+            <span class="section-label">Stage 2</span>
+            <h2>Recomposition</h2>
+            <p>
+                Summaries propagate upward: the leaf chunks within each branch subtree are condensed into a
+                branch-level summary via the <code>summary.j2</code> prompt. Branch summaries are then
+                aggregated into a single artifact-level summary. HADR is <strong>information-preserving</strong>, thus all original chunks remain alongside their summaries for downstream use.
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Full-bleed recomposition -->
+    <div class="full-bleed recomp-band reveal">
+        <div class="recomp-flow">
+            <div class="recomp-col">
+                <div class="recomp-block">
+                    <span class="block-label">Leaf Chunks</span>
+                    <div class="block-items">
+                        <span>\(C_{l_1}\)</span><span>\(C_{l_2}\)</span><span>…</span><span>\(C_{l_M}\)</span>
+                    </div>
+                </div>
+                <div class="recomp-arrow-vert">↓</div>
+                <div class="recomp-block">
+                    <span class="block-label">Branch Summary</span>
+                    <span class="block-value">\(\hat{B}_i\)</span>
+                </div>
+            </div>
+            <div class="recomp-plus">×\(N\)</div>
+            <div class="recomp-arrow-horiz">→</div>
+            <div class="recomp-col">
+                <div class="recomp-block">
+                    <span class="block-label">Artifact Summary</span>
+                    <span class="block-value">\(\hat{A}\)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-rail">
+
+        <!-- Code preview + collapsible for summary.j2 -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/prompts/templates/summary.j2</span>
+                    <span class="code-card-badge">Jinja2</span>
+                </div>
+<pre><code><span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are an expert summary tool tasked with writing a concise and
+comprehensive summary of the input text.
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>summary.j2</code> prompt</summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/prompts/templates/summary.j2</span>
+                        <span class="code-card-badge">Jinja2</span>
+                    </div>
+<pre><code><span class="tok-cmt">{#---
+description: A template for text summarization tasks.
+author: Pablo B., Marlon S.
+---#}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are an expert summary tool tasked with writing a concise and
+comprehensive summary of the input text. Follow these instructions
+carefully:
+
+---Input---
+- The text may include markdown, code blocks (including triple
+  backticks and newline characters), tables, LaTeX, visual-to-text
+  transcription, or any other formats. When summarizing, convert
+  these elements into clear, descriptive writing rather than
+  including raw formatting or code, unless the code or formatting
+  is critical to understanding the content.
+
+---Task---
+- Summarize the input text by including all key details and
+  important points without adding any information not present in
+  the original text.
+- Do not add any commentary, explanation, or preamble before or
+  after the output.
+- Keep the summary concise, ideally within 3-5 sentences.
+<span class="tok-jinja">{% endset %}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">user</span> <span class="tok-jinja">%}</span>
+Write a summary of the following text, including as many key
+details as possible.
+
+---Input Text---
+<span class="tok-var">{{ text }}</span>
+<span class="tok-jinja">{% endset %}</span></code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- ═══ Storage ═══ -->
+
+        <section class="section reveal" id="storage">
+            <span class="section-label">Stage 3</span>
+            <h2>Storage Layer</h2>
+            <p>
+                All artifacts, branches, leaves, embeddings, and summaries are streamed into a
+                <strong>SQLite</strong> database (<code>master.db</code>) using <code>ijson</code> for
+                constant-memory ingestion. Embeddings are simultaneously upserted into
+                <strong>Qdrant</strong> (cosine similarity, 3,072-dim vectors from
+                <code>gemini-embedding-001</code>) to enable semantic nearest-neighbor search across
+                branches and leaves. The UUID hierarchy encodes the tree structure:
+            </p>
+            <div class="uuid-demo">
+                <div class="uuid-row">
+                    <span class="uuid-label">Artifact</span>
+                    <code class="uuid-val">041f16b3-…-d300</code>
+                </div>
+                <div class="uuid-branch-line"></div>
+                <div class="uuid-row">
+                    <span class="uuid-label">Branch</span>
+                    <code class="uuid-val">041f16b3-…-d300<strong>.1</strong></code>
+                </div>
+                <div class="uuid-branch-line"></div>
+                <div class="uuid-row">
+                    <span class="uuid-label">Leaf</span>
+                    <code class="uuid-val">041f16b3-…-d300<strong>.1.3</strong></code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code preview + collapsible for database schema -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">notebooks/database.ipynb</span>
+                    <span class="code-card-badge">SQL</span>
+                </div>
+<pre><code><span class="tok-sql">CREATE TABLE IF NOT EXISTS</span> artifacts (
+    uuid    <span class="tok-cls">TEXT</span> <span class="tok-sql">PRIMARY KEY</span>,
+    path    <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL DEFAULT</span> <span class="tok-str">''</span>,
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full database schema</summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">notebooks/database.ipynb</span>
+                        <span class="code-card-badge">SQL</span>
+                    </div>
+<pre><code><span class="tok-sql">CREATE TABLE IF NOT EXISTS</span> artifacts (
+    uuid    <span class="tok-cls">TEXT</span> <span class="tok-sql">PRIMARY KEY</span>,
+    path    <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL DEFAULT</span> <span class="tok-str">''</span>,
+    type    <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL DEFAULT</span> <span class="tok-str">''</span>,
+    summary <span class="tok-cls">TEXT</span>
+);
+
+<span class="tok-sql">CREATE TABLE IF NOT EXISTS</span> branches (
+    uuid          <span class="tok-cls">TEXT</span> <span class="tok-sql">PRIMARY KEY</span>,
+    artifact_uuid <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL REFERENCES</span> artifacts(uuid),
+    chunk         <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL DEFAULT</span> <span class="tok-str">''</span>,
+    path          <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL DEFAULT</span> <span class="tok-str">''</span>,
+    summary       <span class="tok-cls">TEXT</span>
+);
+
+<span class="tok-sql">CREATE TABLE IF NOT EXISTS</span> branch_embeddings (
+    branch_uuid <span class="tok-cls">TEXT</span> <span class="tok-sql">PRIMARY KEY REFERENCES</span> branches(uuid),
+    embedding   <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL</span>
+);
+
+<span class="tok-sql">CREATE TABLE IF NOT EXISTS</span> leafs (
+    uuid        <span class="tok-cls">TEXT</span> <span class="tok-sql">PRIMARY KEY</span>,
+    branch_uuid <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL REFERENCES</span> branches(uuid),
+    text        <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL DEFAULT</span> <span class="tok-str">''</span>,
+    entities    <span class="tok-cls">TEXT</span>
+);
+
+<span class="tok-sql">CREATE TABLE IF NOT EXISTS</span> leaf_embeddings (
+    leaf_uuid <span class="tok-cls">TEXT</span> <span class="tok-sql">PRIMARY KEY REFERENCES</span> leafs(uuid),
+    embedding <span class="tok-cls">TEXT</span> <span class="tok-sql">NOT NULL</span>
+);</code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- Code preview + collapsible for qdrant.py -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/qdrant.py</span>
+                    <span class="code-card-badge">Python</span>
+                </div>
+<pre><code><span class="tok-kw">class</span> <span class="tok-cls">VectorDB</span>():
+    <span class="tok-kw">def</span> <span class="tok-fn">__init__</span>(<span class="tok-self">self</span>, port: <span class="tok-cls">int</span>, host: <span class="tok-cls">str</span>):
+        <span class="tok-self">self</span>.client <span class="tok-op">=</span> <span class="tok-self">self</span>.connect(port, host)
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>qdrant.py</code></summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/qdrant.py</span>
+                        <span class="code-card-badge">Python</span>
+                    </div>
+<pre><code><span class="tok-kw">from</span> qdrant_client <span class="tok-kw">import</span> QdrantClient
+<span class="tok-kw">from</span> tuutrag.utils <span class="tok-kw">import</span> log_timestamp
+<span class="tok-kw">from</span> pathlib <span class="tok-kw">import</span> Path
+
+IMAGE <span class="tok-op">=</span> <span class="tok-str">"qdrant/qdrant:latest"</span>
+
+
+<span class="tok-kw">class</span> <span class="tok-cls">VectorDB</span>():
+    <span class="tok-kw">def</span> <span class="tok-fn">__init__</span>(<span class="tok-self">self</span>, port: <span class="tok-cls">int</span>, host: <span class="tok-cls">str</span>):
+        <span class="tok-self">self</span>.client <span class="tok-op">=</span> <span class="tok-self">self</span>.connect(port, host)
+
+    <span class="tok-kw">def</span> <span class="tok-fn">connect</span>(<span class="tok-self">self</span>, port: <span class="tok-cls">int</span>, host: <span class="tok-cls">str</span>):
+        port <span class="tok-op">=</span> <span class="tok-cls">int</span>(port)
+        host <span class="tok-op">=</span> <span class="tok-cls">str</span>(host)
+        storage <span class="tok-op">=</span> <span class="tok-cls">str</span>(Path(__file__).parent <span class="tok-op">/</span> <span class="tok-str">"data/qdrant"</span>)
+        <span class="tok-kw">try</span>:
+            client <span class="tok-op">=</span> QdrantClient(
+                port<span class="tok-op">=</span>port, host<span class="tok-op">=</span>host, timeout<span class="tok-op">=</span><span class="tok-num">50</span>, https<span class="tok-op">=</span><span class="tok-bool">False</span>
+            )
+            log_timestamp(<span class="tok-str">f"Connected to http://</span>{host}<span class="tok-str">:</span>{port}<span class="tok-str">/dashboard"</span>)
+            <span class="tok-kw">return</span> client
+        <span class="tok-kw">except</span> <span class="tok-cls">Exception</span> <span class="tok-kw">as</span> e:
+            <span class="tok-kw">raise</span> <span class="tok-cls">RuntimeError</span>(<span class="tok-str">f"Error connecting to Qdrant: </span>{e}<span class="tok-str">"</span>)
+
+    <span class="tok-kw">def</span> <span class="tok-fn">create_collection</span>(<span class="tok-self">self</span>, collection_name, vector_params):
+        <span class="tok-kw">if</span> <span class="tok-self">self</span>.client.collection_exists(
+            collection_name<span class="tok-op">=</span>collection_name
+        ):
+            <span class="tok-kw">return</span>
+        <span class="tok-self">self</span>.client.create_collection(
+            collection_name<span class="tok-op">=</span>collection_name,
+            vectors_config<span class="tok-op">=</span>vector_params,
+        )
+
+    <span class="tok-kw">def</span> <span class="tok-fn">upsert</span>(<span class="tok-self">self</span>, collection_name: <span class="tok-cls">str</span>, point):
+        <span class="tok-self">self</span>.client.upsert(
+            collection_name<span class="tok-op">=</span>collection_name,
+            points<span class="tok-op">=</span>point,
+            wait<span class="tok-op">=</span><span class="tok-bool">True</span>,
+        )</code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- ═══ Entity & Relation Extraction ═══ -->
+
+        <section class="section reveal" id="extraction">
+            <span class="section-label">Stage 4</span>
+            <h2>Entity &amp; Relation Extraction</h2>
+            <p>
+                HADR explicitly decouples entity extraction from relation inference and applies
+                relation discovery at three progressively wider scopes:
+            </p>
+            <p>
+                <strong>Entities</strong> are extracted at the leaf level via the <code>entity.j2</code>
+                prompt where each leaf is processed independently, and the results written back as a JSON array.
+                <strong>Local relations</strong> are inferred per-branch from the union of that branch's leaf
+                entities using <code>relation_local.j2</code>, capturing relationships within a single branch.
+                <strong>Global relations</strong> widen the scope to an entire artifact: embedding-similarity
+                search across branches within the same document tree identifies semantically related chunks,
+                and cross-set relation inference is performed using <code>relation_global_uni.j2</code>.
+                Finally, <strong>universal relations</strong> span the full corpus: the same similarity search
+                and <code>relation_global_uni.j2</code> prompt are applied across branches from
+                <em>all</em> ingested artifacts, surfacing cross-document dependencies that would otherwise
+                remain implicit.
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Full-bleed extraction -->
+    <div class="full-bleed extract-band reveal">
+        <div class="extract-flow">
+            <div class="extract-phase">
+                <div class="extract-badge badge-1">1</div>
+                <div class="extract-card">
+                    <h4>Entity Extraction</h4>
+                    <p>Per-leaf · <code>entity.j2</code></p>
+                    <div class="extract-example">
+                        <span class="entity-pill">Dr. Evelyn Hart</span>
+                        <span class="entity-pill">Johns Hopkins</span>
+                        <span class="entity-pill">FDA</span>
+                        <span class="entity-pill">Case No. 2023-MED-0047</span>
+                        <span class="entity-pill">Compound XR-9B</span>
+                    </div>
+                </div>
+            </div>
+            <div class="extract-arrow">→</div>
+            <div class="extract-phase">
+                <div class="extract-badge badge-2">2</div>
+                <div class="extract-card">
+                    <h4>Local Relations</h4>
+                    <p>Within branch · <code>relation_local.j2</code></p>
+                    <div class="extract-example">
+                        <span class="rel-triple"><em>Dr. Evelyn Hart</em> → works at → <em>Johns Hopkins</em></span>
+                        <span class="rel-triple"><em>Case 2023-MED-0047</em> → reviewed by → <em>FDA</em></span>
+                    </div>
+                </div>
+            </div>
+            <div class="extract-arrow">→</div>
+            <div class="extract-phase">
+                <div class="extract-badge badge-3">3</div>
+                <div class="extract-card">
+                    <h4>Global Relations</h4>
+                    <p>Within artifact · <code>relation_global_uni.j2</code></p>
+                    <div class="extract-example">
+                        <span class="rel-triple"><em>Case 2023-MED-0047</em> → concerns → <em>Compound XR-9B</em></span>
+                        <span class="rel-triple"><em>FDA</em> → suspended → <em>Phase III TriNeuro Trial</em></span>
+                    </div>
+                </div>
+            </div>
+            <div class="extract-arrow">→</div>
+            <div class="extract-phase">
+                <div class="extract-badge badge-4">4</div>
+                <div class="extract-card">
+                    <h4>Universal Relations</h4>
+                    <p>Across all artifacts · <code>relation_global_uni.j2</code></p>
+                    <div class="extract-example">
+                        <span class="rel-triple"><em>Compound XR-9B</em> → referenced in → <em>REQ-042</em></span>
+                        <span class="rel-triple"><em>Dr. Evelyn Hart</em> → authored → <em>TC-108</em></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-rail">
+
+        <!-- Code preview + collapsible for entity.j2 -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/prompts/templates/entity.j2</span>
+                    <span class="code-card-badge">Jinja2</span>
+                </div>
+<pre><code><span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are an entity extraction tool. Extract entities only from the
+section labeled "Input Text".
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>entity.j2</code> prompt</summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/prompts/templates/entity.j2</span>
+                        <span class="code-card-badge">Jinja2</span>
+                    </div>
+<pre><code><span class="tok-cmt">{#---
+description: A template for named entity extraction tasks.
+author: Pablo B., Marlon S.
+---#}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are an entity extraction tool. Extract entities only from the
+section labeled "Input Text". Follow these instructions carefully:
+
+---Input---
+- The entire input text represents a meaningful idea (such as a
+  sentence, paragraph, or code block).
+- If the entity name is case-insensitive, capitalize the first
+  letter of each significant word (title case). Ensure consistent
+  naming across the entire extraction process.
+- If the input text contains the sequence <span class="tok-pipe">&lt;|&gt;</span>, replace it
+  with [PIPE] to avoid confusion with the entity delimiter.
+
+---Task---
+- Identify all meaningful entities only from the input text.
+- Do not add any commentary, explanation, or preamble.
+- Return only the identified entities in the following format,
+  with each entity enclosed by <span class="tok-pipe">&lt;|&gt;</span> delimiters.
+
+---Output Format---
+<span class="tok-pipe">&lt;|&gt;</span>EntityOne<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>EntityTwo<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>EntityThree<span class="tok-pipe">&lt;|&gt;</span>
+
+---Example---
+Input: "On March 14, 2023, Dr. Evelyn Hart of the Johns Hopkins
+Neurology Department filed Case No. 2023-MED-0047 with the FDA
+citing adverse reactions to Compound XR-9B, developed under NIH
+Grant #R01NS112233, affecting patients in the Phase III TriNeuro
+Trial across facilities in Baltimore, MD and Denver, CO."
+Output: <span class="tok-pipe">&lt;|&gt;</span>March 14, 2023<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>Dr. Evelyn Hart<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-pipe">&lt;|&gt;</span>Johns Hopkins Neurology Department<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>Johns Hopkins<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-pipe">&lt;|&gt;</span>Case No. 2023-MED-0047<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>FDA<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>Compound XR-9B<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-pipe">&lt;|&gt;</span>NIH Grant #R01NS112233<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>NIH<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-pipe">&lt;|&gt;</span>Phase III TriNeuro Trial<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>Baltimore<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>MD<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-pipe">&lt;|&gt;</span>Denver<span class="tok-pipe">&lt;|&gt;&lt;|&gt;</span>CO<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-jinja">{% endset %}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">user</span> <span class="tok-jinja">%}</span>
+Extract all named entities from the following text.
+
+---Input Text---
+<span class="tok-var">{{ text }}</span>
+<span class="tok-jinja">{% endset %}</span></code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- Code preview + collapsible for relation_local.j2 -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/prompts/templates/relation_local.j2</span>
+                    <span class="code-card-badge">Jinja2</span>
+                </div>
+<pre><code><span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are a relationship identification tool. Identify relationships
+only from the section labeled "Entities".
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>relation_local.j2</code> prompt</summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/prompts/templates/relation_local.j2</span>
+                        <span class="code-card-badge">Jinja2</span>
+                    </div>
+<pre><code><span class="tok-cmt">{#---
+description: A template for local relationship identification
+             tasks between entities.
+author: Pablo B., Marlon S.
+---#}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are a relationship identification tool. Identify relationships
+only from the section labeled "Entities". "Raw Chunk" may be used
+for disambiguation only. Follow these instructions carefully:
+
+---Input---
+- Entities are provided as a list, where each list item represents
+  a single coherent idea.
+- If the input text contains the sequence <span class="tok-pipe">&lt;|&gt;</span>, replace it
+  with [PIPE] to avoid confusion with the entity delimiter.
+
+---Task---
+- Identify meaningful relationships between entities based on
+  the provided information. Only extract relationships that are
+  explicitly stated or directly implied.
+- If a single statement describes a relationship involving more
+  than two entities (an N-ary relationship), decompose it into
+  multiple binary (two-entity) pairs.
+  E.g. "REQ-12 and REQ-13 both derive from NEED-04" yields:
+  "REQ-12, derives-from, NEED-04" and
+  "REQ-13, derives-from, NEED-04."
+- Relationships are directional: source → target.
+- Do not add any commentary or preamble.
+
+---Output Format---
+<span class="tok-pipe">&lt;|&gt;</span>Source, relationship-type, Target<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-jinja">{% endset %}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">user</span> <span class="tok-jinja">%}</span>
+Identify all relationships that are explicitly stated or directly
+implied across the "Entities".
+
+---Raw Chunk---
+<span class="tok-var">{{ raw_chunk }}</span>
+
+---Entities---
+<span class="tok-var">{{ entities }}</span>
+<span class="tok-jinja">{% endset %}</span></code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- Code preview + collapsible for relation_global_uni.j2 -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/prompts/templates/relation_global_uni.j2</span>
+                    <span class="code-card-badge">Jinja2</span>
+                </div>
+<pre><code><span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are a relationship identification tool. Identify relationships
+only from the sections labeled "Entities".
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>relation_global_uni.j2</code> prompt</summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/prompts/templates/relation_global_uni.j2</span>
+                        <span class="code-card-badge">Jinja2</span>
+                    </div>
+<pre><code><span class="tok-cmt">{#---
+description: A template for global relationship identification
+             tasks between entities across multiple sets.
+             This template is identical to relation_global.j2.
+             Both map to the same underlying prompt.
+author: Pablo B., Marlon S.
+---#}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">system</span> <span class="tok-jinja">%}</span>
+You are a relationship identification tool. Identify relationships
+only from the sections labeled "Entities". Each "Relations",
+"Raw Chunk" and "Artifact Summary" may be used for disambiguation
+of their respective set only. Follow these instructions carefully:
+
+---Input---
+Input is provided across K numbered sets, each formatted as:
+ [SET {n}]
+ Entities: &lt;comma-separated list&gt;
+ Relations: &lt;"<span class="tok-pipe">&lt;|&gt;</span>"-comma separated list&gt;
+ Raw Chunk: &lt;source text&gt;
+ Artifact Summary: &lt;artifact-level summary&gt;
+- Treat each entity as scoped to its own set.
+- If the input text contains the sequence <span class="tok-pipe">&lt;|&gt;</span>, replace it
+  with [PIPE].
+
+---Task---
+- Identify meaningful relationships between entities across
+  different sets. Do not extract relationships within the same set.
+- Only extract relationships explicitly stated or directly implied.
+- Decompose N-ary relationships into binary pairs.
+- Relationships are directional: source → target.
+
+---Output Format---
+<span class="tok-pipe">&lt;|&gt;</span>Source, relationship-type, Target<span class="tok-pipe">&lt;|&gt;</span>
+
+---Example---
+Input:
+[SET 1]
+Entities: Dr. Evelyn Hart, Johns Hopkins, Case No. 2023-MED-0047, FDA
+Relations: <span class="tok-pipe">&lt;|&gt;</span>Dr. Evelyn Hart, works at, Johns Hopkins<span class="tok-pipe">&lt;|&gt;</span>
+           <span class="tok-pipe">&lt;|&gt;</span>Case No. 2023-MED-0047, reviewed by, FDA<span class="tok-pipe">&lt;|&gt;</span>
+Raw Chunk: "…filed Case No. 2023-MED-0047 with the FDA citing
+           adverse reactions to Compound XR-9B."
+Artifact Summary: "FDA case filing regarding drug adverse events."
+[SET 2]
+Entities: Compound XR-9B, NIH, Phase III TriNeuro Trial
+Relations: <span class="tok-pipe">&lt;|&gt;</span>Compound XR-9B, funded by, NIH Grant #R01NS112233<span class="tok-pipe">&lt;|&gt;</span>
+           <span class="tok-pipe">&lt;|&gt;</span>Compound XR-9B, tested in, Phase III TriNeuro Trial<span class="tok-pipe">&lt;|&gt;</span>
+Raw Chunk: "Compound XR-9B…was the subject of an adverse event report…
+           The Phase III TriNeuro Trial was subsequently suspended."
+Artifact Summary: "NIH-funded clinical trial documentation."
+Output:
+<span class="tok-pipe">&lt;|&gt;</span>Case No. 2023-MED-0047, concerns, Compound XR-9B<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-pipe">&lt;|&gt;</span>Dr. Evelyn Hart, reported, Compound XR-9B<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-pipe">&lt;|&gt;</span>FDA, suspended, Phase III TriNeuro Trial<span class="tok-pipe">&lt;|&gt;</span>
+<span class="tok-jinja">{% endset %}</span>
+
+<span class="tok-jinja">{% set</span> <span class="tok-var">user</span> <span class="tok-jinja">%}</span>
+Identify all relationships that are explicitly stated or directly
+implied across the "Entities".
+
+---Raw Chunk---
+<span class="tok-var">{{ raw_chunk }}</span>
+
+---Entities---
+<span class="tok-var">{{ entities }}</span>
+
+---Relations---
+<span class="tok-var">{{ relations }}</span>
+
+---Artifact Summary---
+<span class="tok-var">{{ artifact_summary }}</span>
+<span class="tok-jinja">{% endset %}</span></code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- ═══ Knowledge Graph ═══ -->
+
+        <section class="section reveal" id="kg">
+            <span class="section-label">Stage 5</span>
+            <h2>Knowledge Graph</h2>
+            <p>
+                All extracted triples (local, global, and universal) are merged and upserted into
+                <strong>Memgraph</strong> using the Bolt protocol. Each entity becomes a <code>:Entity</code>
+                node, each relationship a directed <code>:RELATIONSHIP</code> edge with a <code>type</code>
+                property. The <code>MemgraphConnection</code> class parses <code>&lt;|&gt;</code>-delimited
+                triples from JSONL and executes idempotent <code>MERGE</code> Cypher queries.
+            </p>
+        </section>
+
+    </div>
+
+    <!-- Full-bleed KG — flexbox layout -->
+    <div class="full-bleed kg-band reveal">
+        <div class="kg-canvas-v2">
+            <!-- Row 1: Requirements -->
+            <div class="kg-row">
+                <div class="kg-n kg-n-req">REQ-042</div>
+                <div class="kg-edge-label">depends on →</div>
+                <div class="kg-n kg-n-req">REQ-017</div>
+            </div>
+            <!-- Row 2: Edges down -->
+            <div class="kg-row kg-row-edges">
+                <span class="kg-vert-label">verified by ↓</span>
+                <span class="kg-vert-spacer"></span>
+                <span class="kg-vert-label">tested by ↓</span>
+            </div>
+            <!-- Row 3: Test Cases -->
+            <div class="kg-row">
+                <div class="kg-n kg-n-test">TC-108</div>
+                <div class="kg-edge-label"></div>
+                <div class="kg-n kg-n-test">TC-211</div>
+            </div>
+            <!-- Row 4: Edges down -->
+            <div class="kg-row kg-row-edges">
+                <span class="kg-vert-label">references ↓</span>
+                <span class="kg-vert-spacer"></span>
+                <span class="kg-vert-label">references ↓</span>
+            </div>
+            <!-- Row 5: Support -->
+            <div class="kg-row">
+                <div class="kg-n kg-n-sup">ICD-003</div>
+                <div class="kg-edge-label">part of →</div>
+                <div class="kg-n kg-n-sup">Thermal Subsystem</div>
+            </div>
+            <!-- Legend -->
+            <div class="kg-legend">
+                <span class="kg-legend-item"><span class="kg-dot kg-dot-req"></span>Requirement</span>
+                <span class="kg-legend-item"><span class="kg-dot kg-dot-test"></span>Test Case</span>
+                <span class="kg-legend-item"><span class="kg-dot kg-dot-sup"></span>Support</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-rail">
+
+        <!-- Code preview + collapsible for memgraph.py -->
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/memgraph.py</span>
+                    <span class="code-card-badge">Python</span>
+                </div>
+<pre><code><span class="tok-dec">@export</span>
+<span class="tok-kw">class</span> <span class="tok-cls">MemgraphConnection</span>:
+    obj_name <span class="tok-op">=</span> <span class="tok-str">"MemgraphConnection"</span>
+    workspace <span class="tok-op">=</span> <span class="tok-str">"kg"</span>
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>memgraph.py</code></summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/memgraph.py</span>
+                        <span class="code-card-badge">Python</span>
+                    </div>
+<pre><code><span class="tok-kw">import</span> json
+<span class="tok-kw">from</span> typing <span class="tok-kw">import</span> List
+<span class="tok-kw">from</span> exports <span class="tok-kw">import</span> export
+<span class="tok-kw">from</span> neo4j <span class="tok-kw">import</span> GraphDatabase
+
+
+<span class="tok-dec">@export</span>
+<span class="tok-kw">class</span> <span class="tok-cls">MemgraphConnection</span>:
+    obj_name <span class="tok-op">=</span> <span class="tok-str">"MemgraphConnection"</span>
+    workspace <span class="tok-op">=</span> <span class="tok-str">"kg"</span>
+
+    <span class="tok-kw">def</span> <span class="tok-fn">__init__</span>(<span class="tok-self">self</span>, port: <span class="tok-cls">int</span>, frontend_port: <span class="tok-cls">int</span>, host: <span class="tok-cls">str</span>):
+        <span class="tok-self">self</span>.driver <span class="tok-op">=</span> <span class="tok-self">self</span>.__connect(port, frontend_port, host)
+
+    <span class="tok-kw">def</span> <span class="tok-fn">__connect</span>(<span class="tok-self">self</span>, port, frontend_port, host):
+        URI <span class="tok-op">=</span> <span class="tok-str">f"bolt://</span>{host}<span class="tok-str">:</span>{<span class="tok-cls">int</span>(port)}<span class="tok-str">"</span>
+        driver <span class="tok-op">=</span> GraphDatabase.driver(URI, auth<span class="tok-op">=</span>(<span class="tok-str">""</span>, <span class="tok-str">""</span>))
+        driver.verify_connectivity()
+        <span class="tok-fn">print</span>(<span class="tok-str">f"Memgraph UI → http://</span>{host}<span class="tok-str">:</span>{frontend_port}<span class="tok-str">/"</span>)
+        <span class="tok-fn">print</span>(<span class="tok-str">f"Memgraph Bolt → </span>{URI}<span class="tok-str">"</span>)
+        <span class="tok-kw">return</span> driver
+
+    <span class="tok-kw">def</span> <span class="tok-fn">read_data</span>(<span class="tok-self">self</span>, file_path: <span class="tok-cls">str</span>) <span class="tok-op">-></span> <span class="tok-cls">List</span>:
+        parts <span class="tok-op">=</span> []
+        <span class="tok-kw">with</span> <span class="tok-fn">open</span>(file_path, <span class="tok-str">"r"</span>, encoding<span class="tok-op">=</span><span class="tok-str">"utf-8"</span>) <span class="tok-kw">as</span> f:
+            <span class="tok-kw">for</span> line <span class="tok-kw">in</span> f:
+                data <span class="tok-op">=</span> json.loads(line)
+                content <span class="tok-op">=</span> data[<span class="tok-str">"text"</span>].split(<span class="tok-str">"<span class="tok-pipe">&lt;|&gt;</span>"</span>)[<span class="tok-num">1</span>]
+                part <span class="tok-op">=</span> [i.strip() <span class="tok-kw">for</span> i <span class="tok-kw">in</span> content.split(<span class="tok-str">","</span>)]
+                <span class="tok-kw">if</span> <span class="tok-fn">len</span>(part) <span class="tok-op">==</span> <span class="tok-num">3</span>:
+                    parts.append(part)
+        <span class="tok-kw">return</span> parts
+
+    <span class="tok-kw">def</span> <span class="tok-fn">upsert</span>(<span class="tok-self">self</span>, data: <span class="tok-cls">List</span>) <span class="tok-op">-></span> <span class="tok-bool">None</span>:
+        <span class="tok-kw">with</span> <span class="tok-self">self</span>.driver.session() <span class="tok-kw">as</span> session:
+            <span class="tok-kw">for</span> i, part <span class="tok-kw">in</span> <span class="tok-fn">enumerate</span>(data):
+                session.run(<span class="tok-str">"""
+                    MERGE (source:Entity {name: $source})
+                    MERGE (target:Entity {name: $target})
+                    MERGE (source)-[r:RELATIONSHIP]->(target)
+                    SET r.type = $relationship
+                """</span>, source<span class="tok-op">=</span>part[<span class="tok-num">0</span>],
+                     relationship<span class="tok-op">=</span>part[<span class="tok-num">1</span>],
+                     target<span class="tok-op">=</span>part[<span class="tok-num">2</span>])
+                <span class="tok-fn">print</span>(<span class="tok-str">f"upserted </span>{i<span class="tok-op">+</span><span class="tok-num">1</span>}<span class="tok-str">/</span>{<span class="tok-fn">len</span>(data)}<span class="tok-str">: "</span>
+                      <span class="tok-str">f"</span>{part[<span class="tok-num">0</span>]}<span class="tok-str"> -[</span>{part[<span class="tok-num">1</span>]}<span class="tok-str">]-> </span>{part[<span class="tok-num">2</span>]}<span class="tok-str">"</span>)</code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- ═══ Key Modules ═══ -->
+
+        <section class="section reveal" id="modules">
+            <span class="section-label">Codebase</span>
+            <h2>Key Modules</h2>
+            <p>
+                The codebase is organized into a compact Python package (<code>tuutrag/</code>) and a set
+                of Jinja2 prompt templates. Below are the core building blocks that power every pipeline stage.
+            </p>
+
+            <div class="module-grid">
+                <div class="module-card">
+                    <h4>types.py</h4>
+                    <p><code>BranchChunk</code>, <code>BatchRequest</code>, <code>Message</code>, <code>RequestBody</code> — typed dicts enforcing the data contract across stages.</p>
+                </div>
+                <div class="module-card">
+                    <h4>data.py</h4>
+                    <p><code>DataManager</code> — resolves file paths across <code>raw/</code>, <code>interim/</code>, <code>processed/</code>, and <code>api/</code> directories. Singleton instance <code>D</code>.</p>
+                </div>
+                <div class="module-card">
+                    <h4>prompt.py</h4>
+                    <p><code>create_batch_request()</code> — assembles OpenAI Batch API payloads with system + user messages from rendered templates.</p>
+                </div>
+                <div class="module-card">
+                    <h4>prompts/manager.py</h4>
+                    <p><code>load_prompt()</code> — renders Jinja2 templates via <code>make_module()</code> and returns <code>{"system": …, "user": …}</code> string pairs.</p>
+                </div>
+                <div class="module-card">
+                    <h4>utils.py</h4>
+                    <p><code>count_batch_request_tokens()</code> — tiktoken-based token counting for batch-size splitting.</p>
+                </div>
+                <div class="module-card">
+                    <h4>qdrant.py</h4>
+                    <p><code>VectorDB</code> — wraps <code>QdrantClient</code> with <code>connect()</code>, <code>create_collection()</code>, and <code>upsert()</code>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Remaining code collapsibles (types, data, prompt+manager, utils, ocr) — preview pattern -->
+
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/types.py</span>
+                    <span class="code-card-badge">Python</span>
+                </div>
+<pre><code><span class="tok-kw">class</span> <span class="tok-cls">BranchChunk</span>(<span class="tok-cls">TypedDict</span>):
+    uuid: <span class="tok-cls">str</span>
+    chunk: <span class="tok-cls">str</span>
+    path: <span class="tok-cls">str</span>
+    type: <span class="tok-cls">str</span>
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>types.py</code></summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/types.py</span>
+                        <span class="code-card-badge">Python</span>
+                    </div>
+<pre><code><span class="tok-kw">from</span> typing <span class="tok-kw">import</span> Literal, TypedDict
+
+
+<span class="tok-kw">class</span> <span class="tok-cls">BranchChunk</span>(<span class="tok-cls">TypedDict</span>):
+    uuid: <span class="tok-cls">str</span>
+    chunk: <span class="tok-cls">str</span>
+    path: <span class="tok-cls">str</span>
+    type: <span class="tok-cls">str</span>
+
+
+<span class="tok-kw">class</span> <span class="tok-cls">TextContent</span>(<span class="tok-cls">TypedDict</span>):
+    type: Literal[<span class="tok-str">"text"</span>]
+    text: <span class="tok-cls">str</span>
+
+
+<span class="tok-kw">class</span> <span class="tok-cls">Message</span>(<span class="tok-cls">TypedDict</span>):
+    role: Literal[<span class="tok-str">"system"</span>, <span class="tok-str">"user"</span>]
+    content: <span class="tok-cls">str</span> <span class="tok-op">|</span> <span class="tok-cls">list</span>[<span class="tok-cls">TextContent</span>]
+
+
+<span class="tok-kw">class</span> <span class="tok-cls">RequestBody</span>(<span class="tok-cls">TypedDict</span>):
+    model: <span class="tok-cls">str</span>
+    messages: <span class="tok-cls">list</span>[<span class="tok-cls">Message</span>]
+    stream: Literal[<span class="tok-bool">False</span>]
+
+
+<span class="tok-kw">class</span> <span class="tok-cls">BatchRequest</span>(<span class="tok-cls">TypedDict</span>):
+    custom_id: <span class="tok-cls">str</span>
+    method: Literal[<span class="tok-str">"POST"</span>]
+    url: Literal[<span class="tok-str">"/v1/chat/completions"</span>]
+    body: <span class="tok-cls">RequestBody</span></code></pre>
+                </div>
+            </details>
+        </div>
+
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/prompt.py + tuutrag/prompts/manager.py</span>
+                    <span class="code-card-badge">Python</span>
+                </div>
+<pre><code><span class="tok-kw">def</span> <span class="tok-fn">create_batch_request</span>(custom_id, model, **kwargs) <span class="tok-op">-></span> <span class="tok-cls">BatchRequest</span>:
+    <span class="tok-kw">return</span> { <span class="tok-str">"custom_id"</span>: custom_id, <span class="tok-str">"method"</span>: <span class="tok-str">"POST"</span>, ... }
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>prompt.py</code> + <code>manager.py</code></summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/prompt.py</span>
+                        <span class="code-card-badge">Python</span>
+                    </div>
+<pre><code><span class="tok-kw">from</span> tuutrag.types <span class="tok-kw">import</span> BatchRequest
+
+
+<span class="tok-kw">def</span> <span class="tok-fn">create_batch_request</span>(
+    custom_id: <span class="tok-cls">str</span>,
+    model: <span class="tok-cls">str</span>,
+    **kwargs
+) <span class="tok-op">-></span> <span class="tok-cls">BatchRequest</span>:
+    <span class="tok-kw">return</span> {
+        <span class="tok-str">"custom_id"</span>: custom_id,
+        <span class="tok-str">"method"</span>: <span class="tok-str">"POST"</span>,
+        <span class="tok-str">"url"</span>: <span class="tok-str">"/v1/chat/completions"</span>,
+        <span class="tok-str">"body"</span>: {
+            <span class="tok-str">"model"</span>: model,
+            <span class="tok-str">"messages"</span>: [
+                {<span class="tok-str">"role"</span>: <span class="tok-str">"system"</span>, <span class="tok-str">"content"</span>: kwargs[<span class="tok-str">"system"</span>]},
+                {<span class="tok-str">"role"</span>: <span class="tok-str">"user"</span>,   <span class="tok-str">"content"</span>: kwargs[<span class="tok-str">"user"</span>]},
+            ],
+            <span class="tok-str">"stream"</span>: <span class="tok-bool">False</span>,
+        },
+    }</code></pre>
+                </div>
+                <div class="code-card" style="margin-top: 12px;">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/prompts/manager.py</span>
+                        <span class="code-card-badge">Python</span>
+                    </div>
+<pre><code><span class="tok-kw">from</span> pathlib <span class="tok-kw">import</span> Path
+<span class="tok-kw">from</span> jinja2 <span class="tok-kw">import</span> Environment, FileSystemLoader, meta
+
+
+TEMPLATES_DIR <span class="tok-op">=</span> Path(__file__).parent <span class="tok-op">/</span> <span class="tok-str">"templates"</span>
+
+
+<span class="tok-kw">def</span> <span class="tok-fn">load_prompt</span>(template_name: <span class="tok-cls">str</span>, **kwargs) <span class="tok-op">-></span> <span class="tok-cls">dict</span>[<span class="tok-cls">str</span>, <span class="tok-cls">str</span>]:
+    env <span class="tok-op">=</span> Environment(
+        loader<span class="tok-op">=</span>FileSystemLoader(<span class="tok-cls">str</span>(TEMPLATES_DIR)),
+        keep_trailing_newline<span class="tok-op">=</span><span class="tok-bool">True</span>,
+        comment_start_string<span class="tok-op">=</span><span class="tok-str">"{#---"</span>,
+        comment_end_string<span class="tok-op">=</span><span class="tok-str">"---#}"</span>,
+    )
+    template <span class="tok-op">=</span> env.get_template(template_name)
+    module <span class="tok-op">=</span> template.make_module(vars<span class="tok-op">=</span>kwargs)
+    <span class="tok-kw">return</span> {
+        <span class="tok-str">"system"</span>: <span class="tok-cls">str</span>(module.system).strip(),
+        <span class="tok-str">"user"</span>:   <span class="tok-cls">str</span>(module.user).strip(),
+    }</code></pre>
+                </div>
+            </details>
+        </div>
+
+        <div class="code-preview-wrapper reveal">
+            <div class="code-preview">
+                <div class="code-card-header">
+                    <span class="code-card-file">tuutrag/utils.py</span>
+                    <span class="code-card-badge">Python</span>
+                </div>
+<pre><code><span class="tok-kw">def</span> <span class="tok-fn">count_batch_request_tokens</span>(enc, payload) <span class="tok-op">-></span> <span class="tok-cls">int</span>:
+    total <span class="tok-op">=</span> <span class="tok-num">0</span>
+    <span class="tok-kw">for</span> message <span class="tok-kw">in</span> payload[<span class="tok-str">"body"</span>][<span class="tok-str">"messages"</span>]:
+<span class="tok-dim">…</span></code></pre>
+                <div class="code-preview-fade"></div>
+            </div>
+            <details class="code-reveal">
+                <summary><span class="code-reveal-icon">▸</span> View full <code>utils.py</code></summary>
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <span class="code-card-file">tuutrag/utils.py</span>
+                        <span class="code-card-badge">Python</span>
+                    </div>
+<pre><code><span class="tok-kw">from</span> tiktoken.core <span class="tok-kw">import</span> Encoding
+<span class="tok-kw">from</span> tuutrag.types <span class="tok-kw">import</span> BatchRequest
+
+
+<span class="tok-kw">def</span> <span class="tok-fn">count_batch_request_tokens</span>(
+    enc: <span class="tok-cls">Encoding</span>, payload: <span class="tok-cls">BatchRequest</span>
+) <span class="tok-op">-></span> <span class="tok-cls">int</span>:
+    total <span class="tok-op">=</span> <span class="tok-num">0</span>
+    <span class="tok-kw">for</span> message <span class="tok-kw">in</span> payload[<span class="tok-str">"body"</span>][<span class="tok-str">"messages"</span>]:
+        content <span class="tok-op">=</span> message[<span class="tok-str">"content"</span>]
+        <span class="tok-kw">if</span> <span class="tok-fn">isinstance</span>(content, <span class="tok-cls">str</span>):
+            total <span class="tok-op">+=</span> <span class="tok-fn">len</span>(enc.encode(content))
+        <span class="tok-kw">elif</span> <span class="tok-fn">isinstance</span>(content, <span class="tok-cls">list</span>):
+            <span class="tok-kw">for</span> block <span class="tok-kw">in</span> content:
+                <span class="tok-kw">if</span> block.get(<span class="tok-str">"type"</span>) <span class="tok-op">==</span> <span class="tok-str">"text"</span>:
+                    total <span class="tok-op">+=</span> <span class="tok-fn">len</span>(enc.encode(block[<span class="tok-str">"text"</span>]))
+    <span class="tok-kw">return</span> total</code></pre>
+                </div>
+            </details>
+        </div>
+
+        <!-- ═══ Batch API ═══ -->
+
+        <section class="section reveal" id="batching">
+            <span class="section-label">Infrastructure</span>
+            <h2>Batch Processing</h2>
+            <p>
+                Every LLM inference in the pipeline — leaf chunking, summarization, entity extraction,
+                and relationship extraction — is submitted through the <strong>OpenAI Batch API</strong>.
+                Requests are assembled via <code>create_batch_request()</code>, token-counted with
+                <code>count_batch_request_tokens()</code>, and split into JSONL files respecting per-batch
+                token limits. This approach provides 50% cost savings over synchronous completions while
+                enabling parallelized processing of hundreds of thousands of chunks. Embeddings are
+                handled separately through <strong>Gemini</strong> (<code>gemini-embedding-001</code>),
+                batched with sliding-window RPM/TPM rate limiting.
+            </p>
+        </section>
+
+        <!-- ═══ Notebooks ═══ -->
+
+        <section class="section reveal" id="notebooks">
+            <span class="section-label">Orchestration</span>
+            <h2>Notebooks</h2>
+            <p>
+                The pipeline is orchestrated across six Jupyter notebooks, each handling a
+                distinct phase. They share the <code>tuutrag/</code> module layer for prompts,
+                types, and data management.
+            </p>
+            <div class="notebook-grid">
+                <a href="https://github.com/tuutrag-open/HADR/blob/main/notebooks/branch.ipynb" class="notebook-card">
+                    <span class="nb-name">branch.ipynb</span>
+                    <span class="nb-desc">Tokenize, chunk, embed with Gemini</span>
+                </a>
+                <a href="https://github.com/tuutrag-open/HADR/blob/main/notebooks/leafs.ipynb" class="notebook-card">
+                    <span class="nb-name">leafs.ipynb</span>
+                    <span class="nb-desc">LLM semantic leaf segmentation</span>
+                </a>
+                <a href="https://github.com/tuutrag-open/HADR/blob/main/notebooks/database.ipynb" class="notebook-card">
+                    <span class="nb-name">database.ipynb</span>
+                    <span class="nb-desc">Stream into SQLite + embeddings</span>
+                </a>
+                <a href="https://github.com/tuutrag-open/HADR/blob/main/notebooks/entites.ipynb" class="notebook-card">
+                    <span class="nb-name">entites.ipynb</span>
+                    <span class="nb-desc">Leaf-level entity extraction</span>
+                </a>
+                <a href="https://github.com/tuutrag-open/HADR/blob/main/notebooks/qdrant.ipynb" class="notebook-card">
+                    <span class="nb-name">qdrant.ipynb</span>
+                    <span class="nb-desc">Vector DB upsert + global relations</span>
+                </a>
+                <a href="https://github.com/tuutrag-open/HADR/blob/main/notebooks/update_memgraph.ipynb" class="notebook-card">
+                    <span class="nb-name">update_memgraph.ipynb</span>
+                    <span class="nb-desc">Upsert triples into Memgraph</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ═══ References ═══ -->
+
+        <div class="references-section reveal">
+            <h2>References</h2>
+            <ol class="ref-list">
+                <li id="ref-zhou"><a href="https://arxiv.org/abs/2305.11206" target="_blank">Zhou, C., et al. (2023). <em>Lima: Less is more for alignment</em>. NeurIPS, 36.</a></li>
+                <li id="ref-pang"><a href="https://arxiv.org/abs/2502.01968" target="_blank">Pang, J., et al. (2025). <em>Token Cleaning: Fine-Grained Data Selection for LLM SFT.</em></a></li>
+                <li id="ref-lightrag"><a href="https://arxiv.org/abs/2410.05779" target="_blank">Guo, Z., et al. (2024). <em>LightRAG: Simple and Fast Retrieval-Augmented Generation.</em></a></li>
+                <li id="ref-chroma"><a href="https://www.trychroma.com/blog/context-rot" target="_blank">Hong, K., et al. (2025). <em>Context Rot: How Increasing Input Tokens Impacts LLM Performance.</em></a></li>
+                <li id="ref-chen"><a href="https://doi.org/10.1145/320434.320440" target="_blank">Chen, P. P-S. (1976). <em>The entity-relationship model—toward a unified view of data.</em></a></li>
+                <li id="ref-katz"><a href="https://arxiv.org/abs/2204.13778" target="_blank">Katz, U., et al. (2022). <em>Inferring implicit relations in complex questions with language models.</em></a></li>
+                <li id="ref-graphrag"><a href="https://arxiv.org/abs/2501.00309" target="_blank">Han, H., et al. (2024). <em>Retrieval-augmented generation with graphs (GraphRAG).</em></a></li>
+                <li id="ref-eracot"><a href="https://arxiv.org/abs/2403.06932" target="_blank">Liu, Y., et al. (2024). <em>ERA-CoT: improving chain-of-thought through entity relationship analysis.</em></a></li>
+                <li id="ref-gomez"><a href="https://doi.org/10.3390/bioengineering12111194" target="_blank">Gomez-Cabello, C. A., et al. (2025). <em>Comparative Evaluation of Advanced Chunking for RAG in LLMs for Clinical Decision Support.</em></a></li>
+            </ol>
+        </div>
+
+    </div><!-- .content-rail -->
+
+</div><!-- .page-container -->
+
+<script src="js/overview.js"></script>
+
 </body>
-
 </html>
