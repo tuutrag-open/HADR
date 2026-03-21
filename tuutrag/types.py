@@ -7,6 +7,14 @@ class BranchChunk(TypedDict):
     path: str
     type: str
 
+class BranchSummary(TypedDict):
+    uuid: str
+    text: str
+
+class LocalRelation(TypedDict):
+    uuid: str
+    chunk: str
+    entities: list[str]
 
 class TextContent(TypedDict):
     type: Literal["text"]

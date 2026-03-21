@@ -59,6 +59,29 @@ class DataManager:
     def qdrant(self) -> Path:
         return self._root / "api" / "qdrant"
 
+    @property
+    def branch_batches (self) -> Path:
+        return self._root / "api" / "branch_batches"
+
+    @property
+    def artifact_batches(self) -> Path:
+        return self._root / "api" / "artifact_batches"
+
+    @property
+    def local_relation_batches(self) -> Path:
+        return self._root / "api" / "local_relation_batches"
+
+    @property
+    def global_relation_batches(self) -> Path:
+        return self._root / "api" / "global_relation_batches"
+
+    @property
+    def universal_relation_batches(self) -> Path:
+        return self._root / "api" / "universal_relation_batches"
+
+
+
+
     # --- File resolution -----------------------------------------------
 
     def find(self, filename: str) -> Path:
