@@ -76,3 +76,67 @@ class MemgraphConnection:
                 print(
                     f"upserted relationship {i+1}/{len(parts)}: {part[0]} -[{part[1]}]-> {part[2]}"
                 )
+
+    def upsert_global(self, data: List, batch_size: int = 5000) -> None:
+        """Upserts global entity relationships into Memgraph with scope='global' in batches."""
+
+        total = len(data)
+        upserted = 0
+
+        with self.driver.session() as session:
+            for i in range(0, total, batch_size):
+                batch = data[i: i + batch_size]
+
+                params = [
+                    {"source": part[0], "relationship": part[1], "target": part[2]}
+                    for part in batch
+                    if len(part) == 3 and all(part)
+                ]
+
+                session.run(
+                    """
+                    UNWIND $batch AS row
+                    MERGE (source:Entity {name: row.source})
+                    MERGE (target:Entity {name: row.target})
+                    MERGE (source)-[r:RELATIONSHIP {type: row.relationship}]->(target)
+                    SET r.scope = 'global'
+                    """,
+                    batch=params,
+                )
+
+                upserted += len(params)
+                print(f"  Batch {i // batch_size + 1}: {upserted:,} / {total:,} upserted")
+
+        print(f"\nDone — {upserted:,} global relations upserted")
+
+    def upsert_universal(self, data: List, batch_size: int = 5000) -> None:
+        """Upserts universal entity relationships into Memgraph with scope='universal' in batches."""
+
+        total = len(data)
+        upserted = 0
+
+        with self.driver.session() as session:
+            for i in range(0, total, batch_size):
+                batch = data[i: i + batch_size]
+
+                params = [
+                    {"source": part[0], "relationship": part[1], "target": part[2]}
+                    for part in batch
+                    if len(part) == 3 and all(part)
+                ]
+
+                session.run(
+                    """
+                    UNWIND $batch AS row
+                    MERGE (source:Entity {name: row.source})
+                    MERGE (target:Entity {name: row.target})
+                    MERGE (source)-[r:RELATIONSHIP {type: row.relationship}]->(target)
+                    SET r.scope = 'universal'
+                    """,
+                    batch=params,
+                )
+
+                upserted += len(params)
+                print(f"  Batch {i // batch_size + 1}: {upserted:,} / {total:,} upserted")
+
+        print(f"\nDone — {upserted:,} universal relations upserted")
