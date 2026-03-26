@@ -85,7 +85,7 @@ class MemgraphConnection:
 
         with self.driver.session() as session:
             for i in range(0, total, batch_size):
-                batch = data[i: i + batch_size]
+                batch = data[i : i + batch_size]
 
                 params = [
                     {"source": part[0], "relationship": part[1], "target": part[2]}
@@ -105,7 +105,9 @@ class MemgraphConnection:
                 )
 
                 upserted += len(params)
-                print(f"  Batch {i // batch_size + 1}: {upserted:,} / {total:,} upserted")
+                print(
+                    f"  Batch {i // batch_size + 1}: {upserted:,} / {total:,} upserted"
+                )
 
         print(f"\nDone — {upserted:,} global relations upserted")
 
@@ -117,7 +119,7 @@ class MemgraphConnection:
 
         with self.driver.session() as session:
             for i in range(0, total, batch_size):
-                batch = data[i: i + batch_size]
+                batch = data[i : i + batch_size]
 
                 params = [
                     {"source": part[0], "relationship": part[1], "target": part[2]}
@@ -137,6 +139,8 @@ class MemgraphConnection:
                 )
 
                 upserted += len(params)
-                print(f"  Batch {i // batch_size + 1}: {upserted:,} / {total:,} upserted")
+                print(
+                    f"  Batch {i // batch_size + 1}: {upserted:,} / {total:,} upserted"
+                )
 
         print(f"\nDone — {upserted:,} universal relations upserted")
