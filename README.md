@@ -28,8 +28,8 @@ Integrated into a **RAG pipeline**, the resulting knowledge graph supports scala
 ## Project
 
 Documentation and project:  
-https://tuutrag-open.github.io/tuutrag-open/
-
+[www.tuutrag-open.github.io/HADR/
+](https://tuutrag-open.github.io/HADR/)
 ---
 
 ## Dataset
