@@ -23,22 +23,30 @@ We propose **Hierarchical Artifact Decomposition-Recomposition (HADR)**, a knowl
 
 Integrated into a **RAG pipeline**, the resulting knowledge graph supports scalable, multi-artifact requirements traceability by enabling ranked traceability linkages, knowledge graph search, and summarized reasoning across requirements and test cases.
 
+Here is a cleaned and corrected version with fixed links and consistent formatting:
+
+---
+
+## Originating Work
+
+* GitHub: [https://github.com/bedolpab/tuutrag](https://github.com/bedolpab/tuutrag)
+* NASA Release: [https://software.nasa.gov/software/NPO-53610-1](https://software.nasa.gov/software/NPO-53610-1)
+
 ---
 
 ## Project
 
-Documentation and project:  
-[www.tuutrag-open.github.io/HADR/
-](https://tuutrag-open.github.io/HADR/)
+* Documentation and project site:
+  [https://tuutrag-open.github.io/HADR/](https://tuutrag-open.github.io/HADR/)
+
 ---
 
 ## Dataset
 
-PDF → Image dataset:  
-https://www.kaggle.com/datasets/pablobedolla/pdf-to-image-data/data/data/data/data/data/data
+* PDF → Image dataset:
+  [https://www.kaggle.com/datasets/pablobedolla/pdf-to-image-data](https://www.kaggle.com/datasets/pablobedolla/pdf-to-image-data)
 
 ---
-
 
 ## Collaborators
 | Role                  | Name | Affiliation |
